@@ -33,7 +33,7 @@ class HomePageController extends Controller
             $count_survey = json_decode(file_get_contents(ENV('APP_URL_API').'web/homepage/survey/count/'.decrypt(Session::get('id_token_xmtrusr'))));
 
             $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-            
+
             return view('Pages.homePage-Login')->with([
                 'count_survey' => $count_survey->count,
                 'kotaList'     => $kotaList,
@@ -44,10 +44,14 @@ class HomePageController extends Controller
         }else{
             $private = "Harus_login";
             $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+            $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
+            $soal = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/soal'));
 
             return view('Pages.homePage')->with([
                 'private'    => $private,
                 'data'       => $data,
+                'ringkasan'  => $ringkasan,
+                'soal'       => $soal, 
             ]);
         }        
     }
