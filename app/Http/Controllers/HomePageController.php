@@ -15,45 +15,25 @@ class HomePageController extends Controller
      */
     public function index()
     {        
-    	// $url = ENV('APP_URL_API').'web/homepage/popular';
-     //    $PopularData   = json_decode(file_get_contents($url));
-        if(Session::get('login')){
+        $private = "Harus_login";
+        $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+        $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
+        $soal = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/soal'));
 
-            $mitra = json_decode(file_get_contents(ENV('APP_URL_API').'merchant/mitra/cek/'.decrypt(Session::get('id_token_xmtrusr'))));
+        return view('Pages.homePage')->with([
+            'private'    => $private,
+            'data'       => $data,
+            'ringkasan'  => $ringkasan,
+            'soal'       => $soal, 
+        ]);          
+    }
 
-            if ($mitra == "true") {
-                $private = "Mitra";
-            }else{
-                $private = "Pelanggan";
-            }
-
-            $urlKota            = ENV('APP_URL_API').'web/homepage/kota';
-            $kotaList       = json_decode(file_get_contents($urlKota));
-
-            $count_survey = json_decode(file_get_contents(ENV('APP_URL_API').'web/homepage/survey/count/'.decrypt(Session::get('id_token_xmtrusr'))));
-
-            $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-
-            return view('Pages.homePage-Login')->with([
-                'count_survey' => $count_survey->count,
-                'kotaList'     => $kotaList,
-                'private'      => $private,
-                'data'         => $data,
-            ]);
-
-        }else{
-            $private = "Harus_login";
-            $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-            $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
-            $soal = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/soal'));
-
-            return view('Pages.homePage')->with([
-                'private'    => $private,
-                'data'       => $data,
-                'ringkasan'  => $ringkasan,
-                'soal'       => $soal, 
-            ]);
-        }        
+     public function career(){        
+        $private = "Harus_login";
+       
+        return view('Pages.carrer')->with([
+            'private'    => $private,
+        ]);          
     }
 
     public function store_survey(Request $request){

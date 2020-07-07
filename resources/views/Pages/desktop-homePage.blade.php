@@ -38,7 +38,8 @@
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
                 <label class="label-paket">Harga Paket</label>
-                <p class="font-style" style="color:#00B159; font-size: 25px;" id="harga">RP 20.000/ 1 Bulan</p>
+                <p class="font-style" style="color:#797474; text-decoration: line-through; font-size: 16px; position: relative; top: -5px; left: 160px;" id="harga">RP 20.000/ 1 Bulan</p>
+                <span class="font-style" style="color:#00B159; font-size: 27px;">GRATIS SELAMA MASA PROMOSI</span>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
                 <div class="button-style">
@@ -862,7 +863,7 @@
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
 <script type="text/javascript">
 var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200626-Video-contoh_soal_matematika.webm";
-var NUM_CHUNKS = "";
+var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
 window.MediaSource = window.MediaSource || window.WebKitMediaSource;

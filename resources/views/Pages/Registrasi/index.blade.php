@@ -2,11 +2,7 @@
 
 @section('content')
 <!-- start slider -->
-<div style="width: 100%; height: 200px; background-image: url('{!! asset('public/images/sidebar/login.png') !!}');">
-    <div class="container">
-      
-    </div>
-</div>
+
 <!-- slider end -->
 @include('Pages.Registrasi.index-desktop')
 @include('Pages.Registrasi.index-mobile')

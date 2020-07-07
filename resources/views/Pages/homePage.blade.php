@@ -62,6 +62,7 @@
 </div>
 
 @include('Pages.desktop-homePage')
+@include('Pages.mobile-homePage')
 
 
 @endsection

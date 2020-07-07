@@ -13,6 +13,7 @@
 Route::group(['as'=>'FrontEnd.','middleware'=>['CheckNoTelpon']], function(){
     Route::get('/', 'HomePageController@index')->name('index');
     Route::get('/bantuan-permatamall', 'HomePageController@bantuan')->name('bantuan');
+    Route::get('/career', 'HomePageController@career')->name('career');
     Route::get('/store_survey', 'HomePageController@store_survey')->name('store_survey');
 });
 
