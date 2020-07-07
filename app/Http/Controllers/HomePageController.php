@@ -14,19 +14,50 @@ class HomePageController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {        
-        $private = "Harus_login";
-        $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-        $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
-        $soal = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/soal'));
+   {        
+    // $url = ENV('APP_URL_API').'web/homepage/popular';
+    //    $PopularData   = json_decode(file_get_contents($url));
+       if(Session::get('login')){
 
-        return view('Pages.homePage')->with([
-            'private'    => $private,
-            'data'       => $data,
-            'ringkasan'  => $ringkasan,
-            'soal'       => $soal, 
-        ]);          
-    }
+           $mitra = json_decode(file_get_contents(ENV('APP_URL_API').'merchant/mitra/cek/'.decrypt(Session::get('id_token_xmtrusr'))));
+
+           if ($mitra == "true") {
+               $private = "Mitra";
+           }else{
+               $private = "Pelanggan";
+           }
+
+           $urlKota            = ENV('APP_URL_API').'web/homepage/kota';
+           $kotaList       = json_decode(file_get_contents($urlKota));
+
+           $count_survey = json_decode(file_get_contents(ENV('APP_URL_API').'web/homepage/survey/count/'.decrypt(Session::get('id_token_xmtrusr'))));
+
+           $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+           $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
+           $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+           return view('Pages.homePage-Login')->with([
+               'count_survey' => $count_survey->count,
+               'kotaList'     => $kotaList,
+               'private'      => $private,
+               'data'         => $data,
+               'ringkasan'    => $ringkasan,
+               'soal'         => $soal, 
+           ]);
+
+       }else{
+           $private = "Harus_login";
+           $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+           $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
+           $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+
+           return view('Pages.homePage')->with([
+               'private'    => $private,
+               'data'       => $data,
+               'ringkasan'  => $ringkasan,
+               'soal'       => $soal, 
+           ]);
+       }        
+   }
 
      public function career(){        
         $private = "Harus_login";
