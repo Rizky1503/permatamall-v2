@@ -49,7 +49,6 @@ class HomePageController extends Controller
            $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
            $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
            $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
-
            return view('Pages.homePage')->with([
                'private'    => $private,
                'data'       => $data,
