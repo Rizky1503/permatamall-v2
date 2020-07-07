@@ -130,13 +130,14 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col-md-12">
+			<div class="col-md-12">
 				<center>
-					<div style="border: 1px solid black; height: 80px;">
+					<!-- <div style="border: 1px solid black; height: 80px;">
 						
-					</div>
+					</div> -->
+					<span class="font-style" style="font-size: 21px; color: #797474">Sampai 21 Juli 2020</span>
 				</center>
-			</div>	 -->
+			</div>	
 		</div>
 	</div>
 </div>
