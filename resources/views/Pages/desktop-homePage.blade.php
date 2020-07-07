@@ -616,6 +616,7 @@
   </div>
 </div>
 
+@if($ringkasan)
 <div id="loadMe" class="modal">
   <div class="card">
     <div class="card-body">
@@ -629,7 +630,8 @@
     </div>
   </div>
 </div>
-
+@endif
+@if($soal)
 <div id="soal" class="modal">
   <div class="card">
     <div class="card-body">
@@ -648,11 +650,11 @@
           <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/pembahasan/'.$soal->pembahasan}}">
         </div>
       </div>
-        
       </center>
     </div>
   </div>
 </div>
+@endif
 
 <div id="video" class="modal">
   <div class="card">
