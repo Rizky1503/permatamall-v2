@@ -42,6 +42,48 @@
 	</div>
 </div>
 
+<div class="box-mobile";>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<span class="font-style" style="font-size: 20px; color: #00B159;">Posisi yang dibuka :</span>
+			</div>
+			<div id="development-mobile">
+				<div class="col-md-6" style="margin-top: 1em;" onclick="bisnis()">
+					<div class="selection-carrer-mobile" style="background-color: #00B159; color: white;">
+						<center>
+							<span class="font-style"  style="font-size: 18px;">Business development</span>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-6" onclick="guru()" style="margin-top: 1em;">
+					<div class="selection-carrer-mobile" style="background-color: white; color: #00B159;">
+						<center>
+							<span class="font-style" style="font-size: 18px;">Guru Les Private</span>
+						</center>
+					</div>
+				</div>
+			</div>
+			<div id="les-mobile" style="display: none">
+				<div class="col-md-6" style="margin-top: 1em;" onclick="bisnis()">
+					<div class="selection-carrer-mobile" style="background-color: white; color: #00B159;">
+						<center>
+							<span class="font-style"  style="font-size: 18px;">Business development</span>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-6" onclick="guru()" style="margin-top: 1em;">
+					<div class="selection-carrer-mobile" style="background-color: #00B159; color: white;">
+						<center>
+							<span class="font-style" style="font-size: 18px;">Guru Les Private</span>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div style="background-color: #00B159; height: auto; padding-bottom: 16em;">
 	<div class="container">
 		<span class="font-style text-permata-carrer" style="position: relative; top: 40px;">PermataBelajar Karir</span><br>
@@ -98,7 +140,7 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 
 <script src="{!! asset('public\assets\js\sweetalert.min.js') !!}"></script> 
 
-<style type="text/css">
+<style type="text/css"> 
 	.selection-carrer{
 		border: 1px solid #00B159;
 		height: 70px;
@@ -140,6 +182,44 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 	    border: 1px solid #b9b9b9;
 	    box-shadow: 2px 4px 2px 0px rgba(201,201,201,1);
 	    padding: 19px 52px 0px 14px;
+	}
+
+	.box-mobile{
+		display: none;
+	}
+
+	@media (max-width: 660px) {
+		.box {
+	        display: none;
+	    }
+
+	    .box-mobile {
+	        display: block;
+            width: 81%;
+            height: 18em;
+            background-color: white;
+            position: absolute;
+            left: 33px;
+            top: 70em;
+            border-radius: 5px;
+            border: 1px solid #b9b9b9;
+            box-shadow: 2px 4px 2px 0px rgba(201,201,201,1);
+            padding: 19px 52px 0px 14px;
+	    }
+
+	    .selection-carrer-mobile{
+	    	border: 1px solid #00B159;
+    	    height: 70px;
+    	    padding: 23px 0px 0 0px;
+    	    border-radius: 7px;
+    	    width: 120%;
+    	    cursor: pointer;
+	    }
+
+	    .job-desc{
+	    	font-size: 18px; 
+	    	color:#797474;
+	    }
 	}
 </style>
 
@@ -190,6 +270,8 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 		$('#bisnis').hide();
 		$('#development').hide();
 		$('#les').show();
+		$('#development-mobile').hide();
+		$('#les-mobile').show();
 	}
 
 	function bisnis(){
@@ -197,6 +279,8 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 		$('#bisnis').show();
 		$('#development').show();
 		$('#les').hide();
+		$('#development-mobile').show();
+		$('#les-mobile').hide();
 	}
 
 	function lamarNow(val){
