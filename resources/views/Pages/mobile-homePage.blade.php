@@ -1,17 +1,17 @@
 <div class="section-mobile">  
   <div class="paket-list" style="height: auto">
     <div class="container">
-      <div class="desc" style="padding-top: 35px;">
+      <div class="desc" style="padding-top: 3px;">
         <div class="col-md-12">
-            <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Coba Gratis 2 Hari</span></span></center>
-            <center><span class="des-paket-home">pelajar Indonesia yang sedang belajar disini : <span class="count" style="font-weight:900">10000</span> +</span></center>
+            <center><span class="des-paket-home-mobile">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Coba Gratis 2 Hari</span></span></center>
+            <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="count-mobile" style="font-weight:900">10000</span> +</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 50px;">
           <div class="square-content" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
             <div class="row">
               <div class="col-md-12">
-                <label class="label-paket">Pilih Kelas/Paket</label>
-                <select class="form-control select-paket font-style" style="font-size: 19px; color: #797474;" id="kelas">
+                <label class="label-paket-mobile">Pilih Kelas/Paket</label>
+                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="kelas">
                   <option>--Pilih Kelas--</option>
                   <option value="2">TES MASUK PTN</option>
                   <option value="1">KELAS 12 IPA</option>
@@ -27,8 +27,8 @@
                 </select>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
-                <label class="label-paket">Durasi Langganan</label>
-                <select class="form-control select-paket font-style" style="font-size: 19px; color: #797474;" id="durasi" onchange="getharga(this.value)"> 
+                <label class="label-paket-mobile">Durasi Langganan</label>
+                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="durasi" onchange="getharga(this.value)"> 
                   <option>--Pilih Durasi--</option>
                   <option value="1">1 BULAN</option>
                   <option value="2">3 BULAN</option>
@@ -37,14 +37,14 @@
                 </select>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
-                <label class="label-paket">Harga Paket</label>
-                <p class="font-style" style="color:#797474; text-decoration: line-through; font-size: 16px; position: relative; top: -5px; left: 160px;" id="harga">RP 20.000/ 1 Bulan</p>
-                <span class="font-style" style="color:#00B159; font-size: 27px;">GRATIS SELAMA MASA PROMOSI</span>
+                <label class="label-paket-mobile">Harga Paket</label>
+                <p class="font-style" style="color:#797474; text-decoration: line-through; font-size: 14px; position: relative; top: -5px; left: 110px;" id="harga">RP 20.000/ 1 Bulan</p>
+                <span class="font-style" style="color:#00B159; font-size: 18px;">GRATIS SELAMA MASA PROMOSI</span>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
                 <div class="button-style">
                   <center>
-                    <span style="color:white; font-size: 23px;  font-family: 'Ubuntu', sans-serif;">Langganan Sekarang !</span>
+                    <span style="color:white; font-size: 16px;  font-family: 'Ubuntu', sans-serif;">Langganan Sekarang !</span>
                   </center>
                 </div>
               </div>
@@ -59,48 +59,46 @@
                   <td><h2 class="font-style"><b>Paket Bimbel Online Meliputi :</b></h2></td>
                 </tr>
                 <tr>
-                  <td><span style="font-size: 29px;"> - Ringkasan Materi Pelajaran </span></td>
+                  <td><span style="font-size: 18px;"> - Ringkasan Materi Pelajaran </span></td>
                 </tr>
                 <tr>
-                  <td><span style="font-size: 29px;"> - Soal Latihan dengan Pembahasan </span></td>
+                  <td><span style="font-size: 18px;"> - Soal Latihan dengan Pembahasan </span></td>
                 </tr>
                 <tr>
-                  <td><span style="font-size: 29px;"> - Video Tutorial Belajar </span></td>
+                  <td><span style="font-size: 18px;"> - Video Tutorial Belajar </span></td>
                 </tr>
                 <tr>
-                  <td><span style="font-size: 29px;"> - Forum Diskusi dan Konsultasi </span></td>
+                  <td><span style="font-size: 18px;"> - Forum Diskusi dan Konsultasi </span></td>
                 </tr>
               </table>            
             </div>
             <div class="icon-tentang-permata">
               <div class="col-md-4">
                 <div class="ringkasan_materi" onclick="getringkasan()" style="cursor: pointer;">
-                  <img style="width: 50%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
+                  <img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4" style="margin-top: 1em;">
                 <div class="soal_dan_latihan" onclick="getsoal()" style="cursor: pointer;">
-                  <img style="width: 50%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
+                  <img style="width: 25%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4" style="margin-top: 1em;">
                 <div class="video_belajar" onclick="getvideo()" style="cursor: pointer;">
-                  <img style="width: 50%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
+                  <img style="width: 25%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Video Belajar</span>
                 </div>
               </div>
             </div>
           </center>
         </div>
-        <div class="col-md-12" style="position: relative; top: 76px;">
+        <div class="col-md-12" style="position: relative; top: 99px;">
           <div class="container">
-          <center>
-          <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">
+          <span style="color:#797474; font-size: 19px;  font-family: 'Ubuntu', sans-serif;">
             Membantu siswa/i SD, SMP, SMA dan Tes Masuk PTN belajar dengan lengkap, mudah dan menarik darimana dan dimana saja di seluruh wilayah Indonesia dengan dengan biaya murah menggunakan teknologi digital.
           </span>  
-          </center>
           </div>
         </div>
       </div>
@@ -806,21 +804,21 @@
     border-color: #00B159
   }
 
-  .des-paket-home{
+  .des-paket-home-mobile{
     color: #3e3e3e;
-    font-size: 38px;
+    font-size: 28px;
     font-family: 'Ubuntu', sans-serif;
   }
 
-  .label-paket{
-    font-size: 18px; 
+  .label-paket-mobile{
+    font-size: 15px; 
     color: #797474;
     font-family: 'Ubuntu', sans-serif;
   }
 
-  .section {
-      padding-top: 30px !important;
-      padding-bottom: 38px !important;
+  .section-mobile {
+      padding-top: 20px !important;
+      padding-bottom: 28px !important;
       background-color: #e8e8e861;
   }
 
@@ -828,7 +826,7 @@
     height:auto; 
     width:100%; 
     background-color:white; 
-    border-radius: 10px 49px 10px 49px; 
+    border-radius: 10px; 
     padding: 7% 13% 7% 13%;
 
   }
@@ -837,7 +835,7 @@
     height:auto; 
     width:100%; 
     background-color:white; 
-    border-radius: 15px 15px 15px 15px; 
+    border-radius: 5px 15px 15px 15px; 
     padding: 7% 13% 7% 13%;
     box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);
   }
@@ -929,7 +927,7 @@ function GET(url, callback) {
 }
 </script>
 <script type="text/javascript">
-  $('.count').each(function () {
+  $('.count-mobile').each(function () {
       $(this).prop('Counter',0).animate({
           Counter: $(this).text()
       }, {
