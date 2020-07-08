@@ -336,7 +336,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12" style="position: relative; top: 2em;" style="margin-top: 2em; padding-bottom: 41px;">
+        <div class="col-md-12" style="margin-top: 2em;">
           <div class="square-content-mobile" style="height: auto; padding: 3% 13% 3% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
