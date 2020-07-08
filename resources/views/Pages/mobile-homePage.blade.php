@@ -7,7 +7,7 @@
             <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="count-mobile" style="font-weight:900">10000</span> +</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 50px;">
-          <div class="square-content" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
+          <div class="square-content-mobile" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
             <div class="row">
               <div class="col-md-12">
                 <label class="label-paket-mobile">Pilih Kelas/Paket</label>
@@ -179,7 +179,7 @@
 </div>
 
 <div class="section-mobile" style="background-color: #00B159">
-  <div class="desc-plus-permata-belajar" style="height: 1000px;background-color: #00B159;padding: 10px 23px 10px 23px;">
+  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #00B159;padding: 10px 23px 10px 23px;">
     <div class="container">
       <div class="row">
         <div class="permata-testimoni">
@@ -187,11 +187,11 @@
             <center>
               <span style="color:white; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Semua Orang Bisa Mewujudkannya, Termasuk Kamu</span>
             </center>
-          </div><br><br>
+          </div>
           <div class="testimoni">
-            <div class="col-md-4" style="margin-top: 3em;">
-              <div class="square-content" style="height: 500px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
-                <div class="avatar-testimoni">
+            <div class="col-md-4" style="margin-top: 1em;">
+              <div class="square-content-mobile" style="height: 340px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni-mobile">
                   <center>
                     <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}">
                   </center>
@@ -209,14 +209,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4" style="margin-top: 3em;">
-              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
-                <div class="avatar-testimoni">
+            <div class="col-md-4" style="margin-top: 6em;">
+              <div class="square-content-mobile" style="height: 380px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni-mobile">
                   <center>
                     <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}">
                   </center>
                 </div>
-                <div class="name-testimoni">
+                <div class="name-testimoni-mobile">
                   <center> 
                     <span class="font-style"><b>Riska Listiana</b></span><br>
                     <span class="font-style"><b>( Kelas 10 SMA )</b></span>
@@ -229,14 +229,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4" style="margin-top: 3em;">
-              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
-                <div class="avatar-testimoni">
+            <div class="col-md-4" style="margin-top: 6em;">
+              <div class="square-content-mobile" style="height: 340px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni-mobile">
                   <center>
                     <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}">
                   </center>
                 </div>
-                <div class="name-testimoni">
+                <div class="name-testimoni-mobile">
                   <center> 
                     <span class="font-style"><b>Gresia Samosir</b></span><br>
                     <span class="font-style"><b>( Kelas 11 SMA )</b></span>
@@ -256,19 +256,19 @@
   </div>  
 </div>
 
-<div class="section-mobile" style="background-color: #00B159">
-  <div class="desc-plus-permata-belajar" style="height: 630px;background-color: #00B159;padding: 10px 71px 10px 71px;">
+<div class="section-mobile" style="background-color: #00B159;">
+  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #00B159;padding: 10px 11px 10px 11px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <center>
-            <span style="color:white; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">
+            <span style="color:white; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">
               Penuhi Semua Kebutuhan Kamu
             </span>
           </center>
-        </div><br><br><br><br><br>
+        </div><br>
         <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+          <div class="square-content-mobile" style="height: auto; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
                 <span class="font-style">Les Privat</span>
@@ -290,8 +290,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-4" style="margin-top: 2em;">
+          <div class="square-content-mobile" style="height: auto; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
                 <span class="font-style">Les Privat Online</span>
@@ -313,8 +313,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-4"  style="margin-top: 2em;">
+          <div class="square-content-mobile" style="height: auto; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
                 <span class="font-style">Forum Diskusi</span>
@@ -336,8 +336,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12" style="position: relative; top: 2em;">
-          <div class="square-content" style="height: 220px; padding: 3% 13% 3% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-12" style="position: relative; top: 2em;" style="margin-top: 2em;">
+          <div class="square-content-mobile" style="height: auto; padding: 3% 13% 3% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
                 <span class="font-style">PermataMall</span>
@@ -432,24 +432,24 @@
   <div class="container">
     <div class="col-md-12">
       <center>
-        <span style="color:#797474; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">
+        <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">
           Petanyaan Seputar PermataBelajar
         </span>
       </center>
-    </div><br><br><br><br><br>
+    </div><br>
     <div class="col-md-12"> 
       <main>
           <article class="panel-group bs-accordion" id="accordion" role="tablist" aria-multiselectable="true" style="background-color: #ffffff00; border-color: #ffffff00;">
             <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00;">
-              <div class="panel-heading panel-custom" role="tab" id="headingOne">
-                <h4 class="panel-title font-style" style="position: relative; top: 15px; font-size: 23px;">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div class="panel-heading panel-custom-mobile" role="tab" id="headingOne-mobile">
+                <h4 class="panel-title font-style" style="font-size: 18px;">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne-mobile" aria-expanded="true" aria-controls="collapseOne">
                     Bisa nggak satu akun, dipakainya bareng-bareng?
                     <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapseOne-mobile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-mobile">
                 <div class="panel-body">
                   <center>
                     <span class="font-style" style="font-size: 18px;">Untuk mempermudah proses belajar kamu agar lebih fokus dan nyaman, PermataBelajar hanya diperuntukkan untuk penggunaan secara individual</span>
@@ -457,16 +457,16 @@
                 </div>
               </div>
             </section>
-            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00;">
-              <div class="panel-heading panel-custom" role="tab" id="headingTwo">
-                <h4 class="panel-title font-style" style="position: relative; top: 15px; font-size: 23px;">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00; margin-top: 1em;">
+              <div class="panel-heading panel-custom-mobile" role="tab" id="headingTwo-mobile">
+                <h4 class="panel-title font-style" style=" font-size: 18px;">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo-mobile" aria-expanded="true" aria-controls="collapseOne">
                     Pembayaran di PermataBelajar bisa dicicil nggak ?
                     <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div id="collapseTwo-mobile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo-mobile">
                 <div class="panel-body">
                   <center>
                     <span class="font-style" style="font-size: 18px;">Untuk Saat ini, pembayaran PermataBelajar hanya dapat dilakukan 1 kali di awal.</span>
@@ -474,46 +474,46 @@
                 </div>
               </div>
             </section>
-            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00;">
-              <div class="panel-heading panel-custom" role="tab" id="headingThree">
-                <h4 class="panel-title font-style" style="position: relative; top: 15px; font-size: 23px;">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00; margin-top: 1em;">
+              <div class="panel-heading panel-custom-mobile" role="tab" id="headingThree-mobile">
+                <h4 class="panel-title font-style" style=" font-size: 18px;">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree-mobile" aria-expanded="true" aria-controls="collapseOne">
                     Bagaimana Metode Pembayaran untuk BerLangganan ?
                     <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div id="collapseThree-mobile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree-mobile">
                 <div class="panel-body">
                     <span class="font-style" style="font-size: 18px;">metode pembayaran Bank Transfer Manual (BCA,Mandiri), Transfer Otomatis melalui Virtual Account (Permata Bank , BNI) dan GOPAY</span>
                 </div>
               </div>
             </section>
-            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00;">
-              <div class="panel-heading panel-custom" role="tab" id="headingour">
-                <h4 class="panel-title font-style" style="position: relative; top: 15px; font-size: 23px;">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00; margin-top: 1em;">
+              <div class="panel-heading panel-custom-mobile" role="tab" id="headingour-mobile">
+                <h4 class="panel-title font-style" style=" font-size: 18px;">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour-mobile" aria-expanded="true" aria-controls="collapseOne">
                     Apakah Materi PermataBelajar sesuai dengan pelajaran sekolah ?
                     <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingour">
+              <div id="collapseFour-mobile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingour-mobile">
                 <div class="panel-body">``
                     <span class="font-style" style="font-size: 18px;">Tentunya, materi yang dipelajari di sekolah ada di PermataBelajar. Materi PermataBelajar lengkap , pembahasan yang mendalam , dan sesuai dengan kurikulum Nasional</span>``
                 </div>
               </div>
             </section>
-            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00;">
-              <div class="panel-heading panel-custom" role="tab" id="headinFive">
-                <h4 class="panel-title font-style" style="position: relative; top: 15px; font-size: 23px;">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+            <section class="panel panel-default" style="background-color: #ffffff00; border-color: #ffffff00; margin-top: 1em;">
+              <div class="panel-heading panel-custom-mobile" role="tab" id="headinFive-mobile">
+                <h4 class="panel-title font-style" style=" font-size: 18px;">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive-mobile" aria-expanded="true" aria-controls="collapseOne">
                     Masih Belum Yakin ?
                     <span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
                   </a>
                 </h4>
               </div>
-              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headinFive">
+              <div id="collapseFive-mobile" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headinFive-mobile">
                 <div class="panel-body">
                     <span class="font-style" style="font-size: 18px;">Selesaikan pendaftaran dan dapatkan coba gratis selama 2 hari. Coba dan rasakan keseruan belajar dengan Permata Belajar</span>
                 </div>
@@ -526,17 +526,17 @@
 </div>
 
 <div class="section-mobile" style="background-color: #2980b9;">
-  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #2980b9;padding: 10px 71px 10px 71px;">
+  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #2980b9;padding: 10px 9px 10px 9px;">
     <div class="container">
       <div class="row">
         <div class="fitur-permata">
           <div class="col-md-12">
             <center>
-              <span style="color:white; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Belajar dengan aman dan nyaman</span>
+              <span style="color:white; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Belajar dengan aman dan nyaman</span>
             </center>
-          </div><br><br><br><br><br>
+          </div><br>
           <div class="col-md-12">
-            <div class="square-content" style="height: auto; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+            <div class="square-content-mobile" style="height: auto; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
               <div class="row">
                 <div class="privacy" style="margin-left: -59px;">
                   <div class="col-md-12">
@@ -546,8 +546,8 @@
                       </div>
                     </div>
                     <div class="col-md-9">
-                      <span class="font-style" style="font-size: 23px; color: #424242;">Jaga informasi pribadi kamu</span><br>
-                      <span class="font-style" style="font-size: 14px; color: #797474;">E-mail, username, password, kode OTP (One Time Password) dan data pribadi lainnya cukup kamu saja yang tahu.</span>
+                      <span class="font-style" style="font-size: 23px; color: #424242; position: relative; bottom: 39px; left: 39px;">Jaga informasi pribadi kamu</span><br>
+                      <span class="font-style" style="font-size: 14px; color: #797474; position: relative; bottom: 39px; left: 39px;">E-mail, username, password, kode OTP (One Time Password) dan data pribadi lainnya cukup kamu saja yang tahu.</span>
                     </div>
                   </div>
                 </div>
@@ -559,8 +559,8 @@
                       </div>
                     </div>
                     <div class="col-md-9">
-                      <span class="font-style" style="font-size: 23px; color: #424242;">Kode OTP itu Sangat Rahasia</span><br>
-                      <span class="font-style" style="font-size: 14px; color: #797474;">Rahasiakan kode OTP dan Masukkan kode OTP hanya di websiter/aplikasi resmi PermataBelajar. Jangan bagikan pada siapa pun, termasuk pihak PermataMall.</span>
+                      <span class="font-style" style="font-size: 23px; color: #424242; position: relative; bottom: 21px; left: 39px;">Kode OTP itu Sangat Rahasia</span><br>
+                      <span class="font-style" style="font-size: 14px; color: #797474; position: relative; bottom: 21px; left: 39px;">Rahasiakan kode OTP dan Masukkan kode OTP hanya di websiter/aplikasi resmi PermataBelajar. Jangan bagikan pada siapa pun, termasuk pihak PermataMall.</span>
                     </div>
                   </div>
                 </div>
@@ -572,8 +572,8 @@
                       </div>
                     </div>
                     <div class="col-md-9">
-                      <span class="font-style" style="font-size: 23px; color: #424242;">Waspada Penipuan Atas Nama PermataMall </span><br>
-                      <span class="font-style" style="font-size: 14px; color: #797474;">Transaksi resmi hanya melalui Sistem Pembayaran resmi PermataMal dan tanpa adanya perantara orang/website/aplikasi lainnya</span>
+                      <span class="font-style" style="font-size: 23px; color: #424242; position: relative; bottom: 27px; left: 39px;">Waspada Penipuan Atas Nama PermataMall </span><br>
+                      <span class="font-style" style="font-size: 14px; color: #797474; position: relative; bottom: 27px; left: 39px;">Transaksi resmi hanya melalui Sistem Pembayaran resmi PermataMal dan tanpa adanya perantara orang/website/aplikasi lainnya</span>
                     </div>
                   </div>
                 </div>
@@ -585,8 +585,8 @@
                       </div>
                     </div>
                     <div class="col-md-9">
-                      <span class="font-style" style="font-size: 23px; color: #424242;">Kenali nomor tagihan kamu dan transfer dana sesuai nominalnya</span><br>
-                      <span class="font-style" style="font-size: 14px; color: #797474;">Untuk mempermudah transaksi kamu , bayarlah sesuai dengan nominal yang tertera pada tagihan transaksimu di website/aplikasi resmi PermataMall/PermataBelajar</span>
+                      <span class="font-style" style="font-size: 23px; color: #424242; position: relative; bottom: 24px; left: 39px;">Kenali nomor tagihan kamu dan transfer dana sesuai nominalnya</span><br>
+                      <span class="font-style" style="font-size: 14px; color: #797474; position: relative; bottom: 24px; left: 39px;">Untuk mempermudah transaksi kamu , bayarlah sesuai dengan nominal yang tertera pada tagihan transaksimu di website/aplikasi resmi PermataMall/PermataBelajar</span>
                     </div>
                   </div>
                 </div>
@@ -598,8 +598,8 @@
                       </div>
                     </div>
                     <div class="col-md-9">
-                      <span class="font-style" style="font-size: 23px; color: #424242;">Pasti Aman dan Terpercaya</span><br>
-                      <span class="font-style" style="font-size: 14px; color: #797474;">Untuk mempermudah transaksi kamu , bayarlah sesuai dengan nominal yang tertera pada tagihan transaksimu di website/aplikasi resmi PermataMall/PermataBelajar</span>
+                      <span class="font-style" style="font-size: 23px; color: #424242; position: relative; bottom: 24px; left: 39px;">Pasti Aman dan Terpercaya</span><br>
+                      <span class="font-style" style="font-size: 14px; color: #797474; position: relative; bottom: 24px; left: 39px;">Untuk mempermudah transaksi kamu , bayarlah sesuai dengan nominal yang tertera pada tagihan transaksimu di website/aplikasi resmi PermataMall/PermataBelajar</span>
                     </div>
                   </div>
                 </div>
@@ -613,7 +613,7 @@
 </div>
 
 @if($ringkasan)
-<div id="loadMe" class="modal">
+<div id="loadMe" class="modal-mobile">
   <div class="card">
     <div class="card-body">
       <center>
@@ -628,7 +628,7 @@
 </div>
 @endif
 @if($soal)
-<div id="soal" class="modal">
+<div id="soal" class="modal-mobile">
   <div class="card">
     <div class="card-body">
       <center>
@@ -652,7 +652,7 @@
 </div>
 @endif
 
-<div id="video" class="modal">
+<div id="video" class="modal-mobile">
   <div class="card">
     <div class="card-body">
       <center>
@@ -671,17 +671,17 @@
 
 
 <style type="text/css">
-  .modal {
-    max-width: 80% !important;
+  .modal-mobile {
+    max-width: 30% !important;
   }
 
-  .panel-custom{
+  .panel-custom-mobile{
     background-color: #00b159 !important; 
     border-color: #ffffff00 !important;  
     color: white !important; 
-    border-radius: 10px 49px 10px 49px;  
-    height: 67px; 
-    padding: 11px 95px 14px 50px;
+    border-radius: 10px;  
+    height: auto;
+    padding: 13px 24px 17px 23px;
   }
 
   .panel{
@@ -750,12 +750,12 @@
     padding-top: 4em;
   }
 
-  .avatar-testimoni{
-    width: 30%;
-    z-index: 3;
+  .avatar-testimoni-mobile{
+    width: 38%;
+    z-index: 2;
     position: absolute;
-    top: -60px;
-    right: 137px;
+    top: -54px;
+    right: 98px;
   }
 
   .image-testimoni{
@@ -771,7 +771,7 @@
 
   .name-testimoni-mobile{
     position: relative; 
-    top: 34px;
+    top: 66px;
     font-size:19px; 
     color: #00B159;
   }
@@ -820,7 +820,7 @@
       background-color: #e8e8e861;
   }
 
-  .square-content{
+  .square-content-mobile{
     height:auto; 
     width:100%; 
     background-color:white; 
