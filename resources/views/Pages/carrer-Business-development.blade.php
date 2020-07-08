@@ -53,11 +53,11 @@
 				</div>
 				<div class="col-md-12" style="margin-left: 50px;">
 					<span class="job-desc font-style">-</span>
-					<span class="job-desc font-style">Menyusun pengembangan materi pelajaran utk SMP dan SMA  berdasarkan kurikulum nasional</span><br>
+					<span class="job-desc font-style">Menyusun pengembangan materi pelajaran untuk SMP dan SMA  berdasarkan kurikulum nasional</span><br>
 					<span class="job-desc font-style">-</span>
 					<span class="job-desc font-style">Memonitor pelaksanaan dan operasi bimbel online</span><br>
 					<span class="job-desc font-style">-</span>
-					<span class="job-desc font-style">Pengembangan bimbel sesuai dgn perkembangan pasar dan masukan dari pelanggan</span><br>
+					<span class="job-desc font-style">Pengembangan bimbel sesuai dengan perkembangan pasar dan masukan dari pelanggan</span><br>
 				</div>
 				<div class="col-md-12" style="margin-top: 30px;">
 					<div class="title-detail">
@@ -68,11 +68,11 @@
 					<span class="job-desc font-style">-</span>
 					<span class="job-desc font-style">pendidikan sarjana S1, dalam bidang studi yang relevan</span><br>
 					<span class="job-desc font-style">-</span>
-					<span class="job-desc font-style">memiliki pengalaman 1-2 Tahun mengajar terutama dalam bimbingan belajar (BimBel) utk pelajaran IPA</span><br>
+					<span class="job-desc font-style">memiliki pengalaman 1-2 Tahun mengajar terutama dalam bimbingan belajar (BimBel) untuk pelajaran IPA</span><br>
 					<span class="job-desc font-style">-</span>
 					<span class="job-desc font-style">Memiliki pemahaman yang kuat tentang kurikulum nasional dan persiapan ujian</span><br>
 					<span class="job-desc font-style">-</span>
-					<span class="job-desc font-style">dapat berkoordinasi dengan anggota tim dan komunikasi yg baikn</span><br>
+					<span class="job-desc font-style">dapat berkoordinasi dengan anggota tim dan komunikasi yang baik</span><br>
 				</div>
 				<div class="col-md-12" style="margin-top: 30px;">
 					<div class="title-detail">

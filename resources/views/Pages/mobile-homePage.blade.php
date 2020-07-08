@@ -113,29 +113,28 @@
       <div class="row">
         <div class="col-md-12">
           <center>
-            <span style="color:#797474; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: #00B159">Permata</span> <span style="color: #4d9aea;">Belajar </span> ??</span>
+            <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: #00B159">Permata</span> <span style="color: #4d9aea;">Belajar </span> ??</span>
           </center>
-        </div><br><br><br><br><br>
+        </div><br>
         <div class="col-md-12">
-          <div class="tambahan-table-atas"></div>
           <center>
-            <table border="1" style="border-color: #f1eded; border-radius: 1em 0em 1em 1em;" width="81%">
+            <table border="1" style="border-color: #f1eded; border-radius: 1em 0em 1em 1em; width: 50%;">
               <tr>
                 <td class="td" rowspan="2" align="center" style="background: #D9E7F4;" >
-                  <span class="font-style" style="font-size: 19px;">Biaya</span>
+                  <span class="font-style" style="font-size: 15px;">Biaya</span>
                 </td>
 
                 <td class="td" align="center" style="background-color: #d4d4d4;">
-                  <span class="font-style" style="font-size: 19px;">Bimbel Offline</span>
+                  <span class="font-style" style="font-size: 15px;">Bimbel Offline</span>
                 </td>
                 
                 <td class="td" align="center" style="background-color: #d4d4d4;">
-                  <span class="font-style" style="font-size: 19px;">Bimbel Online </span>
+                  <span class="font-style" style="font-size: 15px;">Bimbel Online </span>
                 </td>
                 
                 <td class="td" align="center" style="background-color: white;">
-                  <span class="font-style" style="color: #00B159; font-size: 27px; z-index: 1;">Permata</span> 
-                  <span class="font-style" style="color: #4d9aea; font-size: 27px; z-index: 1;">Belajar</span>
+                  <span class="font-style" style="color: #00B159; font-size: 19px; z-index: 1;">Permata</span> 
+                  <span class="font-style" style="color: #4d9aea; font-size: 19px; z-index: 1;">Belajar</span>
                 </td>
               </tr>
 
@@ -152,28 +151,27 @@
               </tr>
 
               <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 19px;">Cara Belajar</span></td>
+                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Cara Belajar</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">sesuai jadwal belajar yang sudah <br> ditentukan dan waktu terbatas</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">belajar kapanpun dan dimanapun <br> secara online </span></td>
                  <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">belajar kapanpun dan dimanapun <br> dan bisa diulang-ulang</span></td>
               </tr>
 
               <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 19px;">Materi Belajar</span></td>
+                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Materi Belajar</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">dengan buku materi pelajaran <br> yang banyak dan merepotkan</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">terkadang hanya tersedia <br> beberapa materi</span></td>
                  <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">materi belajar lengkap dengan <br> ringkasan materi dan video belajar</span></td>
               </tr>
 
               <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 19px;">Metode Pembelajaran</span></td>
+                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Metode Pembelajaran</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">terlalu banyak murid dan diajarkan <br> sekali menyesuaikan jadwal</span></td>
                 <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">pembelajaran online <br> kurang terintegrasi</span></td>
                  <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">pembelajaran terintegrasi dengan <br> ringkasan materi dan video belajar <br> disertai dengan quiz</span></td>
               </tr>
             </table>
           </center>
-          <div class="tambahan-table-bawah"></div>
         </div>
       </div>
     </div>
@@ -181,24 +179,24 @@
 </div>
 
 <div class="section-mobile" style="background-color: #00B159">
-  <div class="desc-plus-permata-belajar" style="height: 550px;background-color: #00B159;padding: 10px 71px 10px 71px;">
+  <div class="desc-plus-permata-belajar" style="height: 1000px;background-color: #00B159;padding: 10px 23px 10px 23px;">
     <div class="container">
       <div class="row">
         <div class="permata-testimoni">
           <div class="col-md-12">
             <center>
-              <span style="color:white; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Semua Orang Bisa Mewujudkannya, Termasuk Kamu</span>
+              <span style="color:white; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Semua Orang Bisa Mewujudkannya, Termasuk Kamu</span>
             </center>
-          </div><br><br><br><br><br>
+          </div><br><br>
           <div class="testimoni">
-            <div class="col-md-4">
-              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+            <div class="col-md-4" style="margin-top: 3em;">
+              <div class="square-content" style="height: 500px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
                     <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}">
                   </center>
                 </div>
-                <div class="name-testimoni">
+                <div class="name-testimoni-mobile">
                   <center> 
                     <span class="font-style"><b>Nur Lailatul Badriyah</b></span><br>
                     <span class="font-style"><b>( Kelas 12 SMA )</b></span>
@@ -211,7 +209,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top: 3em;">
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
@@ -231,7 +229,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top: 3em;">
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
@@ -771,10 +769,10 @@
     color: #797474;
   }
 
-  .name-testimoni{
+  .name-testimoni-mobile{
     position: relative; 
-    top: 57px;
-    font-size:25px; 
+    top: 34px;
+    font-size:19px; 
     color: #00B159;
   }
 

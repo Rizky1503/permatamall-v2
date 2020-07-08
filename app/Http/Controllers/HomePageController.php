@@ -68,7 +68,7 @@ class HomePageController extends Controller
 
         File::delete($path . $name);
 
-        return redirect()->route('FrontEnd.career');
+        return redirect()->route('FrontEnd.career')->with('alert', 'File Berhasil Di Upload');
     }
 
     public function store_survey(Request $request){

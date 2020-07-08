@@ -58,7 +58,7 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
     			<div class="col-md-12">
     				<div class="form-group">
     					<label>CV/Resume/Portofolio</label>
-    					<input class="form-control" type="file" name="file">
+    					<input class="form-control" type="file" name="file" id="file">
     				</div>
     			</div>
     			<div class="col-md-12">
@@ -77,6 +77,8 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 
 @endsection
 @section('script')
+
+<script src="{!! asset('public\assets\js\sweetalert.min.js') !!}"></script> 
 
 <style type="text/css">
 	.selection-carrer{
@@ -125,7 +127,48 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 	}
 </style>
 
+
+ @if ($message = Session::get('alert'))
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		 swal({
+  	      title: "Selamat!",
+  	      text: "Lamaran anda berhasil terkirim",
+  	      icon: "success",
+  	    });
+  	});
+  </script>
+@endif
 <script type="text/javascript">
+
+	$('#file').bind('change', function() {
+        fileValidation(this.id);
+        var mb = this.files[0].size / 1048576 ;
+        if (mb > 2) {
+            swal({
+              title: "Error!",
+              text: "File yang kamu upload "+ mb.toFixed(2)+", Maksimal upload yang di izinkan 2 MB",
+              icon: "error",
+            });
+            this.value = "";
+        }       
+    });
+
+    function fileValidation(response){
+            var fileInput = document.getElementById(response);
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.pdf|\.docx|\.doc|\.docs)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                swal({
+                  title: "Error!",
+                  text: "File yang di ijinkan hanya format .jpeg .jpg .pdf .word dan .png",
+                  icon: "error",
+                });
+                fileInput.value = '';
+                return false;
+            }
+        }
+
 	function guru(){
 		$('#guru').show();
 		$('#bisnis').hide();
