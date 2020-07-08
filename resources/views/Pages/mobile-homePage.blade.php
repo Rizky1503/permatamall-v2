@@ -1,4 +1,4 @@
-<div class="section">  
+<div class="section-mobile">  
   <div class="paket-list" style="height: auto">
     <div class="container">
       <div class="desc" style="padding-top: 35px;">
@@ -109,7 +109,7 @@
 </div>
 <br><br><br><br>
 
-<div class="section">
+<div class="section-mobile">
   <div class="kelebihan-permata"> 
     <div class="container"> 
       <div class="row">
@@ -182,7 +182,7 @@
   </div>
 </div>
 
-<div class="section" style="background-color: #00B159">
+<div class="section-mobile" style="background-color: #00B159">
   <div class="desc-plus-permata-belajar" style="height: 550px;background-color: #00B159;padding: 10px 71px 10px 71px;">
     <div class="container">
       <div class="row">
@@ -260,7 +260,7 @@
   </div>  
 </div>
 
-<div class="section" style="background-color: #00B159">
+<div class="section-mobile" style="background-color: #00B159">
   <div class="desc-plus-permata-belajar" style="height: 630px;background-color: #00B159;padding: 10px 71px 10px 71px;">
     <div class="container">
       <div class="row">
@@ -368,7 +368,7 @@
   </div>
 </div>
 
-<!-- <div class="section">
+<!-- <div class="section-mobile">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -432,7 +432,7 @@
   </div>
 </div> -->
 
-<div class="section">
+<div class="section-mobile">
   <div class="container">
     <div class="col-md-12">
       <center>
@@ -529,7 +529,7 @@
   </div>
 </div>
 
-<div class="section" style="background-color: #2980b9;">
+<div class="section-mobile" style="background-color: #2980b9;">
   <div class="desc-plus-permata-belajar" style="height: auto;background-color: #2980b9;padding: 10px 71px 10px 71px;">
     <div class="container">
       <div class="row">
