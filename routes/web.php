@@ -15,6 +15,7 @@ Route::group(['as'=>'FrontEnd.','middleware'=>['CheckNoTelpon']], function(){
     Route::get('/bantuan-permatamall', 'HomePageController@bantuan')->name('bantuan');
     Route::get('/career', 'HomePageController@career')->name('career');
     Route::get('/store_survey', 'HomePageController@store_survey')->name('store_survey');
+    Route::post('/storecarrer', 'HomePageController@storecarrer')->name('storecarrer');
 });
 
 Route::get('/pengembangan', 'HomePageController@pengembangan')->name('pengembangan');

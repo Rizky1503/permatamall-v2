@@ -39,6 +39,39 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 	</div>
 </div>
 
+<div id="lamar" class="modal">
+  <div class="card">
+    <div class="card-body">
+    	<form method="POST" action="{{ route('FrontEnd.storecarrer') }}" enctype="multipart/form-data">@csrf
+    		<div class="row">
+    			<div class="col-md-12">
+    				<center>
+    					<span id="judul-job" class="font-style" style="font-size: 20px;"></span>
+    				</center>
+    			</div><hr>
+    			<div class="col-md-12">
+    				<div class="form-group">
+    					<label>Nama Lengkap</label>
+    					<input class="form-control" type="text" name="nama">
+    				</div>
+    			</div>
+    			<div class="col-md-12">
+    				<div class="form-group">
+    					<label>CV/Resume/Portofolio</label>
+    					<input class="form-control" type="file" name="file">
+    				</div>
+    			</div>
+    			<div class="col-md-12">
+    				<div class="form-group">
+    					<button class="btn btn-success" style="float:right;">Kirim</button>
+    				</div>
+    			</div>
+    		</div>
+	    </form>
+    </div>
+  </div>
+</div>
+
 @include('Pages.carrer-Business-development')
 @include('Pages.carrer-Guru-Les-Privat')
 
@@ -101,6 +134,13 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 	function bisnis(){
 		$('#guru').hide();
 		$('#bisnis').show();
+	}
+
+	function lamarNow(val){
+	  $('#judul-job').html(val)	
+	  $('#lamar').modal({
+	    fadeDuration: 250,
+	  });
 	}
 </script>
 @endsection

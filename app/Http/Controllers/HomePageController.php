@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\File; 
+use Illuminate\Routing\Controller;
+use Illuminate\Http\Response;
+use Image;
+
 
 class HomePageController extends Controller
 {
@@ -13,57 +18,57 @@ class HomePageController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-   {        
-    // $url = ENV('APP_URL_API').'web/homepage/popular';
-    //    $PopularData   = json_decode(file_get_contents($url));
-       if(Session::get('login')){
-
-           $mitra = json_decode(file_get_contents(ENV('APP_URL_API').'merchant/mitra/cek/'.decrypt(Session::get('id_token_xmtrusr'))));
-
-           if ($mitra == "true") {
-               $private = "Mitra";
-           }else{
-               $private = "Pelanggan";
-           }
-
-           $urlKota            = ENV('APP_URL_API').'web/homepage/kota';
-           $kotaList       = json_decode(file_get_contents($urlKota));
-
-           $count_survey = json_decode(file_get_contents(ENV('APP_URL_API').'web/homepage/survey/count/'.decrypt(Session::get('id_token_xmtrusr'))));
-
-           $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-           $ringkasan = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/ringkasan'));
-           $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
-           return view('Pages.homePage-Login')->with([
-               'count_survey' => $count_survey->count,
-               'kotaList'     => $kotaList,
-               'private'      => $private,
-               'data'         => $data,
-               'ringkasan'    => $ringkasan,
-               'soal'         => $soal, 
-           ]);
-
-       }else{
-           $private = "Harus_login";
-           $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-           $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
-           $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
-           return view('Pages.homePage')->with([
-               'private'    => $private,
-               'data'       => $data,
-               'ringkasan'  => $ringkasan,
-               'soal'       => $soal, 
-           ]);
-       }        
+    public function index(){        
+       $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+       $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
+       $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+       return view('Pages.homePage')->with([
+           'data'       => $data,
+           'ringkasan'  => $ringkasan,
+           'soal'       => $soal, 
+       ]);          
    }
 
-     public function career(){        
+    public function career(){        
         $private = "Harus_login";
        
         return view('Pages.carrer')->with([
             'private'    => $private,
         ]);          
+    }
+
+    public function storecarrer(Request $request){
+        $nama = str_replace(' ', '_', $request->nama);
+
+        $endpoint = "/file-submissions";
+        $response = array();
+        $file = $request->file('file');
+        $name = date('YmdHis') . '-' . $nama . '.' . $file->getClientOriginalExtension();
+        $path = base_path() .'/public/images/v2/Recruitment/';
+        $resource = fopen($file,"r") or die("File upload Problems");
+        $file->move($path, $name);
+
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', ENV('APP_URL_API_RESOURCE_V2').'upload/StoreCV', [
+              'multipart' => [
+                  [
+                      'name'     => 'cv',
+                      'contents' => file_get_contents($path . $name),
+                      'filename' => $name,
+                  ],
+              ]
+          ]);
+
+        $response = $client->request('POST', ENV('APP_URL_API_V2').'recruitment/storerecruitment', [
+            'form_params'     => [
+                'nama'  => $request->nama,
+                'file'  => $name,
+            ]
+        ]);
+
+        File::delete($path . $name);
+
+        return redirect()->route('FrontEnd.career');
     }
 
     public function store_survey(Request $request){
