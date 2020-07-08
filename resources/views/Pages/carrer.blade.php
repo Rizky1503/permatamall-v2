@@ -6,18 +6,36 @@
 			<div class="col-md-12">
 				<span class="font-style" style="font-size: 30px; color: #00B159;">Posisi yang dibuka</span>
 			</div>
-			<div class="col-md-6" style="margin-top: 1em;" onclick="bisnis()">
-				<div class="selection-carrer">
-					<center>
-						<span class="font-style"  style="font-size: 25px;">Business development</span>
-					</center>
+			<div id="development">
+				<div class="col-md-6" style="margin-top: 1em;" onclick="bisnis()">
+					<div class="selection-carrer" style="background-color: #00B159; color: white;">
+						<center>
+							<span class="font-style"  style="font-size: 25px;">Business development</span>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-6" onclick="guru()">
+					<div class="selection-carrer" style="margin-left: -91px; margin-top: 14px; background-color: white; color: #00B159;">
+						<center>
+							<span class="font-style" style="font-size: 25px;">Guru Les Private</span>
+						</center>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-6" onclick="guru()">
-				<div class="selection-carrer" style="margin-left: -91px; margin-top: 14px;">
-					<center>
-						<span class="font-style" style="font-size: 25px;">Guru Les Private</span>
-					</center>
+			<div id="les" style="display: none">
+				<div class="col-md-6" style="margin-top: 1em;" onclick="bisnis()">
+					<div class="selection-carrer" style="background-color: white; color: #00B159;">
+						<center>
+							<span class="font-style"  style="font-size: 25px;">Business development</span>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-6" onclick="guru()">
+					<div class="selection-carrer" style="margin-left: -91px; margin-top: 14px; background-color: #00B159; color: white;">
+						<center>
+							<span class="font-style" style="font-size: 25px;">Guru Les Private</span>
+						</center>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -83,8 +101,6 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 <style type="text/css">
 	.selection-carrer{
 		border: 1px solid #00B159;
-		background-color: #00B159;
-		color: white;
 		height: 70px;
 		padding: 16px 0px 0 0px;
 		border-radius: 7px;
@@ -172,11 +188,15 @@ darimana dan dimana saja di seluruh wilayah Indonesia dengan biaya murah menggun
 	function guru(){
 		$('#guru').show();
 		$('#bisnis').hide();
+		$('#development').hide();
+		$('#les').show();
 	}
 
 	function bisnis(){
 		$('#guru').hide();
 		$('#bisnis').show();
+		$('#development').show();
+		$('#les').hide();
 	}
 
 	function lamarNow(val){
