@@ -134,7 +134,7 @@
 				<center>
 					<div style="cursor: pointer; border: 1px;  width: 30%; background-color: #00B159; border-radius: 10px;">
 						<center>
-							<span class="font-style" onclick="lamarNow('Guru Les Private')" style="color: white; font-size: 25px;">LAMAR</span>
+							<span class="font-style" onclick="lamarNow('Guru Les Private')" style="color: white; font-size: 25px;">APPLY</span>
 						</center>
 					</div>
 					<span class="font-style" style="margin-top: -3em; font-size: 21px; color: #797474">Sampai 21 Juli 2020</span>
