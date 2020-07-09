@@ -12,28 +12,28 @@
               <div class="col-md-12">
                 <label class="label-paket">Pilih Kelas/Paket</label>
                 <select class="form-control select-paket font-style" style="font-size: 19px; color: #797474;" id="kelas">
-                  <option>--Pilih Kelas--</option>
-                  <option value="2">TES MASUK PTN</option>
-                  <option value="1">KELAS 12 IPA</option>
-                  <option value="1">KELAS 12 IPS</option>
-                  <option value="1">KELAS 11 SMA </option>
-                  <option value="1">KELAS 10 SMA</option>
-                  <option value="1">KELAS 9 SMA</option>
-                  <option value="1">KELAS 8 SMP</option>
-                  <option value="1">KELAS 7 SMP</option>
-                  <option value="1">KELAS 6 SMP</option>
-                  <option value="1">KELAS 5 SD</option>
-                  <option value="1">KELAS 4 SD</option>
+                  <option value="">--Pilih Kelas--</option>
+                  <option value="TES MASUK PTN">TES MASUK PTN</option>
+                  <option value="Kelas 12 IPA">KELAS 12 IPA</option>
+                  <option value="Kelas 12 IPS">KELAS 12 IPS</option>
+                  <option value="Kelas 11 SMA">KELAS 11 SMA </option>
+                  <option value="Kelas 10 SMA">KELAS 10 SMA</option>
+                  <option value="Kelas 9 SMP">KELAS 9 SMA</option>
+                  <option value="Kelas 8 SMP">KELAS 8 SMP</option>
+                  <option value="Kelas 7 SMP">KELAS 7 SMP</option>
+                  <option value="Kelas 6 SD">KELAS 6 SMP</option>
+                  <option value="Kelas 5 SD">KELAS 5 SD</option>
+                  <option value="Kelas 4 SD">KELAS 4 SD</option>
                 </select>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
                 <label class="label-paket">Durasi Langganan</label>
                 <select class="form-control select-paket font-style" style="font-size: 19px; color: #797474;" id="durasi" onchange="getharga(this.value)"> 
-                  <option>--Pilih Durasi--</option>
+                  <option value="">--Pilih Durasi--</option>
                   <option value="1">1 BULAN</option>
-                  <option value="2">3 BULAN</option>
-                  <option value="3">6 BULAN</option>
-                  <option value="4">12 BULAN</option>
+                  <option value="3">3 BULAN</option>
+                  <option value="6">6 BULAN</option>
+                  <option value="12">12 BULAN</option>
                 </select>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
@@ -44,7 +44,7 @@
               <div class="col-md-12" style="margin-top: 9px;">
                 <div class="button-style">
                   <center>
-                    <span style="color:white; font-size: 23px;  font-family: 'Ubuntu', sans-serif;">Langganan Sekarang !</span>
+                    <span onclick="detailPaket()" style="cursor: pointer; color:white; font-size: 23px;  font-family: 'Ubuntu', sans-serif;">Langganan Sekarang !</span>
                   </center>
                 </div>
               </div>
@@ -655,7 +655,6 @@
   </div>
 </div>
 @endif
-
 <div id="video" class="modal">
   <div class="card">
     <div class="card-body">
@@ -668,6 +667,72 @@
          <video controls autoplay width="320" height="240"></video>
      </div>
       </center>
+    </div>
+  </div>
+</div>
+
+<div id="detail-paket" class="modal" style="max-width: 50% !important;">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          <span class="font-style" style="color:#00b159; font-size: 25px; ">Langganan Kamu</span>
+          <div class="paket-langganan">
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 12px; ">Paket/Kelas Kamu</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 6px; ">:</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-paket"><b>Tes Masuk PTN</b></span>
+          </div>
+          <div class="durasi-langganan">
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 14px; ">Durasi Langganan</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 6px; ">:</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-durasi"><b>12 Bulan</b></span>
+          </div>
+          <div class="Harga-langganan" style="margin-bottom: 20px;">
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 65px; ">Harga Paket</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 6px; ">:</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; "><b>Gratis Selama Promosi</b></span>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <span class="font-style" style="color:#00b159; font-size: 25px; ">Paket Bimbel Meliputi</span>
+          <div class="paket-1">
+            <span class="font-style" style="color:#00B159; font-size: 20px; margin-right: 12px; ">-</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; ">Ringkasan Materi Pembelajaran</span>
+          </div>
+          <div class="paket-2">
+            <span class="font-style" style="color:#00B159; font-size: 20px; margin-right: 12px; ">-</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; ">Soal Latihan dengan Pembahasan</span>
+          </div>
+          <div class="paket-3">
+            <span class="font-style" style="color:#00B159; font-size: 20px; margin-right: 12px; ">-</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; ">Video Tutorial Belajar</span>
+          </div>
+          <div class="paket-4" style="margin-bottom: 20px;">
+            <span class="font-style" style="color:#00B159; font-size: 20px; margin-right: 12px; ">-</span>
+            <span class="font-style" style="color:#797474; font-size: 20px; ">Forum Diskusi dan Konsultasi</span>
+          </div>          
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <a href="#ex1" rel="modal:open">
+              <div style="border: 1px solid #00b159; background-color: white; height: 40px; padding-top: 5px; border-radius: 13px;">
+                <center>
+                  <span class="font-style" style="font-size: 20px; color: #797474; ">Ubah Paket</span>
+                </center>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="{{ route('Login.index') }}">
+              <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 5px; border-radius: 13px;">
+                <center>
+                  <span class="font-style" style="font-size: 20px; color: white; ">Langganan Sekarang</span>
+                </center>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>      
     </div>
   </div>
 </div>
@@ -984,30 +1049,46 @@ function GET(url, callback) {
     });
   }
 
+  function detailPaket(){
+    if ($('#kelas').val() == "" && $('#durasi').val() == "") {
+      alert ('silahkan pilih paket dan durasi kamu terlebih dahulu')
+      
+    }else{
+      var kelas  = $('#kelas').val()
+      var durasi = $('#durasi').val()
+
+      $('#value-paket').html(kelas)
+      $('#value-durasi').html(durasi + ' Bulan')
+
+      $('#detail-paket').modal({
+        fadeDuration: 250,
+      });   
+    }
+    
+  }
 
   function getharga(val){
-    if ($('#kelas').val()==1) {
+    if ($('#kelas').val() == "Kelas 12 IPA" || $('#kelas').val() == "Kelas 12 IPS" || $('#kelas').val() == "Kelas 11 SMA" || $('#kelas').val() == "Kelas 10 SMA" || $('#kelas').val() == "Kelas 9 SMP"  || $('#kelas').val() == "Kelas 8 SMP"  || $('#kelas').val() == "Kelas 7 SMP"  || $('#kelas').val() == "Kelas 6 SD"   || $('#kelas').val() == "Kelas 5 SD"   || $('#kelas').val() == "Kelas 4 SD" ) {
       if (val == 1) {
         $('#harga').html('RP 20.000/ 1 Bulan')
-      }else if( val == 2){
-        $('#harga').html('RP 40.000/ 3 Bulan')
       }else if( val == 3){
+        $('#harga').html('RP 40.000/ 3 Bulan')
+      }else if( val == 6){
         $('#harga').html('RP 70.000/ 6 Bulan')
-      }else if( val == 4){
+      }else if( val == 12){
         $('#harga').html('RP 120.000/ 12 Bulan')
       }
-    }else if ($('#kelas').val()==2){
+    }else if ($('#kelas').val()=="TES MASUK PTN"){
       if (val == 1) {
         $('#harga').html('RP 30.000/ 1 Bulan')
-      }else if( val == 2){
-        $('#harga').html('RP 60.000/ 3 Bulan')
       }else if( val == 3){
+        $('#harga').html('RP 60.000/ 3 Bulan')
+      }else if( val == 6){
         $('#harga').html('RP 100.000/ 6 Bulan')
-      }else if( val == 4){
+      }else if( val == 12){
         $('#harga').html('RP 180.000/ 12 Bulan')
       }
     }
-
   }
 
 </script>

@@ -118,59 +118,9 @@
         </div><br>
         <div class="col-md-12">
           <center>
-            <table border="1" style="border-color: #f1eded; border-radius: 1em 0em 1em 1em; width: 50%;">
-              <tr>
-                <td class="td" rowspan="2" align="center" style="background: #D9E7F4;" >
-                  <span class="font-style" style="font-size: 15px;">Biaya</span>
-                </td>
-
-                <td class="td" align="center" style="background-color: #d4d4d4;">
-                  <span class="font-style" style="font-size: 15px;">Bimbel Offline</span>
-                </td>
-                
-                <td class="td" align="center" style="background-color: #d4d4d4;">
-                  <span class="font-style" style="font-size: 15px;">Bimbel Online </span>
-                </td>
-                
-                <td class="td" align="center" style="background-color: white;">
-                  <span class="font-style" style="color: #00B159; font-size: 19px; z-index: 1;">Permata</span> 
-                  <span class="font-style" style="color: #4d9aea; font-size: 19px; z-index: 1;">Belajar</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td align="center" class="td" style="background-color: white">
-                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp10.000.000 / tahun )</span>
-                </td>
-                <td align="center" class="td" style="background-color: white">
-                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp10.000.000 / tahun )</span>
-                </td>
-                <td align="center" class="td" style="background-color: #E5F7EE">
-                  <span class="font-style" style="font-size: 13px;">Sangat Murah dan Terjangkau <br>(hanya Rp100/hari)</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Cara Belajar</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">sesuai jadwal belajar yang sudah <br> ditentukan dan waktu terbatas</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">belajar kapanpun dan dimanapun <br> secara online </span></td>
-                 <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">belajar kapanpun dan dimanapun <br> dan bisa diulang-ulang</span></td>
-              </tr>
-
-              <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Materi Belajar</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">dengan buku materi pelajaran <br> yang banyak dan merepotkan</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">terkadang hanya tersedia <br> beberapa materi</span></td>
-                 <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">materi belajar lengkap dengan <br> ringkasan materi dan video belajar</span></td>
-              </tr>
-
-              <tr>
-                <td class="td" align="center" style="background: #D9E7F4;" ><span class="font-style" style="font-size: 15px;">Metode Pembelajaran</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">terlalu banyak murid dan diajarkan <br> sekali menyesuaikan jadwal</span></td>
-                <td align="center" class="td" style="background-color: white"><span class="font-style" style="font-size: 13px;">pembelajaran online <br> kurang terintegrasi</span></td>
-                 <td align="center" class="td" style="background-color: #E5F7EE"><span class="font-style" style="font-size: 13px;">pembelajaran terintegrasi dengan <br> ringkasan materi dan video belajar <br> disertai dengan quiz</span></td>
-              </tr>
-            </table>
+            <img src="{!! asset('public/images/home/bimbel-offline.png') !!}">
+            <img src="{!! asset('public/images/home/bimbel-online.png') !!}" style="margin-top: 1em;">
+            <img src="{!! asset('public/images/home/permatabelajar.png') !!}" style="margin-top: 1em;">
           </center>
         </div>
       </div>
@@ -980,30 +930,5 @@ function GET(url, callback) {
     });
   }
 
-
-  function getharga(val){
-    if ($('#kelas').val()==1) {
-      if (val == 1) {
-        $('#harga').html('RP 20.000/ 1 Bulan')
-      }else if( val == 2){
-        $('#harga').html('RP 40.000/ 3 Bulan')
-      }else if( val == 3){
-        $('#harga').html('RP 70.000/ 6 Bulan')
-      }else if( val == 4){
-        $('#harga').html('RP 120.000/ 12 Bulan')
-      }
-    }else if ($('#kelas').val()==2){
-      if (val == 1) {
-        $('#harga').html('RP 30.000/ 1 Bulan')
-      }else if( val == 2){
-        $('#harga').html('RP 60.000/ 3 Bulan')
-      }else if( val == 3){
-        $('#harga').html('RP 100.000/ 6 Bulan')
-      }else if( val == 4){
-        $('#harga').html('RP 180.000/ 12 Bulan')
-      }
-    }
-
-  }
 
 </script>

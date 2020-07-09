@@ -50,7 +50,7 @@
             <h3 class="ps-widget__title">Download Apps Di</h3>
           </header>
           <footer>
-            <p><a href='https://play.google.com/store/apps/details?id=com.permatamall&hl=in'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
             <p><a href=''><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 70px;"></a></p>
           </footer>
         </aside>

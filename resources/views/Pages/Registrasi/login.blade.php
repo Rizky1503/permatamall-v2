@@ -267,7 +267,7 @@
   background-image: linear-gradient(#4C69BA, #3B55A0);
   /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
   text-shadow: 0 -1px 0 #354C8C;
-  width: 47%;
+  width: 100%;
 }
 .loginBtn--facebook:before {
   border-right: #364e92 1px solid;
@@ -284,7 +284,7 @@
 .loginBtn--google {
   /*font-family: "Roboto", Roboto, arial, sans-serif;*/
   background: #DD4B39;
-  width: 47.4%;
+  width: 100%;
 }
 .loginBtn--google:before {
   border-right: #BB3F30 1px solid;
