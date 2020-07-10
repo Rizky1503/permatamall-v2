@@ -670,12 +670,14 @@
               </div>
             </a>
           </div>
-          <div class="col-md-6">
-            <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 5px; border-radius: 13px;">
-              <input type="hidden" id="gabungan">
-              <center>
-                <span onclick="login()" class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Langganan Sekarang</span>
-              </center>
+          <div class="col-md-6" style="margin-top: 5px;">
+            <div style="border: 1px solid #00b159; background-color: #00b159; height: 30px; padding-top: 5px; border-radius: 13px;">
+              <form method="get" action="{{ route('Login.index') }}">
+                <input type="hidden" name="gabungan" id="gabungan">
+                <center>
+                  <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Langganan Sekarang</span></button>
+                </center>
+            </form>
             </div>
           </div>
         </div>
@@ -1000,7 +1002,7 @@ function GET(url, callback) {
     }else{
       var kelas  = $('#kelas').val()
       var durasi = $('#durasi').val()
-      var gabungan = '{{ encrypt('+kelas+','+durasi+') }}'
+      var gabungan = [kelas,durasi]
       
       $('#value-paket').html(kelas)
       $('#gabungan').val(gabungan)
