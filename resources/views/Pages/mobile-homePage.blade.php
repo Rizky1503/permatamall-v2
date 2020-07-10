@@ -673,9 +673,9 @@
           <div class="col-md-6" style="margin-top: 5px;">
             <div style="border: 1px solid #00b159; background-color: #00b159; height: 30px; padding-top: 5px; border-radius: 13px;">
               <form method="get" action="{{ route('Login.index') }}">
-                <input type="hidden" name="gabungan" id="gabungan">
+                <input type="hidden" name="gabungan" id="gabungan-mobile">
                 <center>
-                  <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Langganan Sekarang</span></button>
+                  <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 15px; color: white; cursor: pointer;">Langganan Sekarang</span></button>
                 </center>
             </form>
             </div>
@@ -1000,13 +1000,13 @@ function GET(url, callback) {
       alert ('silahkan pilih paket dan durasi kamu terlebih dahulu')
       
     }else{
-      var kelas  = $('#kelas').val()
-      var durasi = $('#durasi').val()
-      var gabungan = [kelas,durasi]
+      var kelas  = $('#kelas-mobile').val()
+      var durasi = $('#durasi-mobile').val()
+      var gabunganmobile = [kelas,durasi]
       
-      $('#value-paket').html(kelas)
-      $('#gabungan').val(gabungan)
-      $('#value-durasi').html(durasi + ' Bulan')
+      $('#value-paket-mobile').html(kelas)
+      $('#gabungan-mobile').val(gabunganmobile)
+      $('#value-durasi-mobile').html(durasi + ' Bulan')
 
       $('#detail-paket-mobile').modal({
         fadeDuration: 250,

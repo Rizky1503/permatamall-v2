@@ -147,6 +147,7 @@
                     <input type="password" id="password_mobile" class="form-control" name="Password"value="{{ old('password') }}">
                     <span toggle="#password_mobile" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                   </div>
+                  <input type="hidden" name="detail" value="{{$paket}}">
                   <br>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary">Login</button>
