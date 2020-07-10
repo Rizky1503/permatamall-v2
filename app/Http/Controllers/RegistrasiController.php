@@ -205,7 +205,7 @@ class RegistrasiController extends Controller
             Session::put('login',TRUE);
 
             if (session('link') == "") {
-                return redirect()->route('Login.download',$request->detail);
+                return redirect()->route('Login.download');
             }else{
                 return redirect(session('link'));                
             }
