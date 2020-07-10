@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['as'=>'FrontEnd.','middleware'=>['CheckNoTelpon']], function(){
+Route::group(['as'=>'FrontEnd.'], function(){
     Route::get('/', 'HomePageController@index')->name('index');
     Route::get('/bantuan-permatamall', 'HomePageController@bantuan')->name('bantuan');
     Route::get('/career', 'HomePageController@career')->name('career');
@@ -39,6 +39,7 @@ Route::group(['prefix'=>'/registrasi','as'=>'Registrasi.'], function(){
 
 Route::group(['prefix'=>'/login','as'=>'Login.'], function(){
     Route::get('/', 'RegistrasiController@login')->name('index');
+    Route::get('/download/{id}', 'RegistrasiController@download')->name('download');
     Route::post('/check', 'RegistrasiController@checkLogin')->name('check');
 });
 

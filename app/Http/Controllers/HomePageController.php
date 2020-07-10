@@ -30,8 +30,6 @@ class HomePageController extends Controller
    }
 
     public function career(){        
-        $private = "Harus_login";
-       
         return view('Pages.carrer')->with([
             'private'    => $private,
         ]);          

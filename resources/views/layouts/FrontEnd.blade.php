@@ -140,6 +140,9 @@
         overflow: visible;
       }
 
+      .font-style{
+        font-family: 'Ubuntu', sans-serif;
+      }
       </style>
     <!-- JS Library-->    
     <script type="text/javascript" src="{!! asset('public/assets/plugins/jquery/dist/jquery.min.js') !!}"></script>

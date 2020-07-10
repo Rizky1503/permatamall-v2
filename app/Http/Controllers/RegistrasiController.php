@@ -31,8 +31,7 @@ class RegistrasiController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function check(Request $request)
-    {
+    public function check(Request $request){
         $this->validate($request, [
             'jenis_registrasi'  => 'required',
             'nama_lengkap'      => 'required',
@@ -131,13 +130,24 @@ class RegistrasiController extends Controller
                 ]);
 
                 if (session('link') == "") {
-                    return redirect()->route('EmailVerify.index');
+                    return redirect()->route('Login.download');
                 }else{
-                    return redirect(session('link'));                
+                    return redirect()->route('Login.download');             
                 }                
             }
         }
-    }   
+    }  
+
+    public function download($id){
+        $ex = (explode(",",$id));
+        $kelas = $ex[0]; 
+        $durasi = $ex[1];
+
+        return view('Pages.download')->with([
+            'kelas'   => $kelas,
+            'durasi'  => $durasi,
+        ]);
+    } 
 
 
     /**
@@ -157,13 +167,11 @@ class RegistrasiController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function login()
+    public function login(Request $request)
     {
-        Session::put('jenis_user_login',encrypt('pelanggan'));
-        if(Session::get('login')){
-            return redirect()->route('Mitra.index');
-        }
-        return view('Pages.Registrasi.login');
+        return view('Pages.Registrasi.login')->with([
+            'paket'      => $request->gabungan,
+        ]);
     }
 
 
@@ -180,58 +188,32 @@ class RegistrasiController extends Controller
             'Password' => 'required',
         ]);
 
-        if ($request->jenis_Login == "Mitra") {
+        
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan/cekLogin', [
+            'form_params'   => [
+                'email'     => $request->email,
+                'password'  => $request->Password,
+            ]
+        ]);
 
-            $client = new \GuzzleHttp\Client();            
-            $response = $client->request('POST', ENV('APP_URL_API').'merchant/mitra/cekLogin', [
-                'form_params'   => [
-                    'email'     => $request->email,
-                    'password'  => $request->Password,
-                ]
-            ]);
+        $responses = json_decode($response->getBody());
+        if ($responses->status == "true") {
+            Session::put('id_token_xmtrusr',encrypt($responses->cekEmail->id_pelanggan));
+            Session::put('id_token_xmtrusr_name',encrypt($responses->cekEmail->nama));
+            Session::put('profile',encrypt($responses->cekEmail));
+            Session::put('login',TRUE);
 
-            $responses = json_decode($response->getBody());
-            if ($responses->status == "true") {                
-                Session::put('id_token_xmtrusr',encrypt($responses->cekEmail->id_mitra));
-                Session::put('id_token_xmtrusr_name',encrypt($responses->cekEmail->nama));
-                Session::put('profile',encrypt($responses->cekEmail));
-                Session::put('login',TRUE);
-
-                if (session('link') == "") {
-                    return redirect()->route('Mitra.index');
-                }else{
-                    return redirect(session('link'));                
-                }
+            if (session('link') == "") {
+                return redirect()->route('Login.download',$request->detail);
             }else{
-                return redirect()->route('Login.index')->with('alert','Login Gagal, pastikan email dan passwod sesuai');
+                return redirect(session('link'));                
             }
+
         }else{
-
-            $client = new \GuzzleHttp\Client();
-            $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan/cekLogin', [
-                'form_params'   => [
-                    'email'     => $request->email,
-                    'password'  => $request->Password,
-                ]
-            ]);
-
-            $responses = json_decode($response->getBody());
-            if ($responses->status == "true") {
-                Session::put('id_token_xmtrusr',encrypt($responses->cekEmail->id_pelanggan));
-                Session::put('id_token_xmtrusr_name',encrypt($responses->cekEmail->nama));
-                Session::put('profile',encrypt($responses->cekEmail));
-                Session::put('login',TRUE);
-
-                if (session('link') == "") {
-                    return redirect()->route('Mitra.index');
-                }else{
-                    return redirect(session('link'));                
-                }
-
-            }else{
-                return redirect()->route('Login.index')->with('alert','Login Gagal, pastikan email dan passwod sesuai');
-            }
-        }        
+            return redirect()->route('Login.index')->with('alert','Login Gagal, pastikan email dan passwod sesuai');
+        }
+              
     }
 
     /**
@@ -262,7 +244,7 @@ class RegistrasiController extends Controller
         $EmailVerifiedMitra = json_decode(file_get_contents(ENV('APP_URL_API').'web/profile/mitra/email_verified/'.decrypt(Session::get('id_token_xmtrusr'))));      
 
         if(json_encode($EmailVerifiedMitra->data, true) == "false") {
-            return redirect()->route('Mitra.index');
+            return redirect()->route('Login.download');
         }        
         return view('Pages.Registrasi.verifyMitra');
     }    
@@ -326,7 +308,7 @@ class RegistrasiController extends Controller
     {
         $url = ENV('APP_URL_API').'web/profile/mitra/email_confirm/'.decrypt($id);
         $data = json_decode(file_get_contents($url));     
-        return redirect()->route('Mitra.index');
+        return redirect()->route('Login.download');
     }
 
     /**
@@ -337,7 +319,7 @@ class RegistrasiController extends Controller
     public function Forgot()
     {
         if(Session::get('login')){
-            return redirect()->route('Mitra.index');
+            return redirect()->route('Login.download');
         }
         return view('Pages.Registrasi.Forgot');
     } 
@@ -351,7 +333,7 @@ class RegistrasiController extends Controller
     public function ChangePassword(Request $request)
     {
         if(Session::get('login')){
-            return redirect()->route('Mitra.index');
+            return redirect()->route('Login.download');
         }
         return view('Pages.Registrasi.Change')->with([
             'id' => str_replace(' ', '+', $request->token)

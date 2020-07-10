@@ -102,6 +102,7 @@
       slider.scrollLeft = scrollLeft - walk;       
 
   });
+
 </script>
 
 <style type="text/css">

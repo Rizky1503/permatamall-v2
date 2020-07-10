@@ -680,12 +680,12 @@
           <div class="paket-langganan">
             <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 12px; ">Paket/Kelas Kamu</span>
             <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 6px; ">:</span>
-            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-paket"><b>Tes Masuk PTN</b></span>
+            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-paket"><b></b></span>
           </div>
           <div class="durasi-langganan">
             <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 14px; ">Durasi Langganan</span>
             <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 6px; ">:</span>
-            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-durasi"><b>12 Bulan</b></span>
+            <span class="font-style" style="color:#797474; font-size: 20px; " id="value-durasi"><b></b></span>
           </div>
           <div class="Harga-langganan" style="margin-bottom: 20px;">
             <span class="font-style" style="color:#797474; font-size: 20px; margin-right: 65px; ">Harga Paket</span>
@@ -723,13 +723,14 @@
             </a>
           </div>
           <div class="col-md-6">
-            <a href="{{ route('Login.index') }}">
-              <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 5px; border-radius: 13px;">
+            <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 2px; border-radius: 13px;">
+              <form method="get" action="{{ route('Login.index') }}">
+                <input type="hidden" name="gabungan" id="gabungan">
                 <center>
-                  <span class="font-style" style="font-size: 20px; color: white; ">Langganan Sekarang</span>
+                  <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Langganan Sekarang</span></button>
                 </center>
-              </div>
-            </a>
+              </form>
+            </div>
           </div>
         </div>
       </div>      
@@ -929,7 +930,7 @@
 <script src="{!! asset('public/assets/plyr/plyr.min.js') !!}"></script>
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
 <script type="text/javascript">
-var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200626-Video-contoh_soal_matematika.webm";
+var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200709-Video-BARIS_DAN_DERET.mp4";
 var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
@@ -1056,8 +1057,10 @@ function GET(url, callback) {
     }else{
       var kelas  = $('#kelas').val()
       var durasi = $('#durasi').val()
-
+      var gabungan = [kelas,durasi]
+      
       $('#value-paket').html(kelas)
+      $('#gabungan').val(gabungan)
       $('#value-durasi').html(durasi + ' Bulan')
 
       $('#detail-paket').modal({

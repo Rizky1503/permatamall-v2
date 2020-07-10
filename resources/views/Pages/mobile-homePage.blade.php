@@ -670,14 +670,13 @@
               </div>
             </a>
           </div>
-          <div class="col-md-6" style="margin-top: 5px;">
-            <a href="{{ route('Login.index') }}">
-              <div style="border: 1px solid #00b159; background-color: #00b159; height: 30px; padding-top: 5px; border-radius: 13px;">
-                <center>
-                  <span class="font-style" style="font-size: 15px; color: white; ">Langganan Sekarang</span>
-                </center>
-              </div>
-            </a>
+          <div class="col-md-6">
+            <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 5px; border-radius: 13px;">
+              <input type="hidden" id="gabungan">
+              <center>
+                <span onclick="login()" class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Langganan Sekarang</span>
+              </center>
+            </div>
           </div>
         </div>
       </div>      
@@ -874,7 +873,7 @@
 <script src="{!! asset('public/assets/plyr/plyr.min.js') !!}"></script>
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
 <script type="text/javascript">
-var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200626-Video-contoh_soal_matematika.webm";
+var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200709-Video-BARIS_DAN_DERET.mp4";
 var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
@@ -999,11 +998,13 @@ function GET(url, callback) {
       alert ('silahkan pilih paket dan durasi kamu terlebih dahulu')
       
     }else{
-      var kelas  = $('#kelas-mobile').val()
-      var durasi = $('#durasi-mobile').val()
-
-      $('#value-paket-mobile').html(kelas)
-      $('#value-durasi-mobile').html(durasi + ' Bulan')
+      var kelas  = $('#kelas').val()
+      var durasi = $('#durasi').val()
+      var gabungan = '{{ encrypt('+kelas+','+durasi+') }}'
+      
+      $('#value-paket').html(kelas)
+      $('#gabungan').val(gabungan)
+      $('#value-durasi').html(durasi + ' Bulan')
 
       $('#detail-paket-mobile').modal({
         fadeDuration: 250,

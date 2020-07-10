@@ -58,6 +58,7 @@
                   <input type="password" id="password_desktop" class="form-control" name="Password"value="{{ old('password') }}">
                   <span toggle="#password_desktop" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
+                <input type="hidden" name="detail" value="{{$paket}}">
                 <br>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Login</button>
@@ -76,11 +77,13 @@
                 <center><p style="font-weight: 600">Atau Dengan</p></center>
             </div>
             <div class="form-group">
-              <a href="{{ route('login_provider', 'facebook') }}">
+              <!-- <a href="{{ route('login_provider', 'facebook') }}"> -->
+              <a href="#">
                 <button class="loginBtn loginBtn--facebook">Facebook</button>
               </a>
               
-              <a href="{{ route('login_provider', 'google') }}">
+              <!-- <a href="{{ route('login_provider', 'google') }}"> -->
+              <a href="#">
                 <button class="loginBtn loginBtn--google">Google</button>
               </a>
               
