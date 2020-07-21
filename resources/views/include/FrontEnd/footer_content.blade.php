@@ -23,7 +23,7 @@
           <footer>
             <p><a href='' class="color-footer">Hubungi Kami</a></p>
             <p><a href="{{ route('Bantuan.bantuan') }}" class="color-footer">Pusat Bantuan</a></p>
-            <p><a href="{{ route('FrontEnd.career') }}" class="color-footer">Karir</a></p>
+            <p><a href="#" class="color-footer">Karir</a></p>
             <p><a href='' class="color-footer">Tentang Kami</a></p>
             <p><a href="{{ route('Refund.index') }}" id="refund" class="color-footer">Pengembalian Dana</a></p>
             <p><a href="" id="refund" class="color-footer">Syarat dan Ketentuan</a></p>
