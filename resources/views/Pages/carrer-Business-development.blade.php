@@ -136,12 +136,16 @@
 				</div>
 				<div class="col-md-12" style="margin-top: 4em;">
 					<center>
-						<div style="cursor: pointer;  border: 1px;  width: 30%; background-color: #00B159; border-radius: 10px;">
+						<div style="border: 1px;  width: 30%; background-color: grey; border-radius: 10px;">
 							<center>
-								<span class="font-style" onclick="lamarNow('Business Develovment')" style="color: white; font-size: 25px;">APPLY</span>
+								<span class="font-style" onclick="lamarNow_('Business Develovment')" style="color: white; font-size: 25px;">APPLY</span>
 							</center>
 						</div>
-						<span class="font-style" style="margin-top: -3em; font-size: 21px; color: #797474">Sampai 21 Juli 2020</span>
+						<span class="font-style" style="margin-top: -3em; font-size: 21px; color: #797474">
+							<center>
+								Terimakasih atas data pelamar yang sudah kami terima, pelamar yang memenuhi syarat akan kami hubungi. Salam PermataBelajar...
+							</center>
+						</span>
 					</center>
 				</div>
 			</div>

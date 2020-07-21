@@ -30,9 +30,7 @@ class HomePageController extends Controller
    }
 
     public function career(){        
-        return view('Pages.carrer')->with([
-            'private'    => $private,
-        ]);          
+        return view('Pages.carrer');          
     }
 
     public function storecarrer(Request $request){
