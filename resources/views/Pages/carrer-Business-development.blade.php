@@ -147,7 +147,7 @@
 							</center>
 						</span>
 					</center>
-				</div>
+				</di
 			</div>
 		</div>
 	</div>
