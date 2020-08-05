@@ -875,7 +875,7 @@
 <script src="{!! asset('public/assets/plyr/plyr.min.js') !!}"></script>
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
 <script type="text/javascript">
-var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/20200709-Video-BARIS_DAN_DERET.mp4";
+var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/KELAS-10-IPA-IPS-MTK-FUNGSI.mp4";
 var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
