@@ -880,9 +880,6 @@ var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
 window.MediaSource = window.MediaSource || window.WebKitMediaSource;
-if (!!!window.MediaSource) {
-  alert('MediaSource API is not available');
-}
 
 var mediaSource = new MediaSource();
 
