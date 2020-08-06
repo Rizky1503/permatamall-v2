@@ -52,6 +52,7 @@
           <footer>
             <p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
             <p><a href=''><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p><a href='http://resource.permatamall.com/api/v1/v2/download/aplikasi'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
           </footer>
         </aside>
       </div>
