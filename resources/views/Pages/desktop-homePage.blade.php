@@ -984,7 +984,6 @@ function GET(url, callback) {
   xhr.send();
   xhr.onload = function(e) {
     if (xhr.status != 200) {
-      alert("Unexpected status code " + xhr.status + " for " + url);
       return false;
     }
     callback(new Uint8Array(xhr.response));
