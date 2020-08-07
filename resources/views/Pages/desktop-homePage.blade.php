@@ -218,7 +218,7 @@
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
-                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/2.png') !!}">
+                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/2.PNG') !!}">
                   </center>
                 </div>
                 <div class="name-testimoni">
@@ -239,7 +239,7 @@
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
-                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/3.png') !!}">
+                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/3.PNG') !!}">
                   </center>
                 </div>
                 <div class="name-testimoni">
