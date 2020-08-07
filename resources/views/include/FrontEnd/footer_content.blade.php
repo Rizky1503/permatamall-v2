@@ -9,7 +9,7 @@
             </a>
           </header>
           <footer>
-            <p>Email: <a href='mailto:support@permatamall.com'>support@permatamall.com</a></p>
+            <p>Email: <a href='mailto:support@permatabelajar.com'>support@permatabelajar.com</a></p>
             <p>Phone: 0811811306</p>
             <p>whatsapp: 0811811306</p>
           </footer>
@@ -18,7 +18,7 @@
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
         <aside class="ps-widget--footer ps-widget--link">
           <header>
-            <h3 class="ps-widget__title">Tentang PermataMall</h3>
+            <h3 class="ps-widget__title">Tentang PERMATA Belajar</h3>
           </header>
           <footer>
             <p><a href='' class="color-footer">Hubungi Kami</a></p>
@@ -33,26 +33,26 @@
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
         <aside class="ps-widget--footer ps-widget--link">
           <header>
-            <h3 class="ps-widget__title">Produk PERMATAMALL</h3>
+            <h3 class="ps-widget__title">Produk PERMATA BELAJAR</h3>
           </header>
           <footer>
-            <p><a href='' class="color-footer">Permata Bimbel</a></p>
-            <p><a href='' class="color-footer">Permata Belanja</a></p>
-            <p><a href='' class="color-footer">Permata Travel</a></p>
-            <p><a href='' class="color-footer">Permata Sewa Gedung</a></p>
-            <!-- <p><a href='' class="color-footer">Permata Jasa</a></p> -->
+            <p><a href='' class="color-footer">Bimbel Online</a></p>
+            <p><a href='' class="color-footer">Bimbel Offline</a></p>
+            <p><a href='' class="color-footer">Private</a></p>
           </footer>
         </aside>
       </div>
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
         <aside class="ps-widget--footer ps-widget--link">
           <header>
-            <h3 class="ps-widget__title">Download Apps Di</h3>
+            <h3 class="ps-widget__title">Download aplikasi PERMATA BELAJAR</h3>
           </header>
           <footer>
             <p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
+
             <p><a href=''><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 70px;"></a></p>
-            <p><a href='http://resource.permatamall.com/api/v1/v2/download/aplikasi'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
+
+            <p><a href='http://resource.permatamall.com/api/v1/v2/download/aplikasi'><img src="{!! asset('public/assets/images/icon/icon/Windows_badge.png') !!}" alt="" style="max-height: 70px;"></a></p>
           </footer>
         </aside>
       </div>

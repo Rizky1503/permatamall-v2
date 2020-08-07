@@ -13,41 +13,57 @@
     </script>
 
     @if(ENV('APP_ENV') == "production")
-    <meta http-equiv="Refresh" content="0;URL=https://frontend.permatamall.com"/>
+    <meta http-equiv="Refresh" content="0;URL=https://permatabelajar.com"/>
     @endif
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="permata, permata mall, Permata Mall, PermataMall indonesia, permata nusantara permata mal nusantara, produk baru,popular, terbaru, termurah, nusantara, barang bagus, tiket, paket wisata, liburan, luar kota, luar negeri , jakarta, bimbel, tryout, bimbel online, sewa mobil, penginapan, hotel, Sewa Gedung, liburan" itemprop="keywords">
-    <meta name="description" content="permatamall.com Situs penyedia jasa Pendidikan, Penjualan Barang, Penyewaan Sewa Gedung, Pengandaan segala kebutuhan dengan jaminan keanggotaan secara aman dan nyaman untuk melakukan transaksi." />
+   
+    <meta name="keywords" content="permata, permata belajar, Permata Berlajar, PermataBelajar, permatabelajar, indonesia, permata nusantara permata mal nusantara, jakarta, bimbel, tryout, bimbel online" itemprop="keywords">
+   
+    <meta name="description" content="permatabelajar.com Situs penyedia Bimbel Online, Bimbel Offline dan Private" />
+    
     <meta name="twitter:card" content="summary_large_image"/>
+    
     <meta name="twitter:site" content="@permata_mall"/>
+    
     <meta name="twitter:creator" content="@permata_mall" />
-    <meta name="twitter:description" content="permatamall.com Situs penyedia jasa Pendidikan, Penjualan Barang, Penyewaan Sewa Gedung, Pengandaan segala kebutuhan dengan jaminan keanggotaan secara aman dan nyaman untuk melakukan transaksi." />
+    
+    <meta name="twitter:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Bimbel Offline dan Private." />
+    
     <meta name="twitter:image:src" content="{!! asset('public/assets/images/logoonly-100x100.png') !!}" />
+
     <meta property="fb:pages" content="109886990386740" />
     <meta property="fb:app_id" content="109886990386740" />
+
     <meta property="article:author" content="{{ ENV('APP_URL_FACEBOOK') }}" itemprop="author" />
+    
     <meta property="article:publisher" content="{{ ENV('APP_URL_FACEBOOK') }}" />
-    <meta property="og:site_name" content="PermataMall"/>
-    <meta property="og:title" content="Permata Mall | Termurah, Terpercaya, Teraman"/>
-    <meta property="og:url" content="https://permatamall.com/"/>
-    <meta property="og:description" content="permatamall.com Situs penyedia jasa Pendidikan, Penjualan Barang, Penyewaan Sewa Gedung, Pengandaan segala kebutuhan dengan jaminan keanggotaan secara aman dan nyaman untuk melakukan transaksi." >
-    <meta property="og:image" content="{!! asset('public/assets/images/logoonly-100x100.png') !!}" />
+    
+    <meta property="og:site_name" content="PermataBelajar"/>
+    
+    <meta property="og:title" content="Permata Belajar | Bimbingan Belajar, Bimbel Online, Bimbel Offline dan Private"/>
+    
+    <meta property="og:url" content="https://permatabelajar.com/"/>
+    
+    <meta property="og:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Bimbel Offline dan Private." >
+    
+    <meta property="og:image" content="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}" />
     <meta property="og:image:width" content="650" />
     <meta property="og:image:height" content="366" />
     <meta property="og:type" content="article" />
     <meta name="google-site-verification" content="OrdhcJTH_OZPkoPhlb4roRLz0lL3ddlVyF6jcQkARqc" />
 
     <link rel="canonical" href="https://permatamall.com" />
-    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://permatamall.com">
-    <link rel="apple-touch-icon" href="{!! asset('public/assets/images/logoonly-100x100.png') !!}">
-    <link rel="android-touch-icon" href="{!! asset('public/assets/images/logoonly-100x100.png') !!}" />
-    <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-100x100.png') !!}">
-    <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-100x100.png') !!}" type="image/x-icon" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://permatabelajar.com">
+    <link rel="apple-touch-icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
+    <link rel="android-touch-icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}" />
+    <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
+    <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}" type="image/x-icon" />
 
-    <title>{{config('app.name', 'Permata Mall')}} : {{ $page->title ?? 'ONE STOP ONLINE MARKETPLACE'}}</title>
+    <title>{{config('app.name', 'Permata Belajar')}} : {{ $page->title ?? 'BIMBINGAN BELAJAR | BIMBEL ONLINE | BIMBEL OFFLINE | PRIVATE'}}</title>
+
     <!-- Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{!! asset('public/assets/plugins/font-awesome/css/font-awesome.min.css') !!}">

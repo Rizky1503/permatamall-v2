@@ -437,6 +437,45 @@
     <div class="col-md-12">
       <center>
         <span style="color:#797474; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">
+          Download Aplikasi PermataBelajar
+        </span>
+      </center>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div>
+              <center>
+                <div>
+                  <img style="width: 70%" src="{!! asset('public/assets/images/icon/icon/Laptop.png') !!}">
+                </div>
+                <a href="http://resource.permatamall.com/api/v1/v2/download/aplikasi">
+                  <div style="width: 70%; background-color:#00b159; border-radius: 15px; padding: 2% 5% 2% 5%; color: white">
+                    <span class="font-style" style="font-size: 23px;">Download Aplikasi Destkop</span>
+                  </div>
+                </a>
+              </center>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <center>
+                <div>
+                  <img style="width: 70%" src="{!! asset('public/assets/images/icon/icon/Hp.png') !!}">
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.permatabimbel">
+                <div style="width: 70%; background-color:#00b159; border-radius: 15px; padding: 2% 5% 2% 5%; color: white">
+                  <span class="font-style" style="font-size: 23px;">Download Aplikasi Android</span>
+                </div>
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12" style="margin-top: 50px;">
+      <center>
+        <span style="color:#797474; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">
           Petanyaan Seputar PermataBelajar
         </span>
       </center>
@@ -622,10 +661,10 @@
     <div class="card-body">
       <center>
       <span>Ringkasan Materi</span><br>
-      <span>{{ $ringkasan->kelas }}</span><br>
-      <span>{{ $ringkasan->bidang_studi }}</span><br>
+      <span>KELAS 12 IPA</span><br>
+      <span>MATEMATIKA PEMINATAN</span><br>
       <hr>
-        <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/ringkasan-materi/'.$ringkasan->file}}">
+        <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/ringkasan-materi/20200803Q5baWsx0dc-Limit_Fungsi.png'}}">
       </center>
     </div>
   </div>
@@ -637,17 +676,17 @@
     <div class="card-body">
       <center>
       <span>Soal dan Pembahasan</span><br>
-      <span>{{ $soal->kelas }}</span><br>
-      <span>{{ $soal->bidang_studi }}</span><br>
+      <span>KELAS 12 IPA</span><br>
+      <span>MATEMATIKA PEMINATAN</span><br>
       <hr>
       <div class="row">
         <div class="col-md-6">
           <p>SOAL : </p>
-          <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/soal/'.$soal->soal}}">
+          <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/soal/20200724-RcCSuXV1ZW-Limit_di_ketakhinggaan_suatu_fungsi.PNG'}}">
         </div>
         <div class="col-md-6">
           <p>PEMBAHASAN : </p>
-          <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/pembahasan/'.$soal->pembahasan}}">
+          <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/pembahasan/20200724-UAiTR1ZoI7-Limit_di_ketakhinggaan_suatu_fungsi.PNG'}}">
         </div>
       </div>
       </center>
@@ -930,7 +969,7 @@
 <script src="{!! asset('public/assets/plyr/plyr.min.js') !!}"></script>
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
 <script type="text/javascript">
-var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/KELAS-10-IPA-IPS-MTK-FUNGSI.mp4";
+var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4";
 var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 

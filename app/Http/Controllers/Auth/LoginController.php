@@ -41,7 +41,7 @@ class LoginController extends Controller
     }
 
     public function redirectToProvider($driver)
-    {
+    {   
         return Socialite::driver($driver)->redirect();
     }
 
@@ -50,10 +50,8 @@ class LoginController extends Controller
         // $user = Socialite::driver($driver)->user();
         $user = Socialite::driver($driver)->stateless()->user();
         $now = \Carbon\Carbon::now()->format('mY');
-
+        
         $client = new \GuzzleHttp\Client();
-
-        if ( decrypt(Session::get('jenis_user_login')) == 'pelanggan'){
 
             $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan_google', [
                 'form_params'               => [
@@ -80,43 +78,7 @@ class LoginController extends Controller
                 ]
             ]);
 
-            if (session('link') == "") {
-                return redirect()->route('EmailVerify.index');
-            }else{
-                return redirect(session('link'));                
-            }     
-        }else{
-            $response = $client->request('POST', ENV('APP_URL_API').'merchant/mitra_google', [
-                'form_params'   => [
-                    'nama'      => $user->user['name'],
-                    'no_telpon' => '',
-                    'email'     => $user->user['email'],
-                    'password'  => $now,
-                    'alamat'    => '',
-                    'kota'      => '',                    
-                ]
-            ]);
-
-            $responses = json_decode($response->getBody());
-            Session::put('id_token_xmtrusr',encrypt($responses->id_mitra));
-            Session::put('id_token_xmtrusr_name',encrypt($responses->nama));        
-            Session::put('profile',encrypt($responses));                        
-            Session::put('login',TRUE);
-            
-            $client = new \GuzzleHttp\Client();
-            $response = $client->request('POST', ENV('APP_URL_API').'web/profile/mitra/email_send', [
-              'form_params'   => [
-                  'id_user'   => decrypt(Session::get('id_token_xmtrusr')),
-                  'link'      => route('EmailVerifyMitra.confirm',[Session::get('id_token_xmtrusr')])
-              ]
-            ]);
-          
-            if (session('link') == "") {
-              return redirect()->route('Mitra.index');
-            }else{
-              return redirect(session('link'));                
-            }
-        }    
+            return redirect()->route('FrontEnd.index');
     }
 
     public function jenis_user(Request $request){

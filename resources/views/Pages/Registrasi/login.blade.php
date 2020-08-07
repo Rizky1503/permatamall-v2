@@ -77,13 +77,11 @@
                 <center><p style="font-weight: 600">Atau Dengan</p></center>
             </div>
             <div class="form-group">
-              <!-- <a href="{{ route('login_provider', 'facebook') }}"> -->
-              <a href="#">
+              <a href="{{ route('login_provider', 'facebook') }}">
                 <button class="loginBtn loginBtn--facebook">Facebook</button>
               </a>
               
-              <!-- <a href="{{ route('login_provider', 'google') }}"> -->
-              <a href="#">
+              <a href="{{ route('login_provider', 'google') }}">
                 <button class="loginBtn loginBtn--google">Google</button>
               </a>
               
