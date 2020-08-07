@@ -113,7 +113,7 @@
       <div class="row">
         <div class="col-md-12">
           <center>
-            <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: #00B159">Permata</span> <span style="color: #4d9aea;">Belajar </span> ??</span>
+            <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: #00B159">Permata</span><span style="color: #4d9aea;">Belajar </span> ??</span>
           </center>
         </div><br>
         <div class="col-md-12">
@@ -148,13 +148,14 @@
                 </div>
                 <div class="name-testimoni-mobile">
                   <center> 
-                    <span class="font-style"><b>Nur Lailatul Badriyah</b></span><br>
+                    <span class="font-style"><b>Lidya Marbun</b></span><br>
+                    <span class="font-style"><b>SMAN 83 Jakarta</b></span><br>
                     <span class="font-style"><b>( Kelas 12 SMA )</b></span>
                   </center>
                 </div>
                 <div class="text-testimoni">
                   <center> 
-                      <span class="font-style">"Paket bimbel lengkap sangat membantu belajar dari rumah"</span>
+                      <span class="font-style">"Sangat Membantu dalam ngerjain tugas dirumah"</span>
                   </center>
                 </div>
               </div>
@@ -169,12 +170,13 @@
                 <div class="name-testimoni-mobile">
                   <center> 
                     <span class="font-style"><b>Riska Listiana</b></span><br>
-                    <span class="font-style"><b>( Kelas 10 SMA )</b></span>
+                    <span class="font-style"><b>SMAN 89 Jakarta</b></span><br>
+                    <span class="font-style"><b>( Kelas 11 SMA )</b></span>
                   </center>
                 </div>
                 <div class="text-testimoni">
                   <center> 
-                      <span class="font-style">" Tampilan menarik dan mudah menggunakan nya Kontenya bagus , mudah dimengerti dan simple "</span>
+                      <span class="font-style">" akhirnya nemu juga bimbel online murah dengan materi sesuai "</span>
                   </center>
                 </div>
               </div>
@@ -189,12 +191,13 @@
                 <div class="name-testimoni-mobile">
                   <center> 
                     <span class="font-style"><b>Gresia Samosir</b></span><br>
+                    <span class="font-style"><b>SMAN 3 Kikim Timur Sumatra Selatan</b></span><br>
                     <span class="font-style"><b>( Kelas 11 SMA )</b></span>
                   </center>
                 </div>
                 <div class="text-testimoni">
                   <center> 
-                      <span class="font-style">"Applikasinya bagus, konten menarik dan bagus"</span>
+                      <span class="font-style">"tampilannya bagus,mudah digunakan dan pelajarannya mudah dimengerti"</span>
                   </center>
                 </div>
               </div>
@@ -644,12 +647,16 @@
   <div class="card">
     <div class="card-body">
       <center>
-      <span>Ringkasan Materi</span><br>
+      <span>VIDEO</span><br>
       <span>IPA</span><br>
       <span>KELAS 12</span><br>
       <hr>
      <div>
-         <video controls autoplay width="320" height="240"></video>
+          <video id="player" playsinline controls autoplay data-poster="/path/to/poster.jpg">
+            <source src="https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4" type="video/mp4" />
+          </video>
+
+         <!-- <video controls autoplay width="320" height="240"></video> -->
      </div>
       </center>
     </div>
@@ -922,7 +929,7 @@
 
 </style>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel='stylesheet' href="{!! asset('public/assets/plyr/plyr.css') !!}">
 <link rel="stylesheet" type="text/css" href="{!! asset('public/assets/css/template-video.css') !!}">
 <script src="{!! asset('public/assets/plyr/polyfill.min.js') !!}"></script>
@@ -934,6 +941,9 @@ var NUM_CHUNKS = 10000;
 var video = document.querySelector('video');
 
 window.MediaSource = window.MediaSource || window.WebKitMediaSource;
+if (!!!window.MediaSource) {
+  alert('MediaSource API is not available');
+}
 
 var mediaSource = new MediaSource();
 
@@ -988,7 +998,7 @@ function GET(url, callback) {
     callback(new Uint8Array(xhr.response));
   };
 }
-</script>
+</script> -->
 <script type="text/javascript">
   $('.count-mobile').each(function () {
       $(this).prop('Counter',0).animate({
