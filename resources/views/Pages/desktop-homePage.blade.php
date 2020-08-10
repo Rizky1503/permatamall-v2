@@ -451,7 +451,7 @@
                 <div>
                   <img style="width: 70%" src="{!! asset('public/assets/images/icon/icon/Laptop.png') !!}">
                 </div>
-                <a href="{!! asset('public/images/foto_testimoni/PermataBelajarSetup.msi') !!}">
+                <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}">
                   <div style="width: 70%; background-color:#00b159; border-radius: 15px; padding: 2% 5% 2% 5%; color: white">
                     <span class="font-style" style="font-size: 23px;">Download Aplikasi Destkop</span>
                   </div>

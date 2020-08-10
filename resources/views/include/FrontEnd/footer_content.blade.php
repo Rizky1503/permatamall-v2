@@ -52,7 +52,7 @@
 
             <p><a href=''><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 70px;"></a></p>
 
-            <p> <a href="{!! asset('public/images/foto_testimoni/PermataBelajarSetup.msi') !!}"><img src="{!! asset('public/assets/images/icon/icon/Windows_badge.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p> <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}"><img src="{!! asset('public/assets/images/icon/icon/Windows_badge.png') !!}" alt="" style="max-height: 70px;"></a></p>
           </footer>
         </aside>
       </div>
