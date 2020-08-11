@@ -160,6 +160,7 @@ class RegistrasiController extends Controller
     {   
         return view('Pages.Registrasi.login')->with([
             'paket' => $request->kelas,
+            'nama_kelas' => $request->nama_kelas,
         ]);
     }
 
@@ -205,13 +206,13 @@ class RegistrasiController extends Controller
             $cek =  json_decode($cekApi->getBody());
             
             if ($cek->data->page == 'gratis') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI')]);
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI')]);
             }else if ($cek->data->page == '2 hari') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA')]);
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA')]);
             }else if ($cek->data->page == 'Aktif') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt($cek->data->title)]);
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt($cek->data->title)]);
             }else{
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')]);
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')]);
             }
 
             // if (session('link') == "") {
