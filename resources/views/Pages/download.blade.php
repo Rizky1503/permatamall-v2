@@ -6,7 +6,7 @@
 		<div style="margin-top: 4%;">
 			<center>
 				
-				<span class="font-style" style="font-size: 28px;">SELAMAT {{$nama}} PAKET KELAS {{$kelas}}</span><br>
+				<span class="font-style" style="font-size: 28px;">SELAMAT {{$nama}} PAKET {{$kelas}}</span><br>
 				<span class="font-style" style="font-size: 28px;">* {{$status}}</span><br>
 				@if($status == 'MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')
 				<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR  :</span><br>

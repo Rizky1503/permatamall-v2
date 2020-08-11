@@ -59,6 +59,7 @@
                   <span toggle="#password_desktop" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
                 <input type="hidden" name="detail" value="{{$paket}}">
+                <input type="hidden" name="nama_kelas" value="{{$nama_kelas}}">
                 <br>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Login</button>

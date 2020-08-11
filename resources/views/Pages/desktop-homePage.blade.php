@@ -754,6 +754,7 @@
             <div style="border: 1px solid #00b159; background-color: #00b159; height: 40px; padding-top: 2px; border-radius: 13px;">
               <form method="get" action="{{ route('Login.index') }}">
                 <input type="hidden" name="kelas" id="tx_kelas" value="">
+                <input type="hidden" name="nama_kelas" id="nama_kelas" value="">
                 <center>
                   <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Aktifkan</span></button>
                 </center>
@@ -1108,7 +1109,8 @@ function GET(url, callback) {
     }else{
       var kelas     =   $( "#kelas option:selected" ).text();
       var id_kelas  =   $( "#kelas").val();
-      $('#value-paket').html(kelas)      
+      $('#value-paket').html(kelas)  
+      $('#nama_kelas').val(kelas)      
       $('#tx_kelas').val(id_kelas)      
       $('#detail-paket').modal({
         fadeDuration: 250,
