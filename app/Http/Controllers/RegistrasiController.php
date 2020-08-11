@@ -229,7 +229,7 @@ class RegistrasiController extends Controller
 
     public function download(Request $request){
         
-        $nama   = strtoupper(decrypt($request->nama)); 
+        $nama   = strtoupper($request->nama); 
         $kelas  = strtoupper(decrypt($request->kelas));
         $status = strtoupper(decrypt($request->status)); 
 
