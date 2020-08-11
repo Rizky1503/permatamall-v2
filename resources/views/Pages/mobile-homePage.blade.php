@@ -652,7 +652,7 @@
       <span>KELAS 12</span><br>
       <hr>
      <div>
-          <video id="player" playsinline controls autoplay data-poster="/path/to/poster.jpg">
+          <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
             <source src="https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4" type="video/mp4" />
           </video>
 
@@ -1011,6 +1011,8 @@ function GET(url, callback) {
           }
       });
   });
+
+  
 
   function ShowDescVideoBelajar(){
     $("#video-belajar").show();

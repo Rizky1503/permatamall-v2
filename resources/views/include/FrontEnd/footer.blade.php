@@ -2,7 +2,7 @@
     <div class="ps-container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                <p>&copy; <a href="#">PERMATAMALL</a>, All rights Resevered. 2019</p>
+                <p>&copy; <a href="#">PermataBelajar</a>, All rights Resevered. 2019</p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
                 <ul class="ps-social">

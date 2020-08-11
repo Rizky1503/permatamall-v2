@@ -18,15 +18,40 @@ class HomePageController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(){        
-       $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-       $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
-       $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
-       return view('Pages.homePage')->with([
-           'data'       => $data,
-           'ringkasan'  => $ringkasan,
-           'soal'       => $soal, 
-       ]);          
+    public function index(Request $request){
+      $client = new \GuzzleHttp\Client();
+
+      $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
+      $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
+      $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+
+      $qkelas = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/filter', [
+      'form_params' => [
+          'page'  => 'kelas',
+      ],
+      'headers' => [
+               'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+      ]
+      ]);
+      $kelas =  json_decode($qkelas->getBody());
+
+      $qdurasi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/filter', [
+        'form_params' => [
+           'page'  => 'durasi',
+        ],
+        'headers' => [
+                'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+        ]
+       ]);
+      $durasi =  json_decode($qdurasi->getBody());
+
+      return view('Pages.homePage')->with([
+         'data'       => $data,
+         'ringkasan'  => $ringkasan,
+         'soal'       => $soal, 
+         'kelas'      => $kelas->data,
+         'durasi'     => $durasi->data,
+      ]);          
    }
 
     public function career(){        

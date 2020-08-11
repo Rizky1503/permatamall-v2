@@ -39,7 +39,7 @@ Route::group(['prefix'=>'/registrasi','as'=>'Registrasi.'], function(){
 
 Route::group(['prefix'=>'/login','as'=>'Login.'], function(){
     Route::get('/', 'RegistrasiController@login')->name('index');
-    Route::get('/download/{id}', 'RegistrasiController@download')->name('download');
+    Route::get('/download', 'RegistrasiController@download')->name('download');
     Route::post('/check', 'RegistrasiController@checkLogin')->name('check');
 });
 

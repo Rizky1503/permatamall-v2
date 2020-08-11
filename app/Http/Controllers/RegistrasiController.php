@@ -138,18 +138,7 @@ class RegistrasiController extends Controller
         }
     }  
 
-    public function download($id){
-        $ex = (explode(",",$id));
-        $kelas = $ex[0]; 
-        $durasi = $ex[1];
-
-        return view('Pages.download')->with([
-            'kelas'   => $kelas,
-            'durasi'  => $durasi,
-        ]);
-    } 
-
-
+   
     /**
      * Show the application dashboard.
      *
@@ -168,9 +157,9 @@ class RegistrasiController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function login(Request $request)
-    {
+    {   
         return view('Pages.Registrasi.login')->with([
-            'paket'      => $request->gabungan,
+            'paket' => $request->kelas,
         ]);
     }
 
@@ -188,7 +177,7 @@ class RegistrasiController extends Controller
             'Password' => 'required',
         ]);
 
-        
+
         $client = new \GuzzleHttp\Client();
         $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan/cekLogin', [
             'form_params'   => [
@@ -204,11 +193,32 @@ class RegistrasiController extends Controller
             Session::put('profile',encrypt($responses->cekEmail));
             Session::put('login',TRUE);
 
-            if (session('link') == "") {
-                return redirect()->route('Login.download',$request->detail);
+            $cekApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/check/paket', [
+             'form_params' => [
+                 'id_kelas'     => decrypt($request->detail),
+                 'id_pelanggan' =>$responses->cekEmail->id_pelanggan
+             ],
+             'headers' => [
+                      'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+             ]
+            ]);
+            $cek =  json_decode($cekApi->getBody());
+            
+            if ($cek->data->page == 'gratis') {
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI')]);
+            }else if ($cek->data->page == '2 hari') {
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA')]);
+            }else if ($cek->data->page == 'Aktif') {
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt($cek->data->title)]);
             }else{
-                return redirect(session('link'));                
+                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->detail,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')]);
             }
+
+            // if (session('link') == "") {
+            //     return redirect()->route('Login.download',$request->detail);
+            // }else{
+            //     return redirect(session('link'));                
+            // }
 
         }else{
             return redirect()->route('Login.index')->with('alert','Login Gagal, pastikan email dan passwod sesuai');
@@ -216,11 +226,20 @@ class RegistrasiController extends Controller
               
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    public function download(Request $request){
+        
+        $nama   = strtoupper(decrypt($request->nama)); 
+        $kelas  = strtoupper(decrypt($request->kelas));
+        $status = strtoupper(decrypt($request->status)); 
+
+        return view('Pages.download')->with([
+            'nama'   => $nama,
+            'kelas'  => $kelas,
+            'status' => $status,
+        ]);
+    } 
+
+   
     public function verify()
     {
 
