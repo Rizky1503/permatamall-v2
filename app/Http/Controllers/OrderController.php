@@ -12,6 +12,26 @@ use Image;
 
 class OrderController extends Controller
 {
+    public function transaksi(Request $request){
+
+        $client = new \GuzzleHttp\Client();
+        $paketApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/list/listTrans', [
+            'form_params' => [
+                'page'         => 1,
+                'id_pelanggan' => decrypt(Session::get('id_token_xmtrusr')),
+                'active'       => 1,
+            ],
+            'headers' => [
+                'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+         ]
+        ]);
+        $paket =  json_decode($paketApi->getBody());
+
+        return view('Pages.listTrans')->with([
+           'paket'   => $paket->data,
+        ]);
+    }
+
     public function download(Request $request){
         $page      = $request->page;
         $nama      = strtoupper(decrypt($request->nama)); 
