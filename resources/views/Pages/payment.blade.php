@@ -1,9 +1,9 @@
 @extends('layouts.FrontEnd')
 @section('content')
-
 <div class="section" style="background-color: #e8e8e861; height: auto; padding-bottom:10%; ">
 	<div class="container">
 		<div style="margin-top: 4%;">
+			<span>Refresh halaman ini setelah Anda melakukan pembayaran atau kembali ke halaman utama</span><br><br>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="square">
@@ -78,6 +78,7 @@
 					@else
 						<div class="square" style="padding : 11px 52px 11px 52px; height: auto">
 							@if($pay->dataOrder->id_payment == 4)
+								<span class="font-style-grey" style="font-size: 20px">Qr Code : </span>
 								<center>
 									<img style="width: 70%;" src="{{$pay->data->midtrans->qr_code}}"><br>
 								</center>
@@ -88,7 +89,14 @@
 
 							
 							<span class="font-style-black" style="font-size:21px;">No Rekening</span><br>
-							<span class="font-style-grey" style="font-size: 20px">@if($pay->data->midtrans){{ $pay->data->midtrans->virtual_account }}@else{{$pay->data->no_payment}} @endif</span>
+							<span class="font-style-grey" style="font-size: 20px">@if($pay->data->midtrans){{ $pay->data->midtrans->virtual_account }}@else{{$pay->data->no_payment}} @endif</span><br><br>
+							@endif
+
+							@if($pay->data->midtrans)
+							<center>
+								<span class="font-style-grey" style="font-size:21px;">Lakukan Pembayaran Sebelum :</span><br>
+								<span class="font-style" style="font-size:21px; color: red;">{{ $pay->data->midtrans->transaction_time_convert }}</span><br>
+							</center>
 							@endif
 						</div><br>
 						@if($pay->data->textPayment != 'Bukti Pembayaran sudah Diupload, Team akan menghubungi segera, jika Ada Pertanyaan atau keluhan silahkan masuk ke halaman profile -> Hubungi Kami')

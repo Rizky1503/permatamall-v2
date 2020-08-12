@@ -99,7 +99,7 @@ class OrderController extends Controller
                 ]);
 
                 $pay =  json_decode($payApi->getBody());
-
+                
                 return view('Pages.payment')->with([
                     'order'         => $order->data,
                     'expired_paket' => $expired_paket,
