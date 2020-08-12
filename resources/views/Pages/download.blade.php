@@ -5,12 +5,20 @@
 	<div class="container">
 		<div style="margin-top: 4%;">
 			<center>
-				<span class="font-style" style="font-size: 28px;">SELAMAT {{$nama}} PAKET {{$kelas}}</span><br>
-				<span class="font-style" style="font-size: 28px;">* {{$status}}</span><br>
+				<span class="font-style" style="font-size: 28px;"><b> {{$nama}} </b></span><br>
+				<span class="font-style" style="font-size: 28px;">ANDA MEMILIH PAKET {{$kelas}}</span><br>
+				@if($page == 'aktif')
+				
+				@elseif($kelas == 'KELAS 12 IPA' || $kelas == 'KELAS 12 IPS' || $kelas == 'KELAS 11 IPA' || $kelas == 'KELAS 11 IPS' || $kelas == 'KELAS 10 IPA' || $kelas == 'KELAS 10 IPS')
+					<span class="font-style" style="font-size: 28px;">PAKET GRATIS 2 HARI UNTUK {{$kelas}} TELAH SELESAI</span><br>
+				@else
+					<span class="font-style" style="font-size: 28px;">PAKET GRATIS SELAMA PROMOSI UNTUK {{$kelas}} TELAH SELESAI</span><br>
+				@endif
+
 				@if($status == 'MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')
-				<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR  :</span><br>
+					<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR UNTUK BERLANGGANAN :</span><br>
 				@elseif($page == 'aktif')
-				<span class="font-style" style="font-size: 28px;">TELAH DI AKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
+					<span class="font-style" style="font-size: 28px;">TELAH DI AKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
 				@else
 				@endif				
 			</center>

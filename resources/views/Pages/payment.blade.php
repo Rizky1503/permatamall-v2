@@ -65,7 +65,10 @@
 									<div class="col-md-6">
 										<div>
 											<input type="radio" name="payment" value="{{ encrypt($list->id_payment) }}" onclick="selectpayment('{{ encrypt($order->invoice) }}',this.value)">
-											<img style="width: 55%" src="{{ $list->breadchumb }}">
+											<img style="width: 55%" src="{{ $list->breadchumb }}"><br>
+										</div>
+										<div style="margin-top: -24px; margin-right: -12px; margin-left: 21px;">
+											<span><b>{{ $list->nama_payment }}</b></span>
 										</div>
 									</div>
 									@endforeach
@@ -88,12 +91,12 @@
 							<span class="font-style-grey" style="font-size: 20px">@if($pay->data->midtrans){{ $pay->data->midtrans->virtual_account }}@else{{$pay->data->no_payment}} @endif</span>
 							@endif
 						</div><br>
-						@if(!$pay->data->textPayment == 'Bukti Pembayaran sudah Diupload, Team akan menghubungi segera, jika Ada Pertanyaan atau keluhan silahkan masuk ke halaman profile -> Hubungi Kami')
-						<div class="button-berlangganan" onclick="changemethod('{{ encrypt($order->invoice) }}')" style="cursor: pointer;">
-							<center>
-								<span class="font-style" style="font-size: 18px">Ganti Metode Pembayaran</span>
-							</center>
-						</div><br>
+						@if($pay->data->textPayment != 'Bukti Pembayaran sudah Diupload, Team akan menghubungi segera, jika Ada Pertanyaan atau keluhan silahkan masuk ke halaman profile -> Hubungi Kami')
+							<div class="button-berlangganan" onclick="changemethod('{{ encrypt($order->invoice) }}')" style="cursor: pointer;">
+								<center>
+									<span class="font-style" style="font-size: 18px">Ganti Metode Pembayaran</span>
+								</center>
+							</div><br>
 						@endif
 						<div class="square" style="padding : 11px 52px 11px 52px; height: auto">
 							@foreach($pay->tutorial as $key => $tutor)

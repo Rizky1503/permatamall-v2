@@ -71,7 +71,7 @@ class OrderController extends Controller
 
         if ($status->data) {
             if ($status->data->tab_order == 'Selesai') {
-            return redirect()->route('Order.download',['nama'=>encrypt(Session::get('id_token_xmtrusr_name')),'kelas'=>$kelas,'status'=>encrypt('Berlangganan Sampai'.$expired_paket),'page'=>'aktif','durasi'=>'1','id_kelas'=>'1']);
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$kelas,'status'=>encrypt('Berlangganan Sampai'.$expired_paket),'page'=>'aktif','durasi'=>'1','id_kelas'=>'1']);
             }else{
                 $orderApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/requested', [
                     'form_params' => [
