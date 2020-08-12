@@ -37,7 +37,7 @@
           </header>
           <footer>
             <p><a href='' class="color-footer">Bimbel Online</a></p>
-            <p><a href='' class="color-footer">Bimbel Offline</a></p>
+            <p><a href='' class="color-footer">Les Private</a></p>
             <p><a href='' class="color-footer">Tryout</a></p>
           </footer>
         </aside>

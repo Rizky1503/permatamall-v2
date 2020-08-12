@@ -22,7 +22,7 @@
    
     <meta name="keywords" content="permata, permata belajar, Permata Berlajar, PermataBelajar, permatabelajar, indonesia, permata nusantara permata mal nusantara, jakarta, bimbel, tryout, bimbel online" itemprop="keywords">
    
-    <meta name="description" content="permatabelajar.com Situs penyedia Bimbel Online, Bimbel Offline dan Tryout" />
+    <meta name="description" content="permatabelajar.com Situs penyedia Bimbel Online, Les Private dan Tryout" />
     
     <meta name="twitter:card" content="summary_large_image"/>
     
@@ -30,7 +30,7 @@
     
     <meta name="twitter:creator" content="@permata_mall" />
     
-    <meta name="twitter:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Bimbel Offline dan Tryout." />
+    <meta name="twitter:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Les Private dan Tryout." />
     
     <meta name="twitter:image:src" content="{!! asset('public/assets/images/logoonly-100x100.png') !!}" />
 
@@ -43,11 +43,11 @@
     
     <meta property="og:site_name" content="PermataBelajar"/>
     
-    <meta property="og:title" content="Permata Belajar | Bimbingan Belajar, Bimbel Online, Bimbel Offline dan Tryout"/>
+    <meta property="og:title" content="Permata Belajar | Bimbingan Belajar, Bimbel Online, Les Private dan Tryout"/>
     
     <meta property="og:url" content="https://permatabelajar.com/"/>
     
-    <meta property="og:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Bimbel Offline dan Tryout." >
+    <meta property="og:description" content="permatabelajar.com Situs penyedia jasa Pendidikan, Bimbel Online, Les Private dan Tryout." >
     
     <meta property="og:image" content="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}" />
     <meta property="og:image:width" content="650" />
@@ -62,7 +62,7 @@
     <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
     <link rel="shortcut icon" href="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}" type="image/x-icon" />
 
-    <title>{{config('app.name', 'Permata Belajar')}} : {{ $page->title ?? 'BIMBINGAN BELAJAR | BIMBEL ONLINE | BIMBEL OFFLINE | TRYOUT'}}</title>
+    <title>{{config('app.name', 'Permata Belajar')}} : {{ $page->title ?? 'BIMBINGAN BELAJAR | BIMBEL ONLINE | LES PRIVATE | TRYOUT'}}</title>
 
     <!-- Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">

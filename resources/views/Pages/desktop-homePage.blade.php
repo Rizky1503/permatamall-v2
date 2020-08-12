@@ -130,10 +130,10 @@
 
               <tr>
                 <td align="center" class="td" style="background-color: white">
-                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp10.000.000 / tahun )</span>
+                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp6.000.000 / tahun )</span>
                 </td>
                 <td align="center" class="td" style="background-color: white">
-                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp10.000.000 / tahun )</span>
+                  <span class="font-style" style="font-size: 13px;">Sangat Mahal <br>(Rata-rata > Rp1.000.000 / tahun )</span>
                 </td>
                 <td align="center" class="td" style="background-color: #E5F7EE">
                   <span class="font-style" style="font-size: 13px;">Sangat Murah dan Terjangkau <br>(hanya Rp100/hari)</span>
