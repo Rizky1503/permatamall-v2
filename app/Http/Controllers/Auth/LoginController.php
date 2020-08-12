@@ -50,6 +50,10 @@ class LoginController extends Controller
         // $user = Socialite::driver($driver)->user();
         $user = Socialite::driver($driver)->stateless()->user();
         $now = \Carbon\Carbon::now()->format('mY');
+
+        $detail     = Session::get('paket');
+        $nama_kelas = Session::get('nama_kelas');
+        $durasi     = Session::get('durasi');
         
         $client = new \GuzzleHttp\Client();
 
@@ -70,13 +74,26 @@ class LoginController extends Controller
             Session::put('profile',encrypt($responses));                        
             Session::put('login',TRUE);
             
-            $client = new \GuzzleHttp\Client();
-            $response = $client->request('POST', ENV('APP_URL_API').'web/profile/pelanggan/email_send', [
-                'form_params'   => [
-                    'id_user'   => decrypt(Session::get('id_token_xmtrusr')),
-                    'link'      => route('EmailVerify.confirm',[Session::get('id_token_xmtrusr')])
-                ]
+            $cekApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/check/paket', [
+             'form_params' => [
+                 'id_kelas'     => decrypt($request->detail),
+                 'id_pelanggan' =>$responses->cekEmail->id_pelanggan
+             ],
+             'headers' => [
+                      'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+             ]
             ]);
+            $cek =  json_decode($cekApi->getBody());
+            
+            if ($cek->data->page == 'gratis') {
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->nama),'kelas'=>$nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'download','durasi'=>$durasi,'id_kelas'=>decrypt($detail)]);
+            }else if ($cek->data->page == '2 hari') {
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->nama),'kelas'=>$nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA'),'page'=>'2 hari','durasi'=>$durasi,'id_kelas'=>decrypt($detail)]);
+            }else if ($cek->data->page == 'aktif') {
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->nama),'kelas'=>$nama_kelas,'status'=>encrypt($cek->data->title),'page'=>'aktif','durasi'=>$durasi,'id_kelas'=>decrypt($detail)]);
+            }else{
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->nama),'kelas'=>$nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF'),'page'=>'paket','durasi'=>$durasi,'id_kelas'=>decrypt($detail)]);
+            }
 
             return redirect()->route('FrontEnd.index');
     }

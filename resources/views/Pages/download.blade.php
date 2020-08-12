@@ -1,18 +1,72 @@
 @extends('layouts.FrontEnd')
 @section('content')
 
-<div class="section" style="background-color: #00B159; height: 500px;">
+<div class="section" style="background-color: #00B159; height: auto; padding-bottom:10%; ">
 	<div class="container">
 		<div style="margin-top: 4%;">
 			<center>
-				
 				<span class="font-style" style="font-size: 28px;">SELAMAT {{$nama}} PAKET {{$kelas}}</span><br>
 				<span class="font-style" style="font-size: 28px;">* {{$status}}</span><br>
 				@if($status == 'MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')
 				<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR  :</span><br>
-				@else
+				@elseif($page == 'aktif')
 				<span class="font-style" style="font-size: 28px;">TELAH DI AKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
+				@else
 				@endif				
+			</center>
+		</div>
+		<div style="margin-top: 5%">
+			<center>
+				@if($paket)
+					<div class="row">
+						@foreach($paket->data as $key => $paket)
+							<div class="col-md-4" style="margin-top: 12px;">
+								<div class="square">
+									<center>
+										<span class="font-style" style="font-size: 21px; color: #504e4e;">{{ $paket->nama_paket }}</span><br>
+										<span class="font-style" style="font-size: 21px; color: #504e4e;">{{ $paket->kelas }}</span><br><br>
+										<span class="font-style" style="font-size: 14px; color: #504e4e;">aktif sampai {{ $paket->expired}}</span><br>
+										<span class="font-style" style="font-size: 23px; margin-bottom: 10px; color: #00B159;">RP</span>
+										<span class="font-style" style="font-size: 45px; color: #00B159;">{{ number_format($paket->price,0,',','.') }}</span><br>
+										<div class="tentang-permata">
+										  <table>
+										    <tr>
+										      <td><span class="font-style" style="font-size: 17px; color: #504e4e;"> - Ringkasan Materi Pelajaran </span></td>
+										    </tr>
+										    <tr>
+										      <td><span class="font-style" style="font-size: 17px; color: #504e4e;"> - Soal Latihan dengan Pembahasan </span></td>
+										    </tr>
+										    <tr>
+										      <td><span class="font-style" style="font-size: 17px; color: #504e4e;"> - Video Tutorial Belajar </span></td>
+										    </tr>
+										    <tr>
+										      <td><span class="font-style" style="font-size: 17px; color: #504e4e;"> - Forum Diskusi dan Konsultasi </span></td>
+										    </tr>
+										  </table>            
+										</div><br>
+										<a href="{{ route('Order.order',['id_paket' => encrypt($paket->id_paket),'id_price'=> encrypt($paket->id_price),'expired_paket'=>encrypt($paket->expired),'kelas'=> encrypt($kelas)]) }}">
+											<div class="button-berlangganan" style="cursor: pointer;">
+												<span class="font-style" style="font-size: 22px;">Berlangganan</span>
+											</div>
+										</a>
+									</center>
+								</div>	
+							</div>
+						@endforeach
+					</div>
+				@else
+				<div class="row">
+					<div class="col-md-4">
+						<p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 100px;"></a></p>
+					</div>
+					<div class="col-md-4">
+						<p> <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}"><img src="{!! asset('public/assets/images/icon/icon/Windows_badge.png') !!}" alt="" style="max-height: 100px;"></a></p>
+					</div>
+					<div class="col-md-4">
+						<p><a href=''><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 100px;"></a></p>
+					</div>
+				</div>
+				@endif
 			</center>
 		</div>
 	</div>
@@ -26,13 +80,20 @@
     color: white;
   }
 
-  .square-content{
+  .square{
     height:auto; 
-    width:60%; 
+    width:100%; 
     background-color:white; 
-    border-radius: 10px; 
-    padding: 1% 2% 1% 2%;
+    border-radius: 17px 17px 7px 61px;
+    padding: 5% 12% 6% 12%;
+  }
 
+  .button-berlangganan{
+  	border-radius: 54px;
+    background-color: #00B159;
+    height: auto;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
   }
 </style>
 

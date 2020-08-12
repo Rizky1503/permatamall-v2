@@ -158,10 +158,39 @@ class RegistrasiController extends Controller
      */
     public function login(Request $request)
     {   
-        return view('Pages.Registrasi.login')->with([
-            'paket' => $request->kelas,
-            'nama_kelas' => $request->nama_kelas,
-        ]);
+        Session::put('paket',$request->kelas);
+        Session::put('nama_kelas',$request->nama_kelas);
+        Session::put('durasi',$request->id_durasi);
+
+        if(Session::get('id_token_xmtrusr')){
+            $client = new \GuzzleHttp\Client();
+            $cekApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/check/paket', [
+             'form_params' => [
+                 'id_kelas'     => decrypt($request->kelas),
+                 'id_pelanggan' => decrypt(Session::get('id_token_xmtrusr'))
+             ],
+             'headers' => [
+                      'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+             ]
+            ]);
+            $cek =  json_decode($cekApi->getBody());
+            
+            if ($cek->data->page == 'gratis') {
+                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'download','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
+            }else if ($cek->data->page == '2 harI') {
+                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA'),'page'=>'2 hari','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
+            }else if ($cek->data->page == 'aktif') {
+                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt($cek->data->title),'page'=>'aktif','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
+            }else{
+                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF'),'page'=>'paket','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
+            }
+        }else{
+            return view('Pages.Registrasi.login')->with([
+                'paket'      => $request->kelas,
+                'nama_kelas' => $request->nama_kelas,
+                'durasi'     => $request->id_durasi,
+            ]);
+        }
     }
 
 
@@ -206,39 +235,20 @@ class RegistrasiController extends Controller
             $cek =  json_decode($cekApi->getBody());
             
             if ($cek->data->page == 'gratis') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI')]);
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'download','durasi'=>$request->durasi,'id_kelas'=>decrypt($request->detail)]);
             }else if ($cek->data->page == '2 hari') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA')]);
-            }else if ($cek->data->page == 'Aktif') {
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt($cek->data->title)]);
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA'),'page'=>'2 hari','durasi'=>$request->durasi,'id_kelas'=>decrypt($request->detail)]);
+            }else if ($cek->data->page == 'aktif') {
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt($cek->data->title),'page'=>'aktif','durasi'=>$request->durasi,'id_kelas'=>decrypt($request->detail)]);
             }else{
-                return redirect()->route('Login.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')]);
+                return redirect()->route('Order.download',['nama'=>encrypt($responses->cekEmail->nama),'kelas'=>$request->nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF'),'page'=>'paket','durasi'=>$request->durasi,'id_kelas'=>decrypt($request->detail)]);
             }
-
-            // if (session('link') == "") {
-            //     return redirect()->route('Login.download',$request->detail);
-            // }else{
-            //     return redirect(session('link'));                
-            // }
 
         }else{
             return redirect()->route('Login.index')->with('alert','Login Gagal, pastikan email dan passwod sesuai');
         }
               
     }
-
-    public function download(Request $request){
-        
-        $nama   = strtoupper(decrypt($request->nama)); 
-        $kelas  = strtoupper($request->kelas);
-        $status = strtoupper(decrypt($request->status)); 
-
-        return view('Pages.download')->with([
-            'nama'   => $nama,
-            'kelas'  => $kelas,
-            'status' => $status,
-        ]);
-    } 
 
    
     public function verify()

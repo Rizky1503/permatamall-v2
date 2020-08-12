@@ -24,7 +24,7 @@
                 <select class="form-control select-paket font-style" style="font-size: 19px; color: #797474;" id="durasi"> 
                   <option value="">--Pilih Durasi--</option>
                   @foreach($durasi as $key => $durasi)
-                    <option value="{{ $durasi->value }}"> Per {{ strtolower($durasi->value) }}</option>
+                    <option value="{{ $durasi->value }}">{{ strtoupper($durasi->value) }}AN</option>
                   @endforeach
                 </select>
               </div>
@@ -81,7 +81,7 @@
             </div>
           </center>
         </div>
-        <div class="col-md-12" style="position: relative; top: 76px;">
+        <div class="col-md-12" style="position: relative; top: 120px;">
           <div class="container">
           <center>
           <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">
@@ -755,6 +755,7 @@
               <form method="get" action="{{ route('Login.index') }}">
                 <input type="hidden" name="kelas" id="tx_kelas" value="">
                 <input type="hidden" name="nama_kelas" id="nama_kelas" value="">
+                <input type="hidden" name="id_durasi" id="id_durasi" value="">
                 <center>
                   <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 20px; color: white; cursor: pointer;">Aktifkan</span></button>
                 </center>
@@ -1109,9 +1110,12 @@ function GET(url, callback) {
     }else{
       var kelas     =   $( "#kelas option:selected" ).text();
       var id_kelas  =   $( "#kelas").val();
+      var durasi    =   $( "#durasi").val();
+
       $('#value-paket').html(kelas)  
       $('#nama_kelas').val(kelas)      
       $('#tx_kelas').val(id_kelas)      
+      $('#id_durasi').val(durasi)      
       $('#detail-paket').modal({
         fadeDuration: 250,
       });   

@@ -39,9 +39,17 @@ Route::group(['prefix'=>'/registrasi','as'=>'Registrasi.'], function(){
 
 Route::group(['prefix'=>'/login','as'=>'Login.'], function(){
     Route::get('/', 'RegistrasiController@login')->name('index');
-    Route::get('/download', 'RegistrasiController@download')->name('download');
     Route::post('/check', 'RegistrasiController@checkLogin')->name('check');
 });
+
+Route::group(['prefix'=>'/order','as'=>'Order.'], function(){
+    Route::get('/download', 'OrderController@download')->name('download');
+    Route::get('/order', 'OrderController@order')->name('order');
+    Route::get('/selectpayment', 'OrderController@selectpayment')->name('selectpayment');
+    Route::get('/changepayment', 'OrderController@changepayment')->name('changepayment');
+    Route::post('/BuktiPembayaran', 'OrderController@BuktiPembayaran')->name('BuktiPembayaran');
+});
+
 
 Route::group(['prefix'=>'/verify','as'=>'EmailVerify.'], function(){
     Route::get('/', 'RegistrasiController@verify')->name('index');

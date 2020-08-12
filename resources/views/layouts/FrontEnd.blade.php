@@ -87,7 +87,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="home-page-widget-overlay" onclick="functionPostOverlay()" id="page_selain_cari_halaman"></div>    
     <!-- @include('include.FrontEnd.header') -->
-    
+    @include('include.FrontEnd.header')
     <main class="ps-main">
       @yield('content')    
       <!-- <div class="ps-subscribe">

@@ -60,6 +60,7 @@
                 </div>
                 <input type="hidden" name="detail" value="{{$paket}}">
                 <input type="hidden" name="nama_kelas" value="{{$nama_kelas}}">
+                <input type="hidden" name="durasi" value="{{$durasi}}">
                 <br>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Login</button>
