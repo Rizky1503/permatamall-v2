@@ -76,8 +76,8 @@ class LoginController extends Controller
             
             $cekApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/check/paket', [
              'form_params' => [
-                 'id_kelas'     => decrypt($request->detail),
-                 'id_pelanggan' =>$responses->cekEmail->id_pelanggan
+                 'id_kelas'     => $detail,
+                 'id_pelanggan' => $responses->id_pelanggan
              ],
              'headers' => [
                       'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
