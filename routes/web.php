@@ -43,6 +43,7 @@ Route::group(['prefix'=>'/login','as'=>'Login.'], function(){
 });
 
 Route::group(['prefix'=>'/order','as'=>'Order.'], function(){
+    Route::get('/transaksi', 'OrderController@transaksi')->name('transaksi');
     Route::get('/download', 'OrderController@download')->name('download');
     Route::get('/order', 'OrderController@order')->name('order');
     Route::get('/selectpayment', 'OrderController@selectpayment')->name('selectpayment');
