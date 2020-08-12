@@ -51,7 +51,7 @@ class LoginController extends Controller
         $user = Socialite::driver($driver)->stateless()->user();
         $now = \Carbon\Carbon::now()->format('mY');
 
-        $detail     = Session::get('paket');
+        $detail     = decrypt(Session::get('paket'));
         $nama_kelas = Session::get('nama_kelas');
         $durasi     = Session::get('durasi');
         
