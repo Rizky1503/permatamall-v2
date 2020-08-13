@@ -22,8 +22,8 @@ class HomePageController extends Controller
       $client = new \GuzzleHttp\Client();
 
       $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
-      $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
-      $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+      // $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
+      // $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
 
       $qkelas = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/filter', [
       'form_params' => [
@@ -47,8 +47,8 @@ class HomePageController extends Controller
 
       return view('Pages.homePage')->with([
          'data'       => $data,
-         'ringkasan'  => $ringkasan,
-         'soal'       => $soal, 
+         // 'ringkasan'  => $ringkasan,
+         // 'soal'       => $soal, 
          'kelas'      => $kelas->data,
          'durasi'     => $durasi->data,
       ]);          

@@ -15,10 +15,8 @@ class RegistrasiController extends Controller
      */
     public function index()
     {
-        if(Session::get('login')){
-            return redirect()->route('Mitra.index');
-        }
-        return view('Pages.Registrasi.index');
+        
+      return view('Pages.Registrasi.index');
     }  
 
     public function refund_policy(){
@@ -42,100 +40,39 @@ class RegistrasiController extends Controller
         ]);
 
         $client = new \GuzzleHttp\Client();
+        $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan', [
+            'form_params'               => [
+                'nama'      => $request->nama_lengkap,
+                'no_telpon' => $request->no_telp,
+                'email'     => $request->email,
+                'password'  => $request->Password,
+                'alamat'    => $request->alamat,
+                'kota'      => '',                    
+            ]
+        ]);
 
-        if ($request->jenis_registrasi == "Mitra") {
+        if ($response->getBody() == "already_exist") {
+            return redirect()->route('Registrasi.index')->with('alert','Email dan No telp telah terdaftar,silahkan login atau gunakan akun lain untuk registrasi');
+        }else{
 
-            $response = $client->request('POST', ENV('APP_URL_API').'merchant/mitra', [
-                'form_params'               => [
-                    'nama'      => $request->nama_lengkap,
-                    'no_telpon' => $request->no_telp,
-                    'email'     => $request->email,
-                    'password'  => $request->Password,
-                    'alamat'    => $request->alamat,
-                    'kota'      => '',
+            $responses = json_decode($response->getBody());
+            Session::put('id_token_xmtrusr',encrypt($responses->id_pelanggan));
+            Session::put('id_token_xmtrusr_name',encrypt($responses->nama));        
+            Session::put('profile',encrypt($responses));                        
+            Session::put('login',TRUE);
+
+            $client = new \GuzzleHttp\Client();
+            $response = $client->request('POST', ENV('APP_URL_API').'web/profile/pelanggan/email_send', [
+                'form_params'   => [
+                    'id_user'   => decrypt(Session::get('id_token_xmtrusr')),
+                    'link'      => route('EmailVerify.confirm',[Session::get('id_token_xmtrusr')])
                 ]
             ]);
 
-            if ($response->getBody() == "already_exist") {
-                return redirect()->route('Registrasi.index')->with('alert','Email dan No telp telah terdaftar,silahkan login atau gunakan akun lain untuk registrasi');
-            }else{
-
-                $responses = json_decode($response->getBody());
-                Session::put('id_token_xmtrusr',encrypt($responses->id_mitra));
-                Session::put('id_token_xmtrusr_name',encrypt($responses->nama));
-                Session::put('profile',encrypt($responses));                        
-                Session::put('login',TRUE);
-
-                $client = new \GuzzleHttp\Client();
-
-                $response = $client->request('POST', ENV('APP_URL_API').'web/profile/store_lat_long', [
-                    'form_params'   => [
-                        'id_pelanggan'  => decrypt(Session::get('id_token_xmtrusr')),
-                        'lat'           => $request->lat,
-                        'long'          => $request->long
-                        
-                    ]
-                ]);
-
-                $response = $client->request('POST', ENV('APP_URL_API').'web/profile/mitra/email_send', [
-                    'form_params'   => [
-                        'id_user'   => decrypt(Session::get('id_token_xmtrusr')),
-                        'link'      => route('EmailVerifyMitra.confirm',[Session::get('id_token_xmtrusr')])
-                    ]
-                ]);
+           
+            return redirect()->route('EmailVerify.index');
                 
-                if (session('link') == "") {
-                    return redirect()->route('Mitra.index');
-                }else{
-                    return redirect(session('link'));                
-                }
-            }
-        }else{            
-            $response = $client->request('POST', ENV('APP_URL_API').'merchant/pelanggan', [
-                'form_params'               => [
-                    'nama'      => $request->nama_lengkap,
-                    'no_telpon' => $request->no_telp,
-                    'email'     => $request->email,
-                    'password'  => $request->Password,
-                    'alamat'    => $request->alamat,
-                    'kota'      => '',                    
-                ]
-            ]);
-
-            if ($response->getBody() == "already_exist") {
-                return redirect()->route('Registrasi.index')->with('alert','Email dan No telp telah terdaftar,silahkan login atau gunakan akun lain untuk registrasi');
-            }else{
-
-                $responses = json_decode($response->getBody());
-                Session::put('id_token_xmtrusr',encrypt($responses->id_pelanggan));
-                Session::put('id_token_xmtrusr_name',encrypt($responses->nama));        
-                Session::put('profile',encrypt($responses));                        
-                Session::put('login',TRUE);
-
-                $client = new \GuzzleHttp\Client();
-                $response = $client->request('POST', ENV('APP_URL_API').'web/profile/mitra/store_lat_long', [
-                    'form_params'   => [
-                        'id_pelanggan'  => decrypt(Session::get('id_token_xmtrusr')),
-                        'lat'           => $request->lat,
-                        'long'          => $request->long,
-                        
-                    ]
-                ]);
-
-                $response = $client->request('POST', ENV('APP_URL_API').'web/profile/pelanggan/email_send', [
-                    'form_params'   => [
-                        'id_user'   => decrypt(Session::get('id_token_xmtrusr')),
-                        'link'      => route('EmailVerify.confirm',[Session::get('id_token_xmtrusr')])
-                    ]
-                ]);
-
-                if (session('link') == "") {
-                    return redirect()->route('Login.download');
-                }else{
-                    return redirect()->route('Login.download');             
-                }                
-            }
-        }
+        }  
     }  
 
    
@@ -324,8 +261,34 @@ class RegistrasiController extends Controller
     public function confirm($id)
     {
         $url = ENV('APP_URL_API').'web/profile/pelanggan/email_confirm/'.decrypt($id);
-        $data = json_decode(file_get_contents($url));     
-        return redirect()->route('FrontEnd.index');
+        $data = json_decode(file_get_contents($url)); 
+
+        $id_kelas = Session::get('paket');
+        $nama_kelas = Session::get('nama_kelas');
+        $durasi = Session::get('durasi');
+
+        $client = new \GuzzleHttp\Client();
+        $cekApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/check/paket', [
+         'form_params' => [
+             'id_kelas'     => decrypt($id_kelas),
+             'id_pelanggan' => decrypt(Session::get('id_token_xmtrusr'))
+         ],
+         'headers' => [
+                  'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+         ]
+        ]);
+        $cek =  json_decode($cekApi->getBody());
+
+        if ($cek->data->page == 'gratis') {
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'download','durasi'=>$durasi,'id_kelas'=>decrypt($id_kelas)]);
+        }else if ($cek->data->page == '2 harI') {
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA'),'page'=>'2 hari','durasi'=>$durasi,'id_kelas'=>decrypt($id_kelas)]);
+        }else if ($cek->data->page == 'aktif') {
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$nama_kelas,'status'=>encrypt($cek->data->title),'page'=>'aktif','durasi'=>$durasi,'id_kelas'=>decrypt($id_kelas)]);
+        }else{
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$nama_kelas,'status'=>encrypt('MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF'),'page'=>'paket','durasi'=>$durasi,'id_kelas'=>decrypt($id_kelas)]);
+        }
+        
     } 
 
     /**

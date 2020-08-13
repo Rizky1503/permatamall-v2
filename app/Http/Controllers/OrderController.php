@@ -213,6 +213,9 @@ class OrderController extends Controller
         ]);
 
         return redirect($_SERVER['HTTP_REFERER']);
+    }
+
+    public function CountDestkopDownload(Request $request){
         
     }
 }

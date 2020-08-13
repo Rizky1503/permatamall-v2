@@ -604,7 +604,7 @@
   </div>
 </div>
 
-@if($ringkasan)
+
 <div id="loadMe" class="modal">
   <div class="card">
     <div class="card-body">
@@ -618,8 +618,7 @@
     </div>
   </div>
 </div>
-@endif
-@if($soal)
+
 <div id="soal" class="modal">
   <div class="card">
     <div class="card-body">
@@ -642,7 +641,7 @@
     </div>
   </div>
 </div>
-@endif
+
 <div id="video" class="modal">
   <div class="card">
     <div class="card-body">

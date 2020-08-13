@@ -438,7 +438,7 @@
                 <div>
                   <img style="width: 70%" src="{!! asset('public/assets/images/icon/icon/Laptop.png') !!}">
                 </div>
-                <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}">
+                <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}" onclick="countDownload()">
                   <div style="width: 70%; background-color:#00b159; border-radius: 15px; padding: 2% 5% 2% 5%; color: white">
                     <span class="font-style" style="font-size: 23px;">Download Aplikasi Destkop</span>
                   </div>
@@ -645,7 +645,7 @@
   </div>
 </div>
 
-@if($ringkasan)
+
 <div id="loadMe" class="modal">
   <div class="card">
     <div class="card-body">
@@ -659,8 +659,6 @@
     </div>
   </div>
 </div>
-@endif
-@if($soal)
 <div id="soal" class="modal">
   <div class="card">
     <div class="card-body">
@@ -683,7 +681,6 @@
     </div>
   </div>
 </div>
-@endif
 <div id="video" class="modal">
   <div class="card">
     <div class="card-body">
@@ -1025,6 +1022,19 @@ function GET(url, callback) {
 }
 </script> -->
 <script type="text/javascript">
+  function countDownload(){
+    $.ajax({
+        type: "POST",
+        url: '{{ route("ExampPermata.proses") }}',
+        data: {
+          sum : 1,
+        },
+        success: function(responses){  
+          
+        }
+    });
+  }
+
   $(function() {
     function log_modal_event(event, modal) {
       if(typeof console != 'undefined' && console.log) console.log("[event] " + event.type);

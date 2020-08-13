@@ -5,6 +5,7 @@
 	<div class="container">
 		<div style="margin-top: 4%;">
 			<center>
+				@if($paket)
 				<div id="transaksi">
 					@foreach($paket as $key => $paket)
 					<div class="square" style="margin-top: 2%;">
@@ -19,8 +20,10 @@
 							</tr>
 							@endforeach
 						</table><br>
+
+						@if($paket->id_paket != 4)
 						<a href="{{ route('Order.order',['id_paket' => encrypt($paket->id_paket),'id_price' => encrypt($paket->id_price),'expired_paket' => encrypt($paket->expired),'kelas' => encrypt($paket->resultPaket->kelas)]) }}">
-						
+						@endif
 							<div class="button-berlangganan">
 								<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
 							</div>
@@ -28,6 +31,7 @@
 					</div>
 					@endforeach
 				</div>
+				@endif
 			</center>
 		</div>
 	</div>
