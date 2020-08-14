@@ -89,77 +89,43 @@ class OrderController extends Controller
 
         $status =  json_decode($statusApi->getBody());
 
-        if ($status->data) {
-            if ($status->data->tab_order == 'Selesai') {
+        $orderApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/requested', [
+            'form_params' => [
+                'id_pelanggan' => $id_pelanggan,
+                'id_paket'     => $id_paket,
+                'id_price'     => $id_price
+            ],
+
+            'headers' => [
+                'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+            ]
+        ]);
+
+        $order =  json_decode($orderApi->getBody());
+       
+        $payApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/paymentList', [
+            'form_params' => [
+                'invoice' => $order->data->invoice,
+            ],
+
+            'headers' => [
+                'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
+            ]
+        ]);
+
+        $pay =  json_decode($payApi->getBody());
+
+        if($order->data->tab_order == 'Selesai'){
             return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$kelas,'status'=>encrypt('Berlangganan Sampai'.$expired_paket),'page'=>'aktif','durasi'=>'1','id_kelas'=>'1']);
-            }else{
-                $orderApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/requested', [
-                    'form_params' => [
-                        'id_pelanggan' => $id_pelanggan,
-                        'id_paket'     => $id_paket,
-                        'id_price'     => $id_price
-                    ],
-
-                    'headers' => [
-                        'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
-                    ]
-                ]);
-
-                $order =  json_decode($orderApi->getBody());
-
-           
-                $payApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/paymentList', [
-                    'form_params' => [
-                        'invoice' => $order->data->invoice,
-                    ],
-
-                    'headers' => [
-                        'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
-                    ]
-                ]);
-
-                $pay =  json_decode($payApi->getBody());
-                
-                return view('Pages.payment')->with([
-                    'order'         => $order->data,
-                    'expired_paket' => $expired_paket,
-                    'pay'           => $pay->data,
-                ]);
-            }
         }else{
-            $orderApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/requested', [
-                'form_params' => [
-                    'id_pelanggan' => $id_pelanggan,
-                    'id_paket'     => $id_paket,
-                    'id_price'     => $id_price
-                ],
-
-                'headers' => [
-                    'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
-                ]
-            ]);
-
-            $order =  json_decode($orderApi->getBody());
-
-        
-            $payApi = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/order/paymentList', [
-                'form_params' => [
-                    'invoice' => $order->data->invoice,
-                ],
-
-                'headers' => [
-                    'Authorization' => 'Bearer '.'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjMsImlhdCI6MTU5NTI5ODMwN30.i4GWwTPyp853fcwO4f71qJTmQzu06qcSrh2_vw71tYE'
-                ]
-            ]);
-
-            $pay =  json_decode($payApi->getBody());
-
             return view('Pages.payment')->with([
                 'order'         => $order->data,
                 'expired_paket' => $expired_paket,
                 'pay'           => $pay->data,
             ]);
         }
+        
+        
     }
 
     public function selectpayment(Request $request){

@@ -8,27 +8,28 @@
 				@if($paket)
 				<div id="transaksi">
 					@foreach($paket as $key => $paket)
-					<div class="square" style="margin-top: 2%;">
-						<span class="font-style-black" style="font-size: 30px">{{ $paket->nama_paket }}</span><hr>
+						@if($paket->command == 'TSCN')
+							<div class="square" style="margin-top: 2%;">
+								<span class="font-style-black" style="font-size: 30px">{{ $paket->nama_paket }}</span><hr>
+								<table>
+									@foreach($paket->result as $key => $result)
+									<tr>
+										<td width="45%"><span class="font-style-black" style="font-size: 20px">{{ $result->name }}</span></td>
+										<td width="10%"><span class="font-style-black" style="font-size: 20px"> : </span></td>
+										<td><span class="font-style-grey" style="font-size: 20px">{{ $result->value }}</span></td>
+									</tr>
+									@endforeach
+								</table><br>
 
-						<table>
-							@foreach($paket->result as $key => $result)
-							<tr>
-								<td width="45%"><span class="font-style-black" style="font-size: 20px">{{ $result->name }}</span></td>
-								<td width="10%"><span class="font-style-black" style="font-size: 20px"> : </span></td>
-								<td><span class="font-style-grey" style="font-size: 20px">{{ $result->value }}</span></td>
-							</tr>
-							@endforeach
-						</table><br>
-
-						@if($paket->id_paket != 4)
-						<a href="{{ route('Order.order',['id_paket' => encrypt($paket->id_paket),'id_price' => encrypt($paket->id_price),'expired_paket' => encrypt($paket->expired),'kelas' => encrypt($paket->resultPaket->kelas)]) }}">
-						@endif
-							<div class="button-berlangganan">
-								<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
+								@if($paket->id_paket != 4)
+									<a href="{{ route('Order.order',['id_paket' => encrypt($paket->id_paket),'id_price' => encrypt($paket->id_price),'expired_paket' => encrypt($paket->expired),'kelas' => encrypt($paket->resultPaket->kelas)]) }}">
+									<div class="button-berlangganan">
+										<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
+									</div>
+								@endif
+								</a>
 							</div>
-						</a>
-					</div>
+						@endif
 					@endforeach
 				</div>
 				@endif
