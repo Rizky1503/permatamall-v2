@@ -11,6 +11,7 @@
         
         @if(Session::get('login'))  
 	        <div class="ps-cart">
+            <a class="btn btn-primary btn-sm" href="{{ route('FrontEnd.index') }}">Home</a>
             <a class="btn btn-primary btn-sm" href="{{ route('Order.transaksi') }}">Transaksi</a>
 	        	<a class="btn btn-primary btn-sm" href="{{ route('logout') }}">Keluar</a>
 	        </div>

@@ -6,7 +6,6 @@
 		<div style="margin-top: 4%;">
 			<center>
 				@if($paket)
-				<div id="transaksi">
 					@foreach($paket as $key => $paket)
 						@if($paket->command == 'TSCN')
 							<div class="square" style="margin-top: 2%;">
@@ -29,8 +28,19 @@
 								@endif
 								</a>
 							</div>
+						@else
+							<div class="square" style="margin-top: 2%;">
+								<center>
+									<span class="font-style-grey" style="font-size: 20px">Anda Belum Mempunyai transaksi</span>
+								</center>
+							</div>
 						@endif
 					@endforeach
+				@else
+				<div class="square" style="margin-top: 2%;">
+					<center>
+						<span class="font-style-grey" style="font-size: 20px">Anda Belum Mempunyai transaksi</span>
+					</center>
 				</div>
 				@endif
 			</center>
