@@ -168,6 +168,25 @@
     <script type="text/javascript" src="{!! asset('public/assets/js/main.js') !!}"></script>     
     <script type="text/javascript" src="{!! asset('public/assets/js/select2.min.js') !!}"></script>
     <script src="{!! asset('public/assets/js/jquery.modal.min.js') !!}"></script>  
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDBYC5Jy8ijND-t0-bRb4AsdYqAtw_vito",
+        authDomain: "permatabimbel-33f11.firebaseapp.com",
+        databaseURL: "https://permatabimbel-33f11.firebaseio.com",
+        projectId: "permatabimbel-33f11",
+        storageBucket: "permatabimbel-33f11.appspot.com",
+        messagingSenderId: "731918742027",
+        appId: "1:731918742027:web:d63bd908b8f0291caa4d0e",
+        measurementId: "G-Y0538GZVK5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
     @if(Session::get('login'))            
 
       @if(HelperRedirectPortalMitra() == 1)
