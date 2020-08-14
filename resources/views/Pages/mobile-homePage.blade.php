@@ -10,36 +10,22 @@
           <div class="square-content-mobile" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
             <div class="row">
               <div class="col-md-12">
-                <label class="label-paket-mobile">Pilih Kelas/Paket</label>
-                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="kelas-mobile">
-                  <option>--Pilih Kelas--</option>
-                  <option value="TES MASUK PTN">TES MASUK PTN</option>
-                  <option value="Kelas 12 IPA">KELAS 12 IPA</option>
-                  <option value="Kelas 12 IPS">KELAS 12 IPS</option>
-                  <option value="Kelas 11 SMA">KELAS 11 SMA </option>
-                  <option value="Kelas 10 SMA">KELAS 10 SMA</option>
-                  <option value="Kelas 9 SMP">KELAS 9 SMA</option>
-                  <option value="Kelas 8 SMP">KELAS 8 SMP</option>
-                  <option value="Kelas 7 SMP">KELAS 7 SMP</option>
-                  <option value="Kelas 6 SD">KELAS 6 SMP</option>
-                  <option value="Kelas 5 SD">KELAS 5 SD</option>
-                  <option value="Kelas 4 SD">KELAS 4 SD</option>
+                <label class="label-paket">Pilih Kelas/Paket</label>
+                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="kelas-mobile"> 
+                  <option value="">--Pilih Kelas--</option>
+                  @foreach($kelas as $key => $kelas)
+                    <option data-rc="{{$kelas->title}}" value="{{ encrypt($kelas->id_kelas) }}">{{ $kelas->value }}</option>
+                  @endforeach
                 </select>
               </div>
               <div class="col-md-12" style="margin-top: 9px;">
-                <label class="label-paket-mobile">Durasi Langganan</label>
-                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="durasi-mobile" onchange="gethargamobile(this.value)"> 
+                <label class="label-paket">Durasi Langganan</label>
+                <select class="form-control select-paket font-style" style="font-size: 15px; color: #797474;" id="durasi-mobile"> 
                   <option value="">--Pilih Durasi--</option>
-                  <option value="1">1 BULAN</option>
-                  <option value="3">3 BULAN</option>
-                  <option value="6">6 BULAN</option>
-                  <option value="12">12 BULAN</option>
+                  @foreach($durasi as $key => $durasi)
+                    <option value="{{ $durasi->value }}">{{ strtoupper($durasi->value) }}AN</option>
+                  @endforeach
                 </select>
-              </div>
-              <div class="col-md-12" style="margin-top: 9px;">
-                <label class="label-paket-mobile">Harga Paket</label>
-                <p class="font-style" style="color:#797474; text-decoration: line-through; font-size: 14px; position: relative; top: -5px; left: 110px;" id="harga-mobile">RP 20.000/ 1 Bulan</p>
-                <span class="font-style" style="color:#00B159; font-size: 18px;">GRATIS SELAMA MASA PROMOSI</span>
               </div>
               <div class="col-md-12" style="margin-top: 9px;" onclick="detailPaketMobile()">
                 <div class="button-style">
@@ -733,7 +719,9 @@
           <div class="col-md-6" style="margin-top: 5px;">
             <div style="border: 1px solid #00b159; background-color: #00b159; height: 30px; padding-top: 5px; border-radius: 13px;">
               <form method="get" action="{{ route('Login.index') }}">
-                <input type="hidden" name="gabungan" id="gabungan-mobile">
+                <input type="hidden" name="kelas" id="tx_kelas_mobile" value="">
+               <input type="hidden" name="nama_kelas" id="nama_kelas_mobile" value="">
+               <input type="hidden" name="id_durasi" id="id_durasi_mobile" value="">
                 <center>
                   <button style="background-color: #ffffff00; border-color: #f0ffff00;"><span class="font-style" style="font-size: 15px; color: white; cursor: pointer;">Langganan Sekarang</span></button>
                 </center>
@@ -1061,42 +1049,18 @@ function GET(url, callback) {
       alert ('silahkan pilih paket dan durasi kamu terlebih dahulu')
       
     }else{
-      var kelas  = $('#kelas-mobile').val()
-      var durasi = $('#durasi-mobile').val()
-      var gabunganmobile = [kelas,durasi]
-      
-      $('#value-paket-mobile').html(kelas)
-      $('#gabungan-mobile').val(gabunganmobile)
-      $('#value-durasi-mobile').html(durasi + ' Bulan')
+      var kelas     =   $( "#kelas-mobile option:selected" ).text();
+      var id_kelas  =   $( "#kelas-mobile").val();
+      var durasi    =   $( "#durasi-mobile").val();
+
+      $('#value-paket-mobile').html(kelas)  
+      $('#nama_kelas_mobile').val(kelas)      
+      $('#tx_kelas_mobile').val(id_kelas)      
+      $('#id_durasi_mobile').val(durasi) 
 
       $('#detail-paket-mobile').modal({
         fadeDuration: 250,
       });   
-    }
-    
-  }
-
-  function gethargamobile(val){
-    if ($('#kelas-mobile').val() == "Kelas 12 IPA" || $('#kelas-mobile').val() == "Kelas 12 IPS" || $('#kelas-mobile').val() == "Kelas 11 SMA" || $('#kelas-mobile').val() == "Kelas 10 SMA" || $('#kelas-mobile').val() == "Kelas 9 SMP"  || $('#kelas-mobile').val() == "Kelas 8 SMP"  || $('#kelas-mobile').val() == "Kelas 7 SMP"  || $('#kelas-mobile').val() == "Kelas 6 SD"   || $('#kelas-mobile').val() == "Kelas 5 SD"   || $('#kelas-mobile').val() == "Kelas 4 SD" ) {
-      if (val == 1) {
-        $('#harga-mobile').html('RP 20.000/ 1 Bulan')
-      }else if( val == 3){
-        $('#harga-mobile').html('RP 40.000/ 3 Bulan')
-      }else if( val == 6){
-        $('#harga-mobile').html('RP 70.000/ 6 Bulan')
-      }else if( val == 12){
-        $('#harga-mobile').html('RP 120.000/ 12 Bulan')
-      }
-    }else if ($('#kelas-mobile').val()=="TES MASUK PTN"){
-      if (val == 1) {
-        $('#harga-mobile').html('RP 30.000/ 1 Bulan')
-      }else if( val == 3){
-        $('#harga-mobile').html('RP 60.000/ 3 Bulan')
-      }else if( val == 6){
-        $('#harga-mobile').html('RP 100.000/ 6 Bulan')
-      }else if( val == 12){
-        $('#harga-mobile').html('RP 180.000/ 12 Bulan')
-      }
     }
   }
 

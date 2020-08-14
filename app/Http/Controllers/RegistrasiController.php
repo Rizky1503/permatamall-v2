@@ -111,9 +111,9 @@ class RegistrasiController extends Controller
              ]
             ]);
             $cek =  json_decode($cekApi->getBody());
-
+            
             if ($cek->data->page == 'gratis') {
-                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'download','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
+                return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA MASA PROMOSI'),'page'=>'gratis','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
             }else if ($cek->data->page == '2 harI') {
                 return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$request->nama_kelas,'status'=>encrypt('GRATIS SELAMA 2 HARI UNTUK SMA'),'page'=>'2 hari','durasi'=>$request->id_durasi,'id_kelas'=>decrypt($request->kelas)]);
             }else if ($cek->data->page == 'aktif') {

@@ -1125,7 +1125,8 @@ function GET(url, callback) {
       $('#value-paket').html(kelas)  
       $('#nama_kelas').val(kelas)      
       $('#tx_kelas').val(id_kelas)      
-      $('#id_durasi').val(durasi)      
+      $('#id_durasi').val(durasi)  
+          
       $('#detail-paket').modal({
         fadeDuration: 250,
       });   

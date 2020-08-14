@@ -13,13 +13,15 @@
 					<span class="font-style" style="font-size: 28px;">{{$status}}</span><br>
 				@elseif($kelas == 'KELAS 12 IPA' || $kelas == 'KELAS 12 IPS' || $kelas == 'KELAS 11 IPA' || $kelas == 'KELAS 11 IPS' || $kelas == 'KELAS 10 IPA' || $kelas == 'KELAS 10 IPS')
 					<span class="font-style" style="font-size: 28px;">PAKET GRATIS 2 HARI UNTUK {{$kelas}} TELAH SELESAI</span><br>
+				@elseif($page == 'gratis')
+					<span class="font-style" style="font-size: 28px;">PAKET GRATIS SELAMA PROMOSI</span><br>
 				@else
 					<span class="font-style" style="font-size: 28px;">PAKET GRATIS SELAMA PROMOSI UNTUK {{$kelas}} TELAH SELESAI</span><br>
 				@endif
 
 				@if($status == 'MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')
 					<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR UNTUK BERLANGGANAN :</span><br>
-				@elseif($page == 'aktif')
+				@elseif($page == 'aktif' || $page == 'gratis')
 					<span class="font-style" style="font-size: 28px;">TELAH DI AKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
 				@else
 				@endif				
