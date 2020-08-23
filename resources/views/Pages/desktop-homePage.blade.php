@@ -60,22 +60,30 @@
               </table>            
             </div>
             <div class="icon-tentang-permata">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <div class="ringkasan_materi" onclick="getringkasan()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <div class="soal_dan_latihan" onclick="getsoal()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <div class="video_belajar" onclick="getvideo()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Video Belajar</span>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="tes">
+                  <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
+                    <img style="width: 50%;" src="{!! asset('public/assets/images/icon/icon/Test.png') !!}"><br>
+                    <span class="font-style" style="font-size: 19px;">Tes Minat Dan Bakat</span>
+                  </a>
                 </div>
               </div>
             </div>
