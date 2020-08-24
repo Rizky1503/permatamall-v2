@@ -4,7 +4,7 @@
       <div class="desc" style="padding-top: 3px;">
         <div class="col-md-12">
             <center><span class="des-paket-home-mobile">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Coba Gratis 2 Hari</span></span></center>
-            <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="count-mobile" style="font-weight:900">10000</span> +</span></center>
+            <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="_count-mobile" style="font-weight:900">10000</span> +</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 50px;">
           <div class="square-content-mobile" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
