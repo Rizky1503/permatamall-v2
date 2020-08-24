@@ -26,7 +26,7 @@
 										@if( $paket->tab_order == 'Selesai' )
 											<span class="font-style" style="font-size: 20px">Download Aplikasi</span>
 										@else
-											<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
+											<span class="font-style" style="font-size: 20px">Lanjutkan Pemesanan</span>
 										@endif
 									</div>
 								@endif
