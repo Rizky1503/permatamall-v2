@@ -23,7 +23,11 @@
 								@if($paket->id_paket != 4)
 									<a href="{{ route('Order.order',['id_paket' => encrypt($paket->id_paket),'id_price' => encrypt($paket->id_price),'expired_paket' => encrypt($paket->expired),'kelas' => encrypt($paket->resultPaket->kelas)]) }}">
 									<div class="button-berlangganan">
-										<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
+										@if( $paket->tab_order == 'Selesai' )
+											<span class="font-style" style="font-size: 20px">Download Aplikasi</span>
+										@else
+											<span class="font-style" style="font-size: 20px">Detail Pesanan</span>
+										@endif
 									</div>
 								@endif
 								</a>

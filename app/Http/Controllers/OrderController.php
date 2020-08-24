@@ -116,7 +116,7 @@ class OrderController extends Controller
         $pay =  json_decode($payApi->getBody());
 
         if($order->data->tab_order == 'Selesai'){
-            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$kelas,'status'=>encrypt('Berlangganan Sampai'.$expired_paket),'page'=>'aktif','durasi'=>'1','id_kelas'=>'1']);
+            return redirect()->route('Order.download',['nama'=>Session::get('id_token_xmtrusr_name'),'kelas'=>$kelas,'status'=>encrypt('Berlangganan Sampai '.$expired_paket),'page'=>'aktif','durasi'=>'1','id_kelas'=>'1']);
         }else{
             return view('Pages.payment')->with([
                 'order'         => $order->data,

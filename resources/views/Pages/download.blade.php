@@ -26,7 +26,7 @@
 				@if($status == 'MOHON MAAF ANDA BELUM MEMPUNYAI PAKET AKTIF')
 					<span class="font-style" style="font-size: 28px;">SILAHKAN PILIH PAKET PERMATABELAJAR UNTUK BERLANGGANAN :</span><br>
 				@elseif($page == 'aktif' || $page == 'gratis')
-					<span class="font-style" style="font-size: 28px;">TELAH DI AKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
+					<span class="font-style" style="font-size: 28px;">TELAH DIAKTIFKAN, SILAHKAN DOWNLOAD APLIKASI KAMI :</span><br>
 				@else
 				@endif				
 			</center>
