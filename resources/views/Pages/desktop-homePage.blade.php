@@ -5,7 +5,7 @@
       <div class="desc" style="padding-top: 35px;">
         <div class="col-md-12">
             <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Coba Gratis 2 Hari</span></span></center>
-            <center><span class="des-paket-home">pelajar Indonesia yang sedang belajar disini : <span class="_count" style="font-weight:900">10.000</span> ++</span></center>
+            <center><span class="des-paket-home">pelajar Indonesia yang sedang belajar disini : <span class="count" style="font-weight:900">10000</span> +</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 50px;">
           <div class="square-content" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
@@ -446,7 +446,7 @@
                 <div>
                   <img style="width: 70%" src="{!! asset('public/assets/images/icon/icon/Laptop.png') !!}">
                 </div>
-                <a href="{!! asset('public/destkop/PermataBelajar1.msi') !!}" onclick="countDownload()">
+                <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}" onclick="countDownload()">
                   <div style="width: 70%; background-color:#00b159; border-radius: 15px; padding: 2% 5% 2% 5%; color: white">
                     <span class="font-style" style="font-size: 23px;">Download Aplikasi Destkop</span>
                   </div>
