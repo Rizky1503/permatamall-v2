@@ -3,8 +3,8 @@
     <div class="container">
       <div class="desc" style="padding-top: 3px;">
         <div class="col-md-12">
-            <center><span class="des-paket-home-mobile">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Coba Gratis 2 Hari</span></span></center>
-            <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="count-mobile" style="font-weight:900">10000</span> +</span></center>
+            <center><span class="des-paket-home-mobile">Langganan Sekarang Juga dan <span style="color: #00B159">dapatkan Gratis 2 Hari</span></span></center>
+            <center><span class="des-paket-home-mobile">pelajar Indonesia yang sedang belajar disini : <span class="_count-mobile" style="font-weight:900">10.000</span> ++</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 50px;">
           <div class="square-content-mobile" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
@@ -44,44 +44,48 @@
                 <tr>
                   <td><h2 class="font-style"><b>Paket Bimbel Online Meliputi :</b></h2></td>
                 </tr>
-                <tr>
-                  <td><span style="font-size: 18px;"> - Ringkasan Materi Pelajaran </span></td>
-                </tr>
-                <tr>
-                  <td><span style="font-size: 18px;"> - Soal Latihan dengan Pembahasan </span></td>
-                </tr>
-                <tr>
-                  <td><span style="font-size: 18px;"> - Video Tutorial Belajar </span></td>
-                </tr>
-                <tr>
-                  <td><span style="font-size: 18px;"> - Forum Diskusi dan Konsultasi </span></td>
-                </tr>
               </table>            
             </div>
             <div class="icon-tentang-permata">
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="ringkasan_materi" onclick="getringkasan()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
                 </div>
               </div>
-              <div class="col-md-3" style="margin-top: 1em;">
+              <div class="col-md-4" style="margin-top: 1em;">
                 <div class="soal_dan_latihan" onclick="getsoal()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
                 </div>
               </div>
-              <div class="col-md-3" style="margin-top: 1em;">
+              <div class="col-md-4" style="margin-top: 1em;">
                 <div class="video_belajar" onclick="getvideo()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Video Belajar</span>
                 </div>
               </div>
-              <div class="col-md-3" style="margin-top: 1em;">
+              <div class="col-md-4" style="margin-top: 1em;">
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
-                    <img style="width: 25%;" src="{!! asset('public/assets/images/icon/icon/Test.png') !!}"><br>
+                    <img style="width: 25%;" src="{!! asset('public/images/home/tes_minat_bakat.png') !!}"><br>
                     <span class="font-style" style="font-size: 19px;">Tes Minat Dan Bakat</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4" style="margin-top: 1em;">
+                <div class="tes">
+                  <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
+                    <img style="width: 25%;" src="{!! asset('public/images/home/tryout.png') !!}"><br>
+                    <span class="font-style" style="font-size: 19px;">TryOut</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-4" style="margin-top: 1em;">
+                <div class="tes">
+                  <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
+                    <img style="width: 25%;" src="{!! asset('public/images/home/forum_konsultasi.png') !!}"><br>
+                    <span class="font-style" style="font-size: 19px;">Konsultasi</span>
                   </a>
                 </div>
               </div>
