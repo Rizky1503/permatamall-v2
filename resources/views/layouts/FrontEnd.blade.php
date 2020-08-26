@@ -20,7 +20,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    
-    <meta name="keywords" content="permata, permata belajar, Permata Berlajar, PermataBelajar, permatabelajar, indonesia, permata nusantara permata mal nusantara, jakarta, bimbel, tryout, bimbel online" itemprop="keywords">
+    <meta name="keywords" content="permata, permata belajar, Permata Berlajar, PermataBelajar, permatabelajar, indonesia, permata nusantara permata mal nusantara, jakarta, bimbel, tryout, bimbel online, bimbel terbaik, WFH, belajar dari rumah, COVID19, terbaik, populer, #BELAJARDARIRUMAH, online, gratis, free" itemprop="keywords">
    
     <meta name="description" content="permatabelajar.com Situs penyedia Bimbel Online, Les Private dan Tryout" />
     
