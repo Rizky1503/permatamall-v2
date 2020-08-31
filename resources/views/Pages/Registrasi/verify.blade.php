@@ -2,13 +2,13 @@
 
 @section('content')
 <!-- start slider -->
-<div style="width: 100%; height: 200px; background-color: #3eb960">
+<div style="width: 100%; height: 100px; background-color: #3eb960">
     <div class="container">
       <p style="font-size: 24px;color: #fff;font-weight: 600;margin-top: 40px; text-align: center;">
           Verifikasi Email
       </p>
     </div>
-</div>
+</div><br><br>
 <!-- slider end -->
 <div class="container">
   <div class="row">    
@@ -16,8 +16,8 @@
       <div class="permata-search">
         <div class="row">
           <div class="col-md-2">
-            <img src="{!! asset('public/assets/images/icon/icon/email_verifikasi.png') !!}" width="300">       
-          </div>
+            <img src="{!! asset('public/assets/images/icon/icon/email_verifikasi.png') !!}" width="200">       
+          </div><br>
           <div class="col-md-10">
             <span style="font-size: 18px;">
               Mohon cek email untuk verifikasi terlebih dahulu

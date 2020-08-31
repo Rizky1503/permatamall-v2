@@ -23,6 +23,13 @@ class RegistrasiController extends Controller
         return view('Pages.Registrasi.refund');
     }
 
+    public function syarat_ketentuan(){
+        return view('Pages.Registrasi.syarat_ketentuan');
+    }
+
+    public function kebijakan_privasi(){
+        return view('Pages.Registrasi.kebijakan_privasi');
+    }
 
     /**
      * Show the application dashboard.

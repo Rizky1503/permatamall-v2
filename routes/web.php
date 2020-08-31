@@ -28,6 +28,8 @@ Route::group(['as'=>'Bantuan.'], function(){
 
 Route::group(['as'=>'Refund.'], function(){
     Route::get('/refund', 'RegistrasiController@refund_policy')->name('index');
+    Route::get('/syarat_ketentuan', 'RegistrasiController@syarat_ketentuan')->name('syarat_ketentuan');
+    Route::get('/kebijakan_privasi', 'RegistrasiController@kebijakan_privasi')->name('kebijakan_privasi');
 });
 
 Route::group(['prefix'=>'/registrasi','as'=>'Registrasi.'], function(){

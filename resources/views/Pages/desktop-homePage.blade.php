@@ -4,7 +4,7 @@
     <div class="container">
       <div class="desc" style="padding-top: 35px;">
         <div class="col-md-12">
-            <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: #00B159">Dapatkan Gratis 2 Hari.</span></span></center>
+            <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: #00B159">Coba Gratis.</span></span></center>
             <center><span class="des-paket-home">Pelajar Indonesia yang Sedang Belajar Disini : <span class="_count" style="font-weight:900">10.000</span> ++</span></center>
         </div>
         <div class="col-md-5" style="position: relative; top: 90px;">
@@ -561,7 +561,7 @@
               </div>
               <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headinFive">
                 <div class="panel-body">
-                    <span class="font-style" style="font-size: 18px;">Selesaikan pendaftaran dan dapatkan coba gratis selama 2 hari. Coba dan rasakan keseruan belajar dengan Permata Belajar</span>
+                    <span class="font-style" style="font-size: 18px;">Selesaikan pendaftaran dan dapatkan coba gratis. Coba dan rasakan keseruan belajar dengan Permata Belajar</span>
                 </div>
               </div>
             </section>

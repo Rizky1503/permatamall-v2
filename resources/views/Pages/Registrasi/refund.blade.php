@@ -11,34 +11,30 @@
 
 <div class="container">
 <p>Refund Policy</p>
-<p>Last updated: January 28, 2020</p>
+<p>Last updated: Ausgust 31, 2020</p>
 <p>Thank you for visiting PermataMall operated by Permata Mall Nusantara PT.</p>
 <p>Jika, untuk beberapa alasan, Anda tidak puas dengan pembelian atau berlangganan produk PT Permata Mall Nusantara. Kami lampirkan peraturan pengembalian dana.</p>
-<p>Lampiran berikut ini dapat mengakomodasi setiap produk yang Anda beli di e-commerce PermataMall.</p>
-<p>Defenisi</p>
+<p>Lampiran berikut ini dapat mengakomodasi setiap produk yang Anda beli di e-commerce PermataBelajar.</p>
 <h2>Defenisi</h2>
 <p>Untuk tujuan peraturan pengembalian dana:</p>
 <ul>
-<li><strong>Anda</strong> mengandung arti personal atau individua atau pengguna Layanan PermataMall atau perusahaan atau entitas legal lainnya yang menggunakan atau mengakses layanan PermataMall.</li>
+<li><strong>Anda</strong> mengandung arti personal atau individua atau pengguna Layanan PermataBelajar atau perusahaan atau entitas legal lainnya yang menggunakan atau mengakses layanan PermataBelajar.</li>
 <li><strong>Perusahaan</strong> (mengacu ke kata lainnya seperti Lembaga, kami, kita dalam perjanjian ini) mengacu kepada PT Permata Mall Nusantara, Komplek Permata Hijau 2 Blok O No 2 Cidodol 12220.</li>
 <li><strong>Layanan</strong> mengacu pada situs web.</li>
-<li><strong>Situs Web</strong> mangacu pada permatamall, akses url https://permatamall.com</li>
-<li><strong>Produk</strong> mengacu pada layanan les privat yang disediakan PermataMall.</li>
-<li><strong>Pesanan</strong> mengandung arti sebuah permintaan untuk menjadi murid les privat PermataMall.</li>
+<li><strong>Situs Web</strong> mangacu pada PermataBelajar, akses url https://permatabelajar.com</li>
+<li><strong>Produk</strong> mengacu pada layanan Bimbel Online yang disediakan PermataBelajar.</li>
+<li><strong>Pesanan</strong> mengandung arti sebuah permintaan untuk menjadi murid bimbel online PermataBelajar.</li>
 </ul>
 <p>Ketentuan Pesanan yang dapat dibatalkan</p>
-<p>Jika Anda belum melakukan pembayaran Les Privat dalam waktu 2x24 Jam dari sejak pemesanan, maka layanan Les Privat tersebut akan otomatis batal.</p>
-<p>Pembatalan Les Privat oleh Murid dapat dilakukan:</p>
-<ol>
-<li>Jika di pertemuan pertama Les Privat, Murid tidak senang dengan guru, Murid diberikan kesempatan untuk meminta pergantian Guru kepada PermataMall. Jika Murid masih tetap tidak senang setelah pergantian Guru dilakukan di Les Privat ke 2, maka Murid dapat melakukan pembatalan Les Privat dengan mengajukan pembatalan melalui telp ke CS PermataMall sebelum Les Privat selanjutnya dilakukan.</li>
+<p>Jika Anda belum melakukan pembayaran Bimbel Online dalam waktu 2x24 Jam dari sejak pemesanan, maka layanan Bimbel Online tersebut akan otomatis batal.</p>
+
 <li>Jika terjadi pembatalan maka biaya pembatalan akan ditransfer sepenuhnya ke rekening yang bersangkutan.</li>
 <li>Masa pengembalian dana pembatalan, paling lama 7 hari kerja.</li>
 </ol>
 <p>&nbsp;</p>
 <p>Untuk proses pembatalan dapat dilakukan dengan:</p>
 <ul>
-<li>Email: support@permatamall.com</li>
-<li>Mengunjungi: https://permatamall.com/bimbel/refund</li>
+<li>Email: support@permatabelajar.com</li>
 <li>Telp: 0811811306</li>
 <li>Surat: Komplek Permata Hijau 2 Blok O No 2 Cidodol Jakarta Selatan 12220</li>
 </ul>
