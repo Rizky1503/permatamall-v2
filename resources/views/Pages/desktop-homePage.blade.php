@@ -245,7 +245,7 @@
                 <div class="name-testimoni">
                   <center> 
                     <span class="font-style"><b>Sri Rejeki</b></span><br>
-                    <span class="font-style"><b>SMAN 3 Kikim Timur Sumatra Selatan</b></span>br
+                    <span class="font-style"><b>SMAN 3 Kikim Timur Sumatra Selatan</b></span><br>
                     <span class="font-style"><b>( Kelas 11 SMA )</b></span><br>
                   </center>
                 </div>
