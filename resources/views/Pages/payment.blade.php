@@ -5,6 +5,19 @@
 		<div style="margin-top: 4%;">
 			<span>Refresh halaman ini setelah Anda melakukan pembayaran atau kembali ke halaman utama</span><br><br>
 			<div class="row">
+				<div class="col-md-5">
+					<span>Klik Tombol Berikut Jika Anda Mempunyai Kode Intansi : </span>
+				</div>
+				<a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
+					<div class="col-md-2" style="margin-left : -95px;">
+						<div style="width: 100%; background-color: #00b159; border-radius: 5px;">
+							<center><span class="font-style" style="color: white;">Masukan Kode</span></center>
+						</div>
+					</div>
+				</a>
+			</div><br>
+			
+			<div class="row">
 				<div class="col-md-4">
 					<div class="square">
 						<div style="padding-top: 16px; padding-left: 12px">
