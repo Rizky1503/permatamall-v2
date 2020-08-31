@@ -10,9 +10,8 @@
 </div>
 
 <div class="container">
-<p>Refund Policy</p>
-<p>Last updated: Ausgust 31, 2020</p>
-<p>Thank you for visiting PermataMall operated by Permata Mall Nusantara PT.</p>
+<center><p></p></center>
+<p><center><strong>Kebijakan Pengembalian</strong></center></p>
 <p>Jika, untuk beberapa alasan, Anda tidak puas dengan pembelian atau berlangganan produk PT Permata Mall Nusantara. Kami lampirkan peraturan pengembalian dana.</p>
 <p>Lampiran berikut ini dapat mengakomodasi setiap produk yang Anda beli di e-commerce PermataBelajar.</p>
 <h2>Defenisi</h2>
