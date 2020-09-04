@@ -186,10 +186,10 @@
         <center>
           <span style="color:#00B159; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Video Pembelajaran</span>
         </center>
-      </div><br><br><br><br><br>
-        @include('Pages.video')
+      </div>
     </div>
-  </div>  
+  </div> <br><br>
+  @include('Pages.video')
 </div>
 
 <div class="section" style="background-color: #00B159">

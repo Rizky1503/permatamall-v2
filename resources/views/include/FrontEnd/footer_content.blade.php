@@ -9,10 +9,13 @@
             </a>
           </header>
           <footer>
+            <div style="border-radius: 10px; background-color: white; width: 138px;">
+              <center><img src="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
+              <span style="color: #797474; font-size: 16px;">Permata<span style="color: #00B159;">Belajar</span></span></center>
+            </div><br>
             <p>Email: <a href='mailto:support@permatabelajar.com'>support@permatabelajar.com</a></p>
             <p>Phone: 0811811306</p>
             <p>whatsapp: <a href=" https://api.whatsapp.com/send?phone=62811811306&text=Saya%20ingin%20bertanya%20seputar%20PermataBelajar" target="_blank">0811811306</a></p>
-            <img src="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
           </footer>
         </aside>
       </div>

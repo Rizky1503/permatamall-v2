@@ -7,7 +7,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
                 <ul class="ps-social">
                     <li><a href="https://www.facebook.com/PermataBelajar"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="http://bit.ly/370tyET"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://bit.ly/3h3jAXv"><i class="fa fa-youtube"></i></a></li>
                     <!-- <li><a href="https://twitter.com/Permatamall_ID"><i class="fa fa-twitter"></i></a></li> -->
                     <li><a href="https://www.instagram.com/permatabelajar_/?hl=en"><i class="fa fa-instagram"></i></a></li>
                 </ul>
