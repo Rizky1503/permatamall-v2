@@ -12,6 +12,7 @@
             <p>Email: <a href='mailto:support@permatabelajar.com'>support@permatabelajar.com</a></p>
             <p>Phone: 0811811306</p>
             <p>whatsapp: <a href=" https://api.whatsapp.com/send?phone=62811811306&text=Saya%20ingin%20bertanya%20seputar%20PermataBelajar" target="_blank">0811811306</a></p>
+            <img src="{!! asset('public/assets/images/logoonly-v2-100x100.png') !!}">
           </footer>
         </aside>
       </div>
@@ -46,11 +47,11 @@
             <h3 class="ps-widget__title">Download aplikasi PermataBelajar</h3>
           </header>
           <footer>
-            <p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/cb935093.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p><a href='https://play.google.com/store/apps/details?id=com.permatabimbel'><img src="{!! asset('public/assets/images/icon/icon/playstore.jpg') !!}" alt="" style="max-height: 70px;"></a></p>
 
-            <p><a><img src="{!! asset('public/assets/images/icon/icon/c3ef5d85.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p><a><img src="{!! asset('public/assets/images/icon/icon/ios.jpg') !!}" alt="" style="max-height: 70px;"></a></p>
 
-            <p> <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}"><img src="{!! asset('public/assets/images/icon/icon/Windows_badge.png') !!}" alt="" style="max-height: 70px;"></a></p>
+            <p> <a href="{!! asset('public/destkop/PermataBelajar.msi') !!}"><img src="{!! asset('public/assets/images/icon/icon/Window.png') !!}" alt="" style="max-height: 73px;"></a></p>
           </footer>
         </aside>
       </div>

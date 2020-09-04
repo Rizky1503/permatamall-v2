@@ -48,19 +48,19 @@
             </div>
             <div class="icon-tentang-permata">
               <div class="col-md-4">
-                <div class="ringkasan_materi" onclick="getringkasan()" style="cursor: pointer;">
+                <div class="ringkasan_materi" onclick="getringkasanmobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">
-                <div class="soal_dan_latihan" onclick="getsoal()" style="cursor: pointer;">
+                <div class="soal_dan_latihan" onclick="getsoalmobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">
-                <div class="video_belajar" onclick="getvideo()" style="cursor: pointer;">
+                <div class="video_belajar" onclick="getvideomobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
                   <span class="font-style" style="font-size: 19px;">Video Belajar</span>
                 </div>
@@ -603,7 +603,7 @@
 </div>
 
 
-<div id="loadMe" class="modal">
+<div id="loadMeMobile" class="modal">
   <div class="card">
     <div class="card-body">
       <center>
@@ -617,7 +617,7 @@
   </div>
 </div>
 
-<div id="soal" class="modal">
+<div id="soalMobile" class="modal">
   <div class="card">
     <div class="card-body">
       <center>
@@ -640,7 +640,7 @@
   </div>
 </div>
 
-<div id="video" class="modal">
+<div id="video-mobile" class="modal">
   <div class="card">
     <div class="card-body">
       <center>
@@ -1039,19 +1039,19 @@ function GET(url, callback) {
     $("#bank-soal").show();
   }
 
-  function getringkasan(){
-    $('#loadMe').modal({
+  function getringkasanlmobile(){
+    $('#loadMeMobile').modal({
       fadeDuration: 250,
     });
   }
-  function getvideo(){
-    $('#video').modal({
+  function getvideomobile(){
+    $('#video-mobile').modal({
       fadeDuration: 250,
     });
   }
 
-  function getsoal(){
-    $('#soal').modal({
+  function getsoalmobile(){
+    $('#soalMobile').modal({
       fadeDuration: 250,
     });
   }

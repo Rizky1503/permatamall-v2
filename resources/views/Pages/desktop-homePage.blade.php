@@ -1,13 +1,13 @@
-
-<div class="section">  
-  <div class="paket-list" style="height: auto">
+<div class="section" style="background-color: #00B159;">  
+  <div class="paket-list" style="height: 448px;">
     <div class="container">
-      <div class="desc" style="padding-top: 35px;">
+      <div class="desc" style="">
         <div class="col-md-12">
-            <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: #00B159">Coba Gratis.</span></span></center>
+            <center><span class="des-paket-home">Langganan Sekarang Juga dan <span style="color: white">Coba Gratis.</span></span></center>
             <center><span class="des-paket-home">Pelajar Indonesia yang Sedang Belajar Disini : <span class="_count" style="font-weight:900">10.000</span> ++</span></center>
         </div>
-        <div class="col-md-5" style="position: relative; top: 90px;">
+
+        <div class="col-md-5" style="position: relative; top: 20px;">
           <div class="square-content" style="box-shadow: 6px 6px 5px 0px rgba(201,201,201,1);">
             <div class="row">
               <div class="col-md-12">
@@ -38,40 +38,36 @@
             </div>
           </div>
         </div>
-        <div class="col-md-7" style="position: relative; top: 40px;">
-          <center>
-            <div class="tentang-permata">
-              <table>
-                <tr>
-                  <td><h2 class="font-style"><b>Paket Bimbel Online Meliputi :</b></h2></td>
-                </tr>
-              </table>            
-            </div>
-        
+
+        <div class="col-md-7" style="position: relative; top: 20px;">
+          <div class="square-content" style="box-shadow: 3px 4px 3px 4px rgba(201,201,201,1); height: 272px; padding: 1% 7% 8% 19%;">
+            <center>
+              <span class="font-style" style="font-size: 17px; color: #797474; position: relative; bottom: -13px;"><b>Paket Bimbel Online Meliputi :</b></span>
+            </center>
             <div class="icon-tentang-permata">
               <div class="col-md-4">
                 <div class="ringkasan_materi" onclick="getringkasan()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
+                  <span class="font-style" style="font-size: 14px;">Ringkasan Materi</span>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="soal_dan_latihan" onclick="getsoal()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
+                  <span class="font-style" style="font-size: 14px;">Soal dan latihan</span>
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="video_belajar" onclick="getvideo()" style="cursor: pointer;">
+                <div class="video_belajar" onclick="getvideos()" style="cursor: pointer;">
                   <img style="width: 50%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Video Belajar</span>
+                  <span class="font-style" style="font-size: 14px;">Video Belajar</span>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 10px;">
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 50%;" src="{!! asset('public/images/home/tes_minat_bakat.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">Tes Minat Dan Bakat</span>
+                    <span class="font-style" style="font-size: 14px;">Tes Minat Dan Bakat</span>
                   </a>
                 </div>
               </div>
@@ -79,7 +75,7 @@
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 50%;" src="{!! asset('public/images/home/tryout.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">TryOut</span>
+                    <span class="font-style" style="font-size: 14px;">TryOut</span>
                   </a>
                 </div>
               </div>
@@ -87,17 +83,19 @@
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 50%;" src="{!! asset('public/images/home/forum_konsultasi.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">Konsultasi</span>
+                    <span class="font-style" style="font-size: 14px;">Konsultasi</span>
                   </a>
                 </div>
               </div>
             </div>
-          </center>
+          </div>
         </div>
-        <div class="col-md-12" style="position: relative; top: 120px;">
+       
+
+        <div class="col-md-12" style="top: 60px;">
           <div class="container">
           <center>
-          <span style="color:#797474; font-size: 25px;  font-family: 'Ubuntu', sans-serif;">
+          <span style="color:white; font-size: 20px;  font-family: 'Ubuntu', sans-serif;">
             Membantu siswa/i SD, SMP, SMA dan Tes Masuk PTN belajar dengan lengkap, mudah dan menarik darimana dan dimana saja di seluruh wilayah Indonesia dengan dengan biaya murah menggunakan teknologi digital.
           </span>  
           </center>
@@ -107,15 +105,14 @@
     </div>
   </div>
 </div>
-<br><br><br><br>
 
-<div class="section">
+<div class="section"  style="background-color: #00B159;">
   <div class="kelebihan-permata"> 
     <div class="container"> 
       <div class="row">
         <div class="col-md-12">
           <center>
-            <span style="color:#797474; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: #00B159">Permata</span><span style="color: #4d9aea;">Belajar </span> ??</span>
+            <span style="color:white; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Mengapa Harus <span style="color: white">Permata</span><span style="color: white;">Belajar </span> ??</span>
           </center>
         </div><br><br><br><br><br>
         <div class="col-md-12">
@@ -182,8 +179,21 @@
   </div>
 </div>
 
+<div class="section"  style="margin-top: 10px;">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-12">
+        <center>
+          <span style="color:#00B159; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Video Pembelajaran</span>
+        </center>
+      </div><br><br><br><br><br>
+        @include('Pages.video')
+    </div>
+  </div>  
+</div>
+
 <div class="section" style="background-color: #00B159">
-  <div class="desc-plus-permata-belajar" style="height: 550px;background-color: #00B159;padding: 10px 71px 10px 71px;">
+  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #00B159;padding: 10px 71px 10px 71px;">
     <div class="container">
       <div class="row">
         <div class="permata-testimoni">
@@ -197,7 +207,7 @@
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
-                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/ada.png') !!}">
+                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/ada.png') !!}" style="z-index: 1">
                   </center>
                 </div>
                 <div class="name-testimoni">
@@ -218,7 +228,7 @@
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
-                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/2.PNG') !!}">
+                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/2.PNG') !!}" style="z-index: 1">
                   </center>
                 </div>
                 <div class="name-testimoni">
@@ -239,7 +249,7 @@
               <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
                 <div class="avatar-testimoni">
                   <center>
-                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/3.PNG') !!}">
+                    <img class="image-testimoni" src="{!! asset('public/images/foto_testimoni/3.PNG') !!}" style="z-index: 1">
                   </center>
                 </div>
                 <div class="name-testimoni">
@@ -256,6 +266,69 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-4" style="margin-top: 90px">
+              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni">
+                  <center>
+                    <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}" style="z-index: 1">
+                  </center>
+                </div>
+                <div class="name-testimoni">
+                  <center> 
+                    <span class="font-style"><b>Miftah </b></span><br>
+                    <span class="font-style"><b>SMP Muhammadiyah 1 Padang</b></span><br>
+                    <span class="font-style"><b>( Kelas 8 SMP )</b></span><br>
+                  </center>
+                </div>
+                <div class="text-testimoni">
+                  <center> 
+                      <span class="font-style">" Respon untuk jawab soalnya cepet, suka sekali dengan tentor PermataBelajar "</span>
+                  </center>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 90px">
+              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni">
+                  <center>
+                    <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}" style="z-index: 1">
+                  </center>
+                </div>
+                <div class="name-testimoni">
+                  <center> 
+                    <span class="font-style"><b>Ridwan Alwi</b></span><br>
+                    <span class="font-style"><b>MAN 2 Padangsidempuan</b></span><br>
+                    <span class="font-style"><b>( Kelas 12 SMA )</b></span><br>
+                  </center>
+                </div>
+                <div class="text-testimoni">
+                  <center> 
+                      <span class="font-style">" Bisa belajar dari video dan ringkasan materi yang tersedia untuk setiap pelajaran "</span>
+                  </center>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 90px">
+              <div class="square-content" style="height: 400px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+                <div class="avatar-testimoni">
+                  <center>
+                    <img class="image-testimoni" src="{!! asset('public/images/home/avatar.jpg') !!}" style="z-index: 1">
+                  </center>
+                </div>
+                <div class="name-testimoni">
+                  <center> 
+                    <span class="font-style"><b>Siti Fatima</b></span><br>
+                    <span class="font-style"><b>Nurul Ikhsan Bogor</b></span><br>
+                    <span class="font-style"><b>( Kelas 6 SD )</b></span><br>
+                  </center>
+                </div>
+                <div class="text-testimoni">
+                  <center> 
+                      <span class="font-style">" Saya selalu bertanya tentang tugas sekolah ke guru PermataBelajar, komunikasinya cepat dan asyik. "</span>
+                  </center>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -264,7 +337,7 @@
 </div>
 
 <div class="section" style="background-color: #00B159">
-  <div class="desc-plus-permata-belajar" style="height: 630px;background-color: #00B159;padding: 10px 71px 10px 71px;">
+  <div class="desc-plus-permata-belajar" style="height: auto;background-color: #00B159;padding: 10px 71px 10px 71px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -274,8 +347,8 @@
             </span>
           </center>
         </div><br><br><br><br><br>
-        <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-6">
+          <div class="square-content" style="height: 200px; padding: 3% 13% 7% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
                 <span class="font-style">Les Privat</span>
@@ -289,7 +362,7 @@
             <div class="link-produk">
               <div class="border-link">
                 <center>
-                  <a href="{{ route('pengembangan') }}">
+                  <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <span class="font-style">Selengkapnya</span>
                   </a>
                 </center>
@@ -297,22 +370,22 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-6">
+          <div class="square-content" style="height: 200px; padding: 3% 13% 7% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
-                <span class="font-style">Les Privat Online</span>
+                <span class="font-style">Tryout</span>
               </center>
             </div><br>
             <div class="desc-produk">
               <center>
-                <span class="font-style">Belajar Privat secara online <br> dengan guru terbaik</span>
+                <span class="font-style">Uji Pemahaman Anda <br>di Tryout Permata Belajar</span>
               </center>
             </div><br>
             <div class="link-produk">
               <div class="border-link">
                 <center>
-                  <a href="{{ route('pengembangan') }}">
+                  <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <span class="font-style">Selengkapnya</span>
                   </a>
                 </center>
@@ -320,22 +393,45 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="square-content" style="height: 210px; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+        <div class="col-md-6" style="margin-top: 20px;">
+          <div class="square-content" style="height: 200px; padding: 3% 13% 7% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
             <div class="title-produk">
               <center>
-                <span class="font-style">Forum Diskusi</span>
+                <span class="font-style">Bimbel Online</span>
               </center>
             </div><br>
             <div class="desc-produk">
               <center>
-                <span class="font-style">forum tanya jawab soal atau tugas dari sekolah</span>
+                <span class="font-style">Belajar latihan,soal,ringkasan materi, <br> video Terlengkap</span>
               </center>
             </div><br>
             <div class="link-produk">
               <div class="border-link">
                 <center>
-                  <a href="{{ route('pengembangan') }}">
+                 <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
+                    <span class="font-style">Selengkapnya</span>
+                  </a>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 20px;">
+          <div class="square-content" style="height: 200px; padding: 3% 13% 7% 13%; box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);">
+            <div class="title-produk">
+              <center>
+                <span class="font-style">Forum Konsultasi</span>
+              </center>
+            </div><br>
+            <div class="desc-produk">
+              <center>
+                <span class="font-style">forum tanya jawab soal atau tugas dari sekolah <br> di permatabelajar</span>
+              </center>
+            </div><br>
+            <div class="link-produk">
+              <div class="border-link">
+                <center>
+                 <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <span class="font-style">Selengkapnya</span>
                   </a>
                 </center>
@@ -659,6 +755,38 @@
 </div>
 
 
+<div id="video" class="modal">
+  <div class="card">
+    <div class="card-body">
+      <center>
+      <span>VIDEO</span><br>
+      <span>IPA</span><br>
+      <span>KELAS 12</span><br>
+      <hr>
+     <div>
+          <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+            <source src="https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4" type="video/mp4" />
+          </video>
+     </div>
+      </center>
+    </div>
+  </div>
+</div>
+
+<div id="videoBelajar" class="modal">
+  <div class="card">
+    <div class="card-body">
+      <center>
+        <div>
+          <video id="player" playsinline controls data-poster="/path/to/poster.jpg" style="width: 100%">
+            <source id="video_file" src="" type="video/mp4" />
+          </video>
+        </div>
+      </center>
+    </div>
+  </div>
+</div>
+
 <div id="loadMe" class="modal">
   <div class="card">
     <div class="card-body">
@@ -690,25 +818,6 @@
           <img src="{{ ENV('APP_URL_API_RESOURCE').'v2/image/pembahasan/20200724-UAiTR1ZoI7-Limit_di_ketakhinggaan_suatu_fungsi.PNG'}}">
         </div>
       </div>
-      </center>
-    </div>
-  </div>
-</div>
-<div id="video" class="modal">
-  <div class="card">
-    <div class="card-body">
-      <center>
-      <span>VIDEO</span><br>
-      <span>IPA</span><br>
-      <span>KELAS 12</span><br>
-      <hr>
-     <div>
-          <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
-            <source src="https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4" type="video/mp4" />
-          </video>
-
-         <!-- <video controls autoplay width="320" height="240"></video> -->
-     </div>
       </center>
     </div>
   </div>
@@ -781,8 +890,30 @@
 
 
 <style type="text/css">
+  #videoBelajar{
+    z-index: 99;
+  }
+
+  .items-menu {
+      position: relative;
+      width: 100%;
+      overflow-x: none !important;
+      overflow-y: hidden;
+      white-space: nowrap;
+      transition: all 0.2s;
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+      padding-left: 35px;
+  }
+
   .modal {
     max-width: 80% !important;
+  }
+
+  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #ddd0;
+    border-bottom-color: #ddd0;
   }
 
   .panel-custom{
@@ -792,10 +923,14 @@
     border-radius: 10px 49px 10px 49px;  
     height: 67px; 
     padding: 11px 95px 14px 50px;
+    border-bottom-color: #ddd0;
   }
 
   .panel{
     padding-bottom: 10px;
+    border-bottom-color: #ddd0;
+    box-shadow: 0 1px 1px rgb(253 253 253 / 5%);
+
   }
 
   .tambahan-table-bawah{
@@ -913,13 +1048,13 @@
   }
 
   .des-paket-home{
-    color: #3e3e3e;
-    font-size: 38px;
+    color: white;
+    font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
   }
 
   .label-paket{
-    font-size: 18px; 
+    font-size: 14px; 
     color: #797474;
     font-family: 'Ubuntu', sans-serif;
   }
@@ -1059,11 +1194,9 @@ function GET(url, callback) {
       location.href = "{{ route('FrontEnd.index') }}";
     });
 
-    function getvideo(){
-      $('#video').modal({
-        fadeDuration: 250,
-      });
-    }
+    $('#videoBelajar').on($.modal.CLOSE, function(event, modal) {
+      location.href = "{{ route('FrontEnd.index') }}";
+    });
 
   });
 
@@ -1117,7 +1250,19 @@ function GET(url, callback) {
     });
   }
 
-  
+  function getvideos(){
+    $('#video').modal({
+      fadeDuration: 250,
+    });
+  }
+
+  function getvideoBelajar(file){
+    document.getElementById("video_file").src = file;
+    $('#videoBelajar').modal({
+      fadeDuration: 250,
+    }); 
+  }
+
   var selection = document.getElementById("kelas");
 
   selection.onchange = function(event){

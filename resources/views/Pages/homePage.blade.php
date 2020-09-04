@@ -14,17 +14,17 @@
 <div class="carousel-inner">  
     <div class="item active">
       <a href="{{ route('Registrasi.index') }}">
-        <img src="{!! asset('public/images/banner/produk-1.png') !!}" alt="Los Angeles" style="width:100%;">
+        <img src="{!! asset('public/images/banner/produk-1.png') !!}" alt="Los Angeles" style="width:100%; height: 180px;">
       </a>
     </div>
     <div class="item">
       <a href="{{ route('Registrasi.index') }}">
-        <img src="{!! asset('public/images/banner/sd-smp-sma-11.png') !!}" alt="Los Angeles" style="width:100%;">
+        <img src="{!! asset('public/images/banner/sd-smp-sma-11.png') !!}" alt="Los Angeles" style="width:100%; height: 180px;">
       </a>
     </div>
     <div class="item">
       <a href="{{ route('Registrasi.index') }}">
-        <img src="{!! asset('public/images/banner/tes-masuk-ptn - 1.png') !!}" alt="Los Angeles" style="width:100%;">
+        <img src="{!! asset('public/images/banner/tes-masuk-ptn - 1.png') !!}" alt="Los Angeles" style="width:100%; height: 180px;">
       </a>
     </div>
 </div>
