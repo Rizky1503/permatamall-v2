@@ -24,6 +24,7 @@ class HomePageController extends Controller
       $data   = json_decode(file_get_contents(ENV('APP_URL_API').'bo/list/paket'));
       // $ringkasan = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/ringkasan'));
       // $soal = json_decode(file_get_contents('http://api.permatamall.com/api/v2/web/soal'));
+      $video = json_decode(file_get_contents(ENV('APP_URL_API_V2').'web/video'));
 
       $qkelas = $client->request('POST', ENV('APP_URL_API_V2').'web/transaksi/filter', [
       'form_params' => [
@@ -51,6 +52,7 @@ class HomePageController extends Controller
          // 'soal'       => $soal, 
          'kelas'      => $kelas->data,
          'durasi'     => $durasi->data,
+         'video'      => $video,
       ]);          
    }
 
