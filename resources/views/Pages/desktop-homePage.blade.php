@@ -179,7 +179,7 @@
   </div>
 </div>
 
-<div class="section"  style="margin-top: 10px;">
+<div class="section"  style="margin-top: 10px; height: 500px">
   <div class="container"> 
     <div class="row">
       <div class="col-md-12">
@@ -1170,6 +1170,27 @@ function GET(url, callback) {
 }
 </script> -->
 <script type="text/javascript">
+  $(document).ready(function() {
+    var item = $('.item'), //Cache your DOM selector
+    visible = 5, //Set the number of items that will be visible
+    index = 0, //Starting index
+    endIndex = ( item.length / visible ) - 1; //End index
+
+      $('#arrowR').click(function(){
+          if(index < endIndex ){
+            index++;
+            item.animate({'left':'-=940px'});
+          }
+      });
+      
+      $('#arrowL').click(function(){
+          if(index > 0){
+            index--;            
+            item.animate({'left':'+=940px'});
+          }
+      });
+      
+  });
   function countDownload(){
     $.ajax({
         type: "POST",
