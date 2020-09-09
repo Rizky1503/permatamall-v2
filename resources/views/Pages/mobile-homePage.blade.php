@@ -50,26 +50,26 @@
               <div class="col-md-4">
                 <div class="ringkasan_materi" onclick="getringkasanmobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span>
+                 <center><span class="font-style" style="font-size: 19px;">Ringkasan Materi</span></center>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">
                 <div class="soal_dan_latihan" onclick="getsoalmobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/soal_dan_latihan.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Soal dan latihan</span>
+                  <center><span class="font-style" style="font-size: 19px;">Soal dan latihan</span></center>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">
                 <div class="video_belajar" onclick="getvideomobile()" style="cursor: pointer;">
                   <img style="width: 25%;" src="{!! asset('public/images/home/video_belajar.png') !!}"><br>
-                  <span class="font-style" style="font-size: 19px;">Video Belajar</span>
+                  <center><span class="font-style" style="font-size: 19px;">Video Belajar</span></center>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 25%;" src="{!! asset('public/images/home/tes_minat_bakat.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">Tes Minat Dan Bakat</span>
+                    <center><span class="font-style" style="font-size: 19px;">Tes Minat Dan Bakat</span></center>
                   </a>
                 </div>
               </div>
@@ -77,7 +77,7 @@
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 25%;" src="{!! asset('public/images/home/tryout.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">TryOut</span>
+                    <center><span class="font-style" style="font-size: 19px;">TryOut</span></center>
                   </a>
                 </div>
               </div>
@@ -85,7 +85,7 @@
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 25%;" src="{!! asset('public/images/home/forum_konsultasi.png') !!}"><br>
-                    <span class="font-style" style="font-size: 19px;">Vidcon / Konsultasi</span>
+                    <center><span class="font-style" style="font-size: 19px;">Vidcon / Konsultasi</span></center>
                   </a>
                 </div>
               </div>
