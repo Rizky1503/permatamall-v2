@@ -49,8 +49,8 @@
             <div class="icon-tentang-permata">
               <div class="col-md-4">
                 <div class="ringkasan_materi" onclick="getringkasanmobile()" style="cursor: pointer;">
-                  <img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
-                 <center><span class="font-style" style="font-size: 19px;">Ringkasan Materi</span></center>
+                <center><img style="width: 25%;" src="{!! asset('public/images/home/ringkasan_materi.png') !!}"><br>
+                 <span class="font-style" style="font-size: 19px;">Ringkasan Materi</span></center>
                 </div>
               </div>
               <div class="col-md-4" style="margin-top: 1em;">

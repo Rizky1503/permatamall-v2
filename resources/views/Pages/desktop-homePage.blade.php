@@ -83,7 +83,7 @@
                 <div class="tes">
                   <a href="https://play.google.com/store/apps/details?id=com.permatabimbel" target="_blank">
                     <img style="width: 50%;" src="{!! asset('public/images/home/forum_konsultasi.png') !!}"><br>
-                    <span class="font-style" style="font-size: 14px;">Vidcon / Konsultasi</span>
+                    <span class="font-style" style="font-size: 14px;">Vidcon & Forum</span>
                   </a>
                 </div>
               </div>
