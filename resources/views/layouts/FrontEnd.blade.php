@@ -79,6 +79,7 @@
     <link rel="stylesheet" type="text/css" href="{!! asset('public/assets/css/select2.min.css') !!}">    
     <link rel="stylesheet" href="{!! asset('public/assets/css/jquery.modal.min.css') !!}" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css" type="text/css" rel="stylesheet">
   </head>
   <body class="ps-loading loaded">
     <!-- Google Tag Manager (noscript) -->

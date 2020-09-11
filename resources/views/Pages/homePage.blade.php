@@ -9,6 +9,7 @@
   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
   <li data-target="#myCarousel" data-slide-to="1"></li>
   <li data-target="#myCarousel" data-slide-to="2"></li>
+  <li data-target="#myCarousel" data-slide-to="3"></li>
 </ol>
 <!-- Wrapper for slides -->
 <div class="carousel-inner">  
@@ -25,6 +26,11 @@
     <div class="item">
       <a href="{{ route('Registrasi.index') }}">
         <img src="{!! asset('public/images/banner/3.png') !!}" alt="Los Angeles" style="width:100%; height: 180px;">
+      </a>
+    </div>
+    <div class="item">
+      <a href="{{ route('Registrasi.index') }}">
+        <img src="{!! asset('public/images/banner/4.png') !!}" alt="Los Angeles" style="width:100%; height: 180px;">
       </a>
     </div>
 </div>
@@ -98,6 +104,26 @@
 
 body {
     background: #ececec !important;
+}
+
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.5)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgb(255 254 254 / 50%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+    background-image: linear-gradient(to right,rgb(255 255 255) 0,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
 }
 
 .wabutton{

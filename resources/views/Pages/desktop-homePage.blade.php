@@ -106,6 +106,19 @@
   </div>
 </div>
 
+<div class="section"  style="margin-top: 10px; height: 390px">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-12">
+        <center>
+          <span style="color:#00B159; font-size: 40px;  font-family: 'Ubuntu', sans-serif;">Jadwal Video Conference Dengan <br> Guru Profesional</span>
+        </center>
+      </div>
+    </div>
+  </div> <br><br>
+  @include('Pages.vidcon')
+</div>
+
 <div class="section"  style="background-color: #00B159;">
   <div class="kelebihan-permata"> 
     <div class="container"> 
@@ -1105,6 +1118,7 @@
 <script src="{!! asset('public/assets/plyr/polyfill.min.js') !!}"></script>
 <script src="{!! asset('public/assets/plyr/plyr.min.js') !!}"></script>
 <script  src="{!! asset('public/assets/plyr/script-plyr.js') !!}"></script>
+<link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css”></i>
 <!-- <script type="text/javascript">
 var FILE = "https://resource.permatamall.com/api/v1/v2/video/play/Kelas-12-IPA-MTK-Limit.mp4";
 var NUM_CHUNKS = 10000;
@@ -1190,6 +1204,25 @@ function GET(url, callback) {
           }
       });
       
+
+      var itemvidcon = $('.item-vidcon'), //Cache your DOM selector
+      visiblevidcon = 4, //Set the number of items that will be visible
+      indexvidcon = 0, //Starting index
+      endIndexvidcon = ( itemvidcon.length / visiblevidcon ) - 1; //End index
+
+        $('#arrowRVidcon').click(function(){
+            if(indexvidcon < endIndexvidcon ){
+              indexvidcon++;
+              itemvidcon.animate({'left':'-=1000px'});
+            }
+        });
+        
+        $('#arrowLVidcon').click(function(){
+            if(indexvidcon > 0){
+              indexvidcon--;            
+              itemvidcon.animate({'left':'+=1000px'});
+            }
+        });
   });
   function countDownload(){
     $.ajax({
